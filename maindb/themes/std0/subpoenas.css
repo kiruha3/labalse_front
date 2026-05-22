@@ -1,0 +1,738 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	#subpoenaTooltip {
+		position : absolute ;
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+		/*padding : 4px 8px ;*/
+	}
+
+	.slt {
+		margin-top : 1cm ;
+		border-collapse : collapse ;
+		border : none ;
+		table-layout : fixed ;
+	}
+
+	.slr {
+	}
+	
+	.slr:hover {
+		background-color : #fc8 ;
+	}
+
+	.slch-0 ,.slch-1 , .slch-2 , .slch-3 , .slch-4 , .slch-5 , .slch-6 {
+		border-bottom : 1px solid #606060 ;
+		font-size : 9pt ;
+		color : #808080 ;
+	}
+	
+	.sl-date + .sl-time {
+		margin-left : 16px ;
+	}
+
+	.slch-0 , .slc-0 {
+		width : 48px ;
+	}
+
+	.slch-1 , .slc-1 {
+		width : 48px ;
+	}
+
+	.slch-2 , .slc-2 {
+		width : 96px ;
+	}
+
+	.slch-3 , .slc-3 {
+		width : 480px ;
+		max-width : 480px ;
+	}
+
+	.slch-4 , .slc-4 {
+		width : 160px ;
+	}
+	
+	.slc-5 , .slch-5 {
+		width : 320px ;
+	}
+	
+	.slc-6 , .slch-6 {
+		width : 128px ;
+	}
+
+	.slch-0 , .slc-0 {
+		text-align : center ;
+	}
+
+
+	.slch-1 , .slc-1 {
+		text-align : right ;
+	}
+	
+	.slch-2 , .slch-4 , .slch-6 , .slc-2 , .slc-4 , .slc-6 {
+		text-align : center ;
+	}
+	
+	.slch-3 , .slch-5 , .slc-3 , .slc-5 {
+		text-align : left ;
+	}
+
+	.slc-0 , .slc-1 , .slc-2 , .slc-3 , .slc-4 , .slc-5 , .slc-6 {
+		font-size : 10pt ;
+		border-bottom : 1px solid #e0e0e0 ;
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow: ellipsis ;
+	}
+	
+	
+	.nrr-dlg {
+		position : fixed ;
+		border : 1px solid black ;
+		padding : 2px ;
+		
+		left : 50% ;
+		margin-left : -480px ;
+		width : 960px ;
+		height : 480px ;
+		top : 5cm ;
+		background-color : #ffffff ;
+		
+		text-align : center ;
+		
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.nrr-t-area {
+		position : absolute ;
+		left : 4px ;
+		right : 50% ;
+		top : 4px ;
+		bottom : 44px ;
+	}
+	
+	.nrr-t {
+		position : absolute ;
+		width : 100% ;
+		height : 100% ;
+		/*background-color : #ff0000 ;*/
+		border-collapse : collapse ;
+	}
+	
+	.nrr-t-d , .nrr-t-v , .nrr-toa-c {
+		padding : 2px ;
+		text-align : center ;
+		border : 1px dotted #808080 ;
+		height : 1px ;
+	}
+	
+	.nrr-t-d {
+		font-size : 10pt ;
+	}
+	
+	.nrr-date , .nrr-time {
+		font-size : 11pt ;
+		text-align : center ;
+	}
+	
+	.nrr-date::-ms-clear , .nrr-time::-ms-clear {
+		display : none ;
+	}
+	
+	.nrr-date {
+		width : 96px ;
+	}
+	
+	.nrr-time {
+		width : 64px ;
+	}
+	
+	.nrr-type {
+		width : 100% ;
+		box-sizing : border-box ;
+	}
+	
+	.nrr-toa {
+		width : 100% ;
+		box-sizing : border-box ;
+	}
+	
+	.nrr-from-agency {
+		width : 100% ;
+		height : 48px ;
+		box-sizing : border-box ;
+	}
+	
+	.nrr-a-c {
+		padding : 2px ;
+		width : 100% ;
+		height : 100% ;
+		text-align : center ;
+		border : 1px dotted #808080 ;
+	}
+	
+	.nrr-a-c1 {
+		padding : 0px ;
+		width : 100% ;
+		height : 100% ;
+		text-align : center ;
+		position : relative ;
+	}
+	
+	.nrr-a-c2 {
+		position : absolute ;
+		left : 0px ;
+		right : 0px ;
+		top : 0px ;
+		bottom : 0px ;
+		width : 100% ;
+		height : 100% ;
+	}
+	
+	.nrr-agency-sel {
+		width : 100% ;
+		height : 100% ;
+		box-sizing : border-box ;
+	}
+	
+	.nrr-from-agency-address-c , .nrr-from-agency-alt-address {
+		height : 2.5em ;
+		font-size : 11pt ;
+		width : 100% ;
+		box-sizing : border-box ;
+	}
+	
+	.nrr-from-agency-address {
+		cursor : pointer ;
+		color : #0080ff ;
+		text-decoration : underline ;
+	}
+	
+	.nrr-elc {
+		position : absolute ;
+		left : 50% ;
+		right : 4px ;
+		top : 4px ;
+		bottom : 44px ;
+		border-top : 1px dotted #808080 ;
+		border-right : 1px dotted #808080 ;
+		border-bottom : 1px dotted #808080 ;
+	}
+		
+	.nrr-elt-area {
+		position : absolute ;
+		width : 100% ;
+		right : 0px ;
+		top : 32px ;
+		bottom : 0px ;
+		overflow-y : scroll ;
+		font-size : 10pt ;
+		border-top : 1px dotted #808080 ;
+	}
+	
+	
+	.nrr-elt {
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+	
+	.nrr-elt-n {
+		text-align : left ;
+	}
+	
+	.nrr-elt-mark1 {
+		color : #f00 ;
+		font-weight : bold ;
+	}
+	.nrr-elt-mark2 {
+		color : #00f ;
+		font-weight : bold ;
+	}
+	
+	
+	.nrr-tool-panel {
+		position : absolute ;
+		bottom : 4px ;
+		left : 4px ;
+		right : 4px ;
+	}
+	
+	.nrr-lnk {
+		font-size : 10pt ;
+		text-decoration : none ;
+		cursor : pointer ;
+	}
+	.nrr-lnk + .nrr-lnk {
+		margin-left : 16px ;
+	}
+
+	.lnk-ok {
+		color : #008000 ;
+	}
+	
+	.lnk-cancel {
+		color : #ff0000 ;
+	}
+	
+	.nrr-lnk:hover {
+		text-decoration : underline ;
+	}
+	
+	.sl-a-e {
+		color : #000 ;
+		cursor : pointer ;
+	}
+	.sl-a-e:hover {
+		color : #f00 ;
+	}
+	
+	.scan-lnk {
+		display : inline-block ;
+		width : 96px ;
+		padding : 2px 4px ;
+		border : 1px solid #840 ;
+		border-radius : 3px ;
+		background-color : #fc0 ;
+		color : #000 ;
+		text-decoration : none ;
+		cursor : pointer ;
+		font-size : 9pt ;
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow : ellipsis ;
+		-o-text-overflow : ellipsis ;
+		vertical-align : middle ;
+	}
+	
+	.su-files-ab {
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -175px ;
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+	}
+
+	
+	
+	
+	/* ******************************************************************** */
+	
+	.fu-dlg-wrapper {
+		position : fixed ;
+		left : 50% ;
+		top : 5cm ;
+		width : 1200px ;
+		max-width : 100% ;
+		max-width : calc( 100% - 20px ) ;
+	}
+	
+	.fu-dlg-bg {
+		position : fixed ;
+		left : -3px ;
+		top : -3px ;
+		right : -3px ;
+		bottom : -3px ;
+		background-color : #000 ;
+		opacity : 0.8 ;
+	}
+	
+	.fu-dlg {
+		border : 1px solid black ;
+		padding : 8px ;
+		
+		position : relative ;
+		left : -50% ;
+		width : 100% ;
+		/*height : 384px ;*/
+
+		background-color : #ddd ;
+		/*background-image : url( 'bg_337394.png' );*/
+		
+		text-align : center ;
+		
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.fu-dlg-cap {
+		background-color : #0cf ;
+		height : 19px ;
+		position : absolute ;
+		left : 0px ;
+		right : 0px ;
+		top : 0px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -293px ;
+		line-height : 19px ;
+		padding : 0px 0px 0px 6px ;
+		color : #fff ;
+		font-size : 9pt ;
+		text-align : left ;
+		text-shadow : #000 1px 1px 1px ;
+	}
+	
+	.fu-dlg-close-btn {
+		background-color : #0cf ;
+		height : 14px ;
+		width : 25px ;
+		position : absolute ;
+		right : 2px ;
+		top : 2px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -66px ;
+		line-height : 14px ;
+		padding : 0px ;
+		color : #fff ;
+		font-size : 8pt ;
+		font-weight : bold ;
+		text-align : center ;
+		cursor : pointer ;
+	}
+	
+	.fu-dlg-close-btn:hover {
+		background-position : 0px -52px ;
+	}
+	
+	.fu-tla {
+		border : 1px solid #444 ;
+		padding : 8px ;
+		display : inline-block ;
+		position : relative ;
+		background-color : #fff ;
+	}
+	
+	.fu-tla * {
+		box-sizing : border-box ;
+	}
+	
+	.fu-tlal {
+		position : absolute ;
+		left : 0px ;
+		top : 0px ;
+		right : 0px ;
+		bottom : 0px ;
+		background-color : #000 ;
+		opacity : 0.7 ;
+	}
+	
+	.fu-tl {
+		height : 384px ;
+		max-height : 384px ;
+		overflow-x : hidden ;
+		overflow-y : auto ;
+	}
+	
+	.fu-tgt-lnk {
+		display : block ;
+		font-size : 10pt ;
+		width : 384px ;
+		overflow-x : hidden ;
+		text-overflow : ellipsis ;
+		white-space : nowrap ;
+		padding-left : 8px ;
+		cursor : pointer ;
+		text-align : left ;
+	}
+	.fu-tgt-lnk:hover {
+		background-color : #444 ;
+		color : #fff ;
+	}
+	
+
+	.fu-pdf-pa {
+		border : 1px solid #444 ;
+		padding : 8px ;
+		display : inline-block ;
+		margin-left : 16px ;
+		vertical-align : top ;
+		/*background-color : #456 ;*/
+	}
+	
+	.fu-pa-sizer {
+		height : 0px ;
+		width : 720px ; 
+	}
+	
+	.fu-pdf-pw {
+		height : 384px ;
+		max-height : 384px ;
+		overflow-y : auto ;
+		overflow-x : hidden ;
+	}
+	
+	.fu-toolbar {
+		margin-top : 16px ;
+		text-align : center ;
+	}
+	
+	.fu-toolbar * {
+		vertical-align : middle ;
+	}
+	
+	/* all tabs */
+	
+	.fu-tabs {
+		margin-top : 15px ;
+		text-align : left ;
+		background-color : inherit ;
+		position : relative ;
+	}
+	
+	.fu-tabs > span {
+		margin-bottom : 8px ;
+		border-bottom : 1px solid #666 ;
+		display : block ;
+	}
+
+	.fu-tabs > input {
+		display : none ;
+	}
+
+	.fu-tabs > label {
+		border : 1px solid #666 ;
+		border-bottom : none ;
+		border-radius : 4px 4px 0 0 ;
+		cursor : pointer ;
+		display : inline-block ;
+		padding : 0.125em 1em ;
+		font-size : 12pt ;
+		margin : 1px 1px -1px 1px ;
+		color : #888 ;
+	}
+	
+	.fu-tabs :checked + * + label {
+		background-color : inherit ;
+		padding : 0.25em 1em ;
+		border-top : 0.125em solid #444 ;
+		color : #444 ;
+	}
+	.fu-tabs > label:hover {
+		background-color : inherit ;
+		color : #000 ;
+	}
+	.fu-tabs :checked + * + label:hover {
+		border-color : #000 ;
+		color : #000 ;
+	} 
+	
+	.fu-tabs > div {
+		visibility : hidden ;
+	}
+	.fu-tabs :checked + * + * + * + * + div {
+		visibility : visible ;
+	}
+	
+	.fu-file-select-area {
+		position : absolute ;
+		top : 40% ;
+		left : 50% ;
+	}
+	
+	.fu-file-select-area div {
+		 position : relative ;
+		 left : -50% ;
+	}
+	
+	.fu-file {
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		padding : 1px ;
+	}
+
+	.date-selector-panel {
+		margin : 1em 3em 1em 3em ;
+		padding : 4px 6px ;
+		border-bottom : 1px dotted #444 ;
+	}
+
+	.cmon_link A {
+		padding : 3px 6px ;
+		border : 1px solid #000000 ;
+		text-decoration : none ;
+		background-color : #e0e0e0 ;
+		font-size : 10pt ;
+		color : #000000 ;
+	}
+
+	/*  ������ �����/���  */
+	.mon_link A {
+		padding : 3px 6px ;
+		border : 1px solid #000000 ;
+		text-decoration : none ;
+		background-color : #404040 ;
+		font-size : 9pt ;
+		color : #d0d0d0 ;
+	}
+	.mon_link A:hover {
+		padding : 3px 6px ;
+		border : 1px solid #000000 ;
+		text-decoration : none ;
+		background-color : #606060 ;
+		color : #ffffff ;
+	}
+
+	.sub-b-l {
+		background-image : url( "sprites1.png" );
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		margin : 1px ;
+	}
+
+	.sub-b-l {
+		width : 13px ;
+		height : 13px ;
+		background-position : -13px -93px ;
+	}
+
+	.b-l-at {
+		color : #ff0000 ;
+		text-decoration : none ;
+		position : relative ;
+	}
+
+	.b-l-at span {
+		text-shadow : #FFFFFF 1px 0px, #FFFFFF -1px 0px, #FFFFFF 0px 1px, #FFFFFF 0px -1px, #FFFFFF 1px 1px, #FFFFFF -1px -1px, #FFFFFF -1px 1px, #FFFFFF 1px -1px, #FFFFFF 0 0 1px ;
+		padding : 0px ;
+		position : absolute ;
+		right : -2px ;
+		bottom : -4px ;
+	}
+
+	/* ********************************************************* */
+	.letter-dlg {
+		position : fixed ;
+		margin-left : -400px ;
+		padding : 20px 10px 10px 10px ;
+		width : 800px ;
+		top : 7cm ;
+		left : 50% ;
+
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+
+
+		box-shadow : 6px 6px 8px #000 ;
+	}
+
+	.letter-dlg-cont {
+		width : 100% ;
+		max-height : 400px ;
+
+		border : none ;
+		overflow-x : auto ;
+		overflow-y : auto ;
+		white-space : nowrap ;
+		padding-right : 4px ;
+	}
+
+	.letter-dlg-tab {
+		border-collapse : collapse ;
+		margin : 0px ;
+		width : 100% ;
+	}
+
+	.letter-dlg-ex {
+		margin : 1px 0px 16px 0px ;
+		text-align : center ;
+		font-size : 8pt ;
+		border : 1px solid #606060 ;
+		background-color : #e0e0e0 ;
+		white-space : normal ;
+	}
+
+	.weight-inp {
+		text-align : right ;
+		width : 64px ;
+	}
+
+	.price-inp {
+		text-align : right ;
+		width : 128px ;
+	}
+
+	.letter-dlg-close-box {
+		position : absolute ;
+		top : -8px ;
+		left : 807px ;
+		width : 21px ;
+		padding-top : 3px ;
+		border : 1px solid #c0c0c0 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	}
+
+	.dlg-close-box-btn {
+		cursor : pointer ;
+		display : inline-block ;
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -145px ;
+	}
+
+	.letter-dlg-btn-panel {
+		text-align : center ;
+	}
+
+	.letter-label-fmt {
+		text-align : center ;
+	}
+
+	.letter-dlg-button {
+		width : 320px ;
+	}
+
+	.ldt-cap , .ldt2-cap {
+		font-size : 8pt ;
+		text-align : center ;
+		border : 1px solid #606060 ;
+		font-weight : bold ;
+		color : #ffffff ;
+		background-color : #404040 ;
+		background-image : url( "cap.gif" );
+		height : 19px ;
+		padding : 0px ;
+	}
+
+	.ldt-prna-btn , .ldt-addressee , .ldt-destination , .ldt2-radio-btn , .ldt2-worker {
+		font-size : 8pt ;
+		border : 1px solid #606060 ;
+		background-color : #e0e0e0 ;
+		white-space : normal ;
+	}
+
+	.ldt-prna-btn , .ldt2-radio-btn {
+		min-width : 23px ;
+		width : 23px ;
+		max-width : 23px ;
+
+		text-align : center ;
+	}
+
+	.ldt-prna-img {
+		display : inline-block ;
+		cursor : pointer ;
+		background-image : url( "print.gif" );
+		width : 13px ;
+		height : 13px ;
+		border : 0px ;
+	}
+
+	.ldt-addressee {
+		min-width : 320px ;
+		width : 320px ;
+		max-width : 320px ;
+	}
+
+	.ldt-destination {
+	}
+
+	.ldt2-worker {
+	}
+

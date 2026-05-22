@@ -1,0 +1,141 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.stat-head {
+		font-size: 14pt;
+	}
+
+	.stat-head-bold {
+		font-size: 14pt;
+		font-weight: bold;
+		color: #000000;
+	}
+
+	.stat-head-2 {
+		font-size: 10pt;
+	}
+
+	.stat-head-2-bold {
+		font-size: 10pt;
+		font-weight: bold;
+	}
+
+	.stat-section-head {
+		font-size: 10pt;
+	}
+
+	.stat-section-head-bold {
+		font-size: 10pt;
+		font-weight: bold;
+	}
+
+	.lnk-next-section A {
+		font-size: 10pt;
+		text-decoration: none;
+		color: #0000ff;
+	}
+
+	.lnk-next-section A:hover {
+		color: #008000;
+	}
+
+	.section-table {
+		border-collapse: collapse;
+		margin-top: 16px;
+		margin-bottom: 96px;
+	}
+
+	.section-col-head {
+		background-color: #404040;
+		color: #ffffff;
+		text-align: center;
+		font-size: 10pt;
+		font-weight: bold;
+		border: 1px solid #ffffff;
+	}
+
+	.section-col-head-bottom {
+		background-color: #404040;
+		color: #ffffff;
+		text-align: center;
+		vertical-align : bottom ;
+		font-size: 10pt;
+		font-weight: bold;
+		border: 1px solid #ffffff;
+		white-space : nowrap ;
+	}
+
+	.section-col-subhead {
+		background-color: #808080;
+		color: #ffffff;
+		text-align: center;
+		font-size: 8pt;
+		font-weight: bold;
+		border: 1px solid #ffffff;
+	}
+
+	.section-num-col {
+		width: 64px;
+		background-color: #f0f0f0;
+		color: #000000;
+		text-align: right;
+		border: 1px solid #808080;
+		font-size: 10pt;
+	}
+
+	.section-num-r-col {
+		width: 36px;
+		background-color: #ffffff;
+		color: #000000;
+		text-align: center;
+		border: 1px solid #808080;
+		font-size: 8pt;
+	}
+
+	.section-num-s-col {
+		width: 64px;
+		background-color: #d8d8d8;
+		color: #000000;
+		text-align: right;
+		border: 1px solid #808080;
+		font-weight: bold;
+		font-size: 10pt;
+	}
+
+	.section-name-col {
+		padding-left: 6px;
+		padding-right: 6px;
+		background-color: #ffffff;
+		color: #000000;
+		text-align: left;
+		border: 1px solid #808080;
+		font-size: 10pt;
+	}
+
+	.section-name-col-bold {
+		background-color: #ffffff;
+		color: #0070e0;
+		font-size: 10pt;
+	}
+
+	.legend-name {
+		background-color: #ffffff;
+		color: #606060;
+		font-size: 9pt;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	.legend-text {
+		background-color: #ffffff;
+		color: #606060;
+		font-size: 8pt;
+		font-style: italic;
+	}
+
+	.h-vab {
+		vertical-align : bottom ;
+	}

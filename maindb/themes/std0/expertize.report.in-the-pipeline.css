@@ -1,0 +1,29 @@
+
+	.MainTable {
+		margin-top : 1cm ;
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+
+	.cap1 , .cap2 {
+		border : 1px solid #000000 ;
+		text-align : center ;
+		font-size : 8pt ;
+	}
+
+	.dat1 , .dat2 {
+		border : 1px solid #000000 ;
+		font-size : 10pt ;
+	}
+
+	.dat1 {
+		text-align : center ;
+	}
+
+	.dat2 {
+		text-align : left ;
+	}
+
+	.lnk {
+		color : #08f ;
+	}

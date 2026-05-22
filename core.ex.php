@@ -1,0 +1,106 @@
+<?php
+	function TryDirectLogin( $placeId = -1 , $dLogin = "" , $dPass = "" ) {
+		global	$portalDB , $dbConfig ;
+		global	$locale ;
+		global	$UserLogin , $UserName ,
+				$UserID , $UserLastVisitDate , $UserLastVisitTime ,
+				$UserDepartment , $UserPost , $UserSpecialityNumber ,
+				$UserRights , $UserOptions , $UserThemeLoc , $UserGroups ;
+		global	$AbsRootDir ;
+		global	$Err , $LoginOk ;
+		global  $UserWorkerID , $UserWorkerFirstID , $UserAllWorkers , $UserAllDeps , $DepAllWorkers ;
+
+		if ( $dbConfig[ "engine.mode" ] == "ADMIN" ) {
+			$portalAdmins = explode( ";" , strtolower( $dbConfig[ "engine.admin" ] ) );
+			if ( !in_array( $dLogin , $portalAdmins ) ) {
+				$Err = 800 ;
+				return ;
+			}
+		}
+
+		if ( !isset( $dLogin ) || ( $dLogin == "" ) ) {
+			$Err = 100 ;
+			return ;
+		}
+
+		$UserLogin = $dLogin ;
+
+		if ( !isset( $dPass ) || ( $dPass == "" ) ) {
+			$Err = 101 ;
+			return ;
+		}
+
+		$row = $portalDB->row( "select * from `accounts` where `login` = ? limit 1 ;" , "s" , strtolower( $UserLogin ) );
+		if ( $row === false  ) {
+			$Err = 102 ;
+			return ;
+		}
+
+		$ipList = array_fill_keys( strexp( $row[ "ip" ] ) , true );
+		if ( ( $row[ "any_ip" ] == 1 ) || ( isset( $ipList[ $_SERVER[ "REMOTE_ADDR" ] ] ) ) ) {
+		} else {
+			$Err = 104 ;
+			return ;
+		}
+
+		if ( $row[ "pass" ] != $dPass ) {
+			$Err = 103 ;
+			return ;
+		}
+
+		$LoginOk = true ;
+		$UserID = $row[ "id" ];
+		$UserGroups = explode( ";" , trim( strtolower( $row[ "groups" ] ) ) );
+
+		$UserWorkerID = $row[ "worker_id" ];
+		$row2 = $portalDB->row( "select * from `workers` where `id` = ? limit 1 ;" , "i" , $UserWorkerID );
+		$UserName             = $row2[ "name" ];
+		$UserDepartment       = $row2[ "dep" ];
+		$UserPost             = $row2[ "post_1_id" ];
+		$UserSpecialityNumber = $row2[ "spec" ];
+		$UserWorkerFirstID    = $row2[ "first_id" ];
+
+		$uaw = $portalDB->query( "select `id` , `dep` from `workers` where `first_id` = ?" , false , "i" , $row2[ "first_id" ] );
+		$UserAllWorkers = Array();
+		$UserAllDeps = Array();
+		foreach( $uaw as &$r ) {
+			$UserAllWorkers[]= $r[ "id" ];
+			$UserAllDeps[]= $r[ "dep" ];
+		}
+		unset( $r );
+
+		$daw = $portalDB->query( "select `first_id` from `workers` where ( `dep` <=> ? ) and ( `actual` <=> 1 )" , false , "i" , $UserDepartment );
+		foreach( $daw as &$r ) {
+			$tmp = $portalDB->row( "select group_concat( cast( `id` as CHAR ) separator \",\" ) as `ids` from `workers` where ( `first_id` <=> ? )" , "i" , $r[ "first_id" ] );
+			$DepAllWorkers = array_merge( $DepAllWorkers , explode( "," , $tmp[ "ids" ] ) );
+		}
+		unset( $r );
+
+		$row2 = $portalDB->row( "select `location` from `themes` where `id` = ? limit 1" , "i" , $row[ "theme" ] );
+		if ( $row2 !== false ) {
+			$UserThemeLoc = $row2[ "location" ];
+		} else {
+			$UserThemeLoc = "std0" ;
+		}
+
+
+		$UserLastVisitDate = date( "d-m-Y" , strtotime( $row[ "last_visit_date" ] ) );
+		$UserLastVisitTime = date( "H:i" , strtotime( $row[ "last_visit_time" ] ) );
+		setcookie( "uLastVisitDate" , $UserLastVisitDate , null , "/" , "" , "0" );
+		setcookie( "uLastVisitTime" , $UserLastVisitTime , null , "/" , "" , "0" );
+
+		$Temp = date( "d-m-Y" , time() );
+		$UserLastVisitDate = ( $UserLastVisitDate == $Temp ? "сегодня" : $UserLastVisitDate );
+		$Temp = date( "d-m-Y" , mktime( 0 , 0 , 0 , date( "m" ) , date( "d" ) - 1 , date( "Y" ) ) );
+		$UserLastVisitDate = ( $UserLastVisitDate == $Temp ? "вчера" : $UserLastVisitDate );
+		$portalDB->noResult( "update `accounts` set `last_visit_date` = ? , `last_visit_time` = ? where `id` = ? limit 1" , "ssi" , PrepDate( date( "d-m-Y" , time() ) ) , date( "H:i" , time() ) , $UserID );
+
+
+		$row2 = $portalDB->row( "select `rights` from `access-rights` where ( `user_id` = ? ) and ( `place` = ? ) limit 1" , "ii" , $UserID , $placeId );
+		if ( $row2 !== false ) {
+			$UserRights[ 0 ] = $row2[ "rights" ] ;
+		}
+
+		$UserOptions = $portalDB->query( "select * from `options` where ( `user_id` = ? )" , "op_name" , "i" , $UserID );
+	}
+?>

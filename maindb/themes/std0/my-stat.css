@@ -1,0 +1,21 @@
+
+	.stat-area {
+		padding : 0cm ;
+		margin : 0.5cm ;
+		width : 20cm ;
+		height : 28cm ;
+		
+		border : 1px dotted #808080 ;
+	}
+	
+	.expert-name {
+		text-align : center ;
+	}
+	
+	.tab-1 {
+		border-collapse : collapse ;
+	}
+	
+	.tab-1 td {
+		border : 1px solid #404040 ;
+	}

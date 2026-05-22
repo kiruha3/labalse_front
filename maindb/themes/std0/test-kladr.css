@@ -1,0 +1,154 @@
+	.wer-1 {
+		border : 1px solid #c0c0c0 ;
+		border-radius : 3px ;
+		height : 28px ;
+		width : 800px ;
+		position : absolute ;
+	}
+	
+	.wer-w {
+		position : absolute ;
+		left : 48px ;
+		right : 8px ;
+	}
+	
+	.wer-2-1 , .wer-2-2 {
+		box-sizing : border-box ;
+	 	width : 100% ;
+	 	font-size : 12pt ;
+	 	padding : 0px ;
+	 	margin : 0px ;
+	 	position : absolute ;
+	 	top : 3px ;
+	 	border : none ;
+	 	height : 24px ;
+	 	line-height : 24px ;
+	 	outline : none ;
+	 	font-family : "Arial" ;
+	 }
+	 
+	 .wer-2-1::-ms-clear , .wer-2-2::-ms-clear {
+	 	display : none ;
+	 }
+ 
+	.wer-2-1 {
+		color : #c0c0c0 ;
+		z-index : 10 ; 
+	}
+	
+	.wer-2-2 {
+		background : none ;
+		z-index : 20 ;
+	}
+	
+	.wer-ss {
+		box-sizing : border-box ;
+	 	width : 40px ;
+	 	font-size : 11pt ;
+	 	padding : 0px ;
+	 	margin : 0px ;
+	 	border : none ;
+	 	position : absolute ;
+	 	top : 3px ;
+	 	left : 4px ;
+	 	border : 1px solid #c0c0c0 ;
+	 	border-radius : 3px ;
+	 	height : 22px ;
+	 	line-height : 18px ;
+	 	outline : none ;
+	 	background-color : #c0c0c0 ;
+	 	/*color : #ffffff ;*/
+	 	z-index : 20 ;
+	 	text-align : center ;
+	 	cursor : pointer ;
+	}
+	
+	.wer-l {
+	 	box-sizing : border-box ;
+		width : 800px ;
+	 	font-size : 12pt ;
+	 	border : 1px solid #e0e0e0 ;
+	 	border-radius : 0px 0px 3px 3px ;
+	 	position : absolute ;
+	 	top : 28px ;
+	 	background-color : #ffffff ;
+	 	
+	 	max-height : 200px ;
+	 	overflow : auto ;
+	 	
+		box-shadow : 0px 2px 8px #c0c0c0 ;
+	}
+	
+	.wle , .wle-hl {
+		cursor : pointer ;
+		padding : 0px ;
+		color : #404040 ;
+		font-family : "Arial" ;
+	}
+	
+	.wle div , .wle-hl div {
+		padding : 2px 4px ;
+		text-overflow : ellipsis ;
+	}
+	
+	.wle-hl {
+		/*text-decoration : underline ;*/ 
+	}
+		
+	.wle-b {
+		color : #000000 ;
+		font-weight : bold ;
+		font-family : "Arial" ;
+	}
+	
+	.wle-cap {
+		display : inline-block ;
+	 	border-radius : 4px ;
+		font-style : italic ;
+		margin-right : 6px ;
+		padding : 2px 4px ;
+		font-size : 10pt ;
+	}
+
+	.wle-hl .wle-s-city {
+		background-color : #c0e0ff ;
+	}
+	
+	.wle-s-city .wle-cap {
+		background-color : #0080ff ;
+		border : 1px solid #0080ff ;
+		color : #ffffff ;
+	}
+	
+	.wle-hl .wle-s-street {
+		background-color : #c0ffc0 ;
+	}
+	
+	.wle-s-street .wle-cap {
+		background-color : #008000 ;
+		border : 1px solid #008000 ;
+		color : #ffffff ;
+	}
+	
+	.wle-hl .wle-s-pay {
+		background-color : #ffe0c0 ;
+	}
+	
+	.wle-s-pay .wle-cap {
+		background-color : #ffc000 ;
+		border : 1px solid #ffc000 ;
+		color : #ffffff ;
+	}
+	
+	.wle-hl .wle-s-all {
+		background-color : #e0e0e0 ;
+		color : #404040 ;
+	}
+	.wle .wle-s-all {
+		color : #404040 ;
+	}
+
+	.wle-s-all .wle-cap {
+		display : none ;
+	}
+	

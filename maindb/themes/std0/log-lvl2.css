@@ -1,0 +1,61 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+.main-tab {
+	border-collapse : collapse ;
+}
+
+
+.label {
+	width : 208px ;
+	border : 1px dotted #c0c0c0 ;
+	padding : 8px ;
+	text-align : center ;
+	font-size : 12pt ;
+}
+.label:hover {
+	width : 208px ;
+	border : 1px dotted #c0c0c0 ;
+	padding : 8px ;
+	text-align : center ;
+	font-size : 12pt ;
+	color : #ff0000 ;
+}
+
+
+.label input {
+	width : 80px ;
+	font-size : 14pt ;
+	text-align : center ;
+}
+
+.label select {
+	font-size : 14pt ;
+}
+
+.params {
+	width : 384px ;
+	border : 1px dotted #c0c0c0 ;
+	padding : 8px ;
+	text-align : left ;
+	font-size : 12pt ;
+}
+
+.params span:hover {
+	color : #ff0000 ;
+}
+ 
+.btn-area {
+	border : none ;
+	padding : 8px ;
+	text-align : center ;
+}
+
+.btn-area input {
+	padding : 8px 32px ;
+	text-align : center ;
+	font-size : 12pt ;
+}

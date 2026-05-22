@@ -1,0 +1,96 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	.letter-dlg-tab {
+		border-collapse : collapse ;
+		margin : 0px ;
+		width : 100% ;
+	}
+
+	.ldt-cap {
+		font-size : 8pt ;
+		text-align : center ;
+		border : 1px solid #606060 ;
+		font-weight : bold ;
+		color : #ffffff ;
+		background-color: #404040 ;
+		background-image: url( "cap.gif" );
+		height : 19px ;
+		padding : 0px ;
+	}
+
+	.ldt-prna-btn , .ldt-addressee , .ldt-destination {
+		font-size : 8pt ;
+		border : 1px solid #606060 ;
+		background-color : #e0e0e0 ;
+		white-space : normal ;
+		padding : 0px ;
+	}
+
+	.ldt-prna-btn {
+		min-width : 23px ;
+		width : 23px ;
+		max-width : 23px ;
+
+		text-align : center ;
+	}
+
+	.ldt-prna-img {
+		display : inline-block ;
+		cursor : pointer ;
+		background-image : url( "print.gif" );
+		width : 13px ;
+		height : 13px ;
+		border : 0px ;
+	}
+
+	.ldt-addressee {
+		text-align : center ;
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+
+	.ldt-destination {
+	}
+
+	.buttons-panel {
+		margin-top : 8px ;
+		text-align : center ;
+	}
+
+	.addressee-inp {
+		width : 250px ;
+	}
+
+	.destination-panel-inp , .destination-panel-btn {
+		text-align : center ;
+	}
+
+	.destination-panel-btn {
+		width : 27px ;
+	}
+	.destination-panel-inp {
+	}
+
+	.destination-panel-top {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.destination-inp {
+		width : 100% ;
+	}
+
+	.address-lnk {
+		cursor : pointer ;
+		color : #004080 ;
+	}
+
+	.address-lnk:hover {
+		color : #ff8000 ;
+	}
+

@@ -1,0 +1,361 @@
+	.tdlg-global-search * {
+		box-sizing : border-box ;
+	}
+	
+	.tdlg-global-search {
+		position : fixed ;
+		left : 50% ;
+		top : -5cm ;
+		transition : top 0.5s ;
+	}
+	
+	#search-frame-reserver .tdlg-global-search {
+		position : static ;
+		left : auto ;
+		top : auto ;
+	}
+	
+	.tdlg-global-search-panel {
+		width : 720px ;
+		border : 1px solid #876 ;
+		background-color : #fdb ;
+		border-radius : 3px ;
+		margin-left : -50% ;
+		padding : 10px ;
+		
+		box-shadow : 4px 4px 32px #000 ;
+	}
+	
+	#search-frame-reserver .tdlg-global-search-panel {
+		width : auto ;
+		display : block ;
+		border : none ;
+		background : none ;
+		box-shadow : none ;
+		margin : 0 ;
+	}
+	
+	.wer-1 {
+		border : 1px solid #ccc ;
+		border-radius : 3px ;
+		height : 31px ;
+		position : relative ;
+		display : block ;
+		background-color : #fff ;
+		background-image : url("/themes/std0/search.main.png");
+		background-position : right center ;
+		background-repeat : no-repeat ;
+	}
+	
+	.wer-w {
+		position : absolute ;
+		left : 48px ;
+		right : 26px ;
+	}
+	
+	.wer-2-1 , .wer-2-2 {
+	 	width : 100% ;
+	 	font-size : 12pt ;
+	 	padding : 0px ;
+	 	margin : 0px ;
+	 	position : absolute ;
+	 	top : 3px ;
+	 	border : none ;
+	 	height : 24px ;
+	 	line-height : 24px ;
+	 	outline : none ;
+	 	font-family : "Arial" ;
+	 }
+	 
+	 .wer-2-1::-ms-clear , .wer-2-2::-ms-clear {
+	 	display : none ;
+	 }
+ 
+	.wer-2-1 {
+		color : #ccc ;
+		z-index : 10 ; 
+	}
+	
+	.wer-2-2 {
+		background : none ;
+		z-index : 20 ;
+	}
+	
+	.wer-ss {
+		box-sizing : border-box ;
+	 	width : 40px ;
+	 	font-size : 11pt ;
+	 	padding : 0px ;
+	 	margin : 0px ;
+	 	border : none ;
+	 	position : absolute ;
+	 	top : 3px ;
+	 	left : 4px ;
+	 	border : 1px solid #ccc ;
+	 	border-radius : 3px ;
+	 	height : 22px ;
+	 	line-height : 18px ;
+	 	outline : none ;
+	 	background-color : #ccc ;
+	 	z-index : 20 ;
+	 	text-align : center ;
+	 	cursor : pointer ;
+	}
+
+	.wer-sl {
+		position : absolute ;
+		bottom : 31px ;
+
+		box-sizing : border-box ;
+		width : 240px ;
+		font-size : 12pt ;
+		border : 1px solid #eee ;
+		border-radius : 0px 0px 3px 3px ;
+		position : absolute ;
+		background-color : #fff ;
+
+		box-shadow : 0px 2px 8px #ccc ;
+
+		max-height : 320px ;
+		overflow-y : auto ;
+		z-index : 10000 ;
+
+	}
+
+	.wer-sli {
+		display : block ;
+	}
+	
+	.wer-l {
+	 	box-sizing : border-box ;
+		width : 100% ;
+	 	font-size : 12pt ;
+	 	border : 1px solid #eee ;
+	 	border-radius : 0px 0px 3px 3px ;
+	 	position : absolute ;
+	 	top : 31px ;
+	 	background-color : #fff ;
+	 	
+		box-shadow : 0px 2px 8px #ccc ;
+		
+		max-height : 320px ;
+		overflow-y : scroll ;
+		z-index : 10000 ;
+	}
+	
+	.wle , .wle-hl , .wer-sli {
+		cursor : pointer ;
+		padding : 0px ;
+		color : #444 ;
+		font-family : "Arial" ;
+	}
+	
+	.wle div , .wle-hl div , .wer-sli div {
+		padding : 2px 4px ;
+		text-overflow : ellipsis ;
+		overflow : hidden ;
+		white-space : nowrap ;
+		max-width : 100% ;
+	}
+	
+	.wle-hl {
+		/*text-decoration : underline ;*/ 
+	}
+		
+	.wle-b {
+		/*color : #000 ;*/
+		font-weight : bold ;
+		font-family : "Arial" ;
+	}
+	
+	.wle-cap {
+		display : inline-block ;
+	 	border-radius : 4px ;
+		/*font-style : italic ;*/
+		margin-right : 6px ;
+		padding : 2px 4px ;
+		font-size : 10pt ;
+		/*text-shadow : #000 1px 1px  1px ;*/
+	}
+
+	.wle-hl .wle-s-exp {
+		background-color : #cef ;
+	}
+	
+	.wle-s-exp .wle-cap {
+		background-color : #06c ;
+		border : 1px solid #06c ;
+		color : #fff ;
+	}
+	
+	.wle-hl .wle-s-bills {
+		background-color : #cfc ;
+	}
+	
+	.wle-s-bills .wle-cap {
+		background-color : #060 ;
+		border : 1px solid #060 ;
+		color : #fff ;
+	}
+	
+	.wle-hl .wle-s-pay {
+		background-color : #fec ;
+	}
+	
+	.wle-s-pay .wle-cap {
+		background-color : #c60 ;
+		border : 1px solid #c60 ;
+		color : #fff ;
+	}
+	
+	.wle-hl .wle-s-timet {
+		background-color : #fcf ;
+	}
+	
+	.wle-s-timet .wle-cap {
+		background-color : #808 ;
+		border : 1px solid #808 ;
+		color : #fff ;
+	}
+	
+	.wle-hl .wle-s-subpoena {
+		background-color : #cff ;
+	}
+	
+	.wle-s-subpoena .wle-cap {
+		background-color : #088 ;
+		border : 1px solid #088 ;
+		color : #fff ;
+	}
+	
+	.wle-hl .wle-s-portal {
+		background-color : #ddd ;
+	}
+	
+	.wle-s-portal .wle-cap {
+		background-color : #444 ;
+		border : 1px solid #000 ;
+		color : #fff ;
+	}
+
+	
+	.wle-hl .wle-s-all {
+		background-color : #eee ;
+		color : #444 ;
+	}
+	.wle .wle-s-all {
+		color : #444 ;
+	}
+
+	.wle-s-all .wle-cap {
+		display : none ;
+	}
+	
+	.wle-hl .wle-s-cor_t1 {
+		background-color : #ede5da ;
+	}
+	
+	.wle-s-cor_t1 .wle-cap {
+		background-color : #c5ab89 ;
+		border : 1px solid #625645 ;
+		color : #40382d ;
+		margin-right : 68px ;
+		position : relative ;
+		text-shadow : #ede5da 1px 1px  1px ;
+	}
+	
+	.wle-s-cor_t1 .wle-cap:after {
+		content : "вх. корр" ;
+		background-color : #0d0 ;
+		border : 1px solid #060 ;
+		color : #000 ;
+	}
+	
+	.wle-hl .wle-s-cor_t2 {
+		background-color : #ede5da ;
+	}
+	
+	.wle-s-cor_t2 .wle-cap {
+		background-color : #c5ab89 ;
+		border : 1px solid #625645 ;
+		color : #40382d ;
+		margin-right : 76px ;
+		position : relative ;
+		text-shadow : #ede5da 1px 1px  1px ;
+	}
+	
+	.wle-s-cor_t2 .wle-cap:after {
+		content : "исх. корр" ;
+		background-color : #0df ;
+		border : 1px solid #068 ;
+		color : #000 ;
+	}
+	
+	.wle-hl .wle-s-cor_t3 {
+		background-color : #ede5da ;
+	}
+	
+	.wle-s-cor_t3 .wle-cap {
+		background-color : #c5ab89 ;
+		border : 1px solid #625645 ;
+		color : #40382d ;
+		margin-right : 110px ;
+		position : relative ;
+		text-shadow : #ede5da 1px 1px  1px ;
+	}
+	
+	.wle-s-cor_t3 .wle-cap:after {
+		content : "вх. корр (опл)" ;
+		background-color : #fd0 ;
+		border : 1px solid #860 ;
+		color : #000 ;
+	}
+	
+	.wle-hl .wle-s-cor_t4 {
+		background-color : #ede5da ;
+	}
+	
+	.wle-s-cor_t4 .wle-cap {
+		background-color : #c5ab89 ;
+		border : 1px solid #625645 ;
+		color : #40382d ;
+		margin-right : 118px ;
+		position : relative ;
+		text-shadow : #ede5da 1px 1px  1px ;
+	}
+	
+	.wle-s-cor_t4 .wle-cap:after {
+		content : "исх. корр (опл)" ;
+		background-color : #fcc ;
+		border : 1px solid #855 ;
+		color : #000 ;
+	}
+	
+	.wle-s-cor_t1 .wle-cap:after ,
+	.wle-s-cor_t2 .wle-cap:after ,
+	.wle-s-cor_t3 .wle-cap:after ,
+	.wle-s-cor_t4 .wle-cap:after {
+		position : absolute ;
+		left : 62px ;
+		color : #000 ;
+		
+		display : inline-block ;
+	 	border-radius : 4px ;
+		padding : 2px 4px ;
+		font-size : 10pt ;
+		top : -1px ;
+		text-shadow : #cfc 1px 1px  1px ;
+	}
+	
+
+	
+	.tdlg-global-search #dbg {
+		position : fixed ;
+		width : 640px ;
+		height : 9cm ;
+		top : 0px ;
+		right : 0px ;
+		background-color : #ccc ;
+		border : 1px solid #000 ;
+		overflow : scroll ;
+	}

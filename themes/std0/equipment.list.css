@@ -1,0 +1,183 @@
+
+	.eq-tab {
+		margin : 2cm auto 0 ;
+		width : 720px ;
+	}
+	
+	.eq-info {
+		border : 1px solid #444 ;
+		background-color : #ccc ;
+		margin-bottom : 8px ;
+		padding : 23px 8px 8px ;
+		position : relative ;
+		border-radius : 4px ;
+	}
+
+	.eq-info.not-in-use {
+		border : 1px solid #444 ;
+		background-color : #fcc ;
+		margin-bottom : 8px ;
+		padding : 23px 8px 8px ;
+		position : relative ;
+		border-radius : 4px ;
+	}
+
+	.eq-h {
+		position : absolute ;
+		left : 0 ;
+		right : 0 ;
+		top : 0 ;
+		
+		height : 19px ;
+		max-height : 19px ;
+		line-height : 19px ;
+		
+		padding : 0 0 0 6px ;
+		 
+		background-image : url( "cap.gif" );
+		color : #fff ;
+		text-shadow : #000 1px 1px 1px ;
+	}
+	
+	.eqt-v {
+	}
+	
+	.eq-pl {
+		color : #555 ;
+		font-size : 8pt ;
+		display : inline ;
+	}
+		
+	.eq-pv  {
+		font-size : 12pt ;
+		color : #000 ;
+		text-shadow : #888 -1px -1px 1px ;
+		display : inline-block ;
+		margin-left : 4px ;
+	}
+	
+	.eq-n {
+	}
+	
+	.eq-rn {
+		float : right ;
+		margin-left : 32px ;
+	}
+		
+	.eq-name {
+		font-size : 9pt ;
+		line-height : 19px ;
+		vertical-align : middle ;
+		float : left ;
+	}
+	
+	.eq-label {
+		font-size : 8pt ;
+		color : #000 ;
+		margin-bottom : 8px ;
+	}
+	
+	.eq-clear , .eq-tab-separator {
+		clear : both ;
+	}
+	
+	.eq-tab-separator {
+		margin : 12px 0 6px ;
+		height : 0 ;
+		border-top : 1px solid #888 ; 
+		border-bottom : 1px solid #eee ;
+	}
+	
+	.eq-tt {
+		width : 128px ;
+	}
+	
+	.eq-td {
+		width : 128px ;
+	}
+	
+	.eq-doc-lnk , .eq-doc-lnk-err {
+		border-radius : 3px ;
+		color : #000 ;
+		font-size : 8pt ;
+		text-decoration : none ;
+		padding : 2px 8px ;
+		cursor : pointer ;
+		display : inline-block ;
+		margin-right : 4px ;
+	}
+	
+	.eq-doc-lnk {
+		border : 1px solid #c80 ;
+		background-color : #fc0 ;
+	}
+	
+	.eq-doc-lnk-err {
+		border : 1px solid #844 ;
+		background-color : #f88 ;
+		text-shadow : #ccc 1px 1px 1px ;
+	}
+	
+	.eq-menu {
+		display : none ;
+		position : absolute ;
+		border : 1px solid #444 ;
+		width : 256px ;
+		right : -258px ;
+		background-color : #ccc ;
+		padding : 4px ;
+		
+		
+		box-shadow : 6px 6px 8px #000 ;
+	}
+	
+	.eq-info:hover .eq-menu {
+		display : block ;
+	}
+
+	.eq-menu-item {
+		font-size : 8pt ;
+		color : #000 ;
+		cursor : pointer ;
+	}
+	.eq-menu-item:hover {
+		color : #f00 ;
+	}
+	
+	.eq-buttons {
+		display : inline-block ;
+		float : right ;
+		line-height : 19px ;
+		height : 19px ;
+		vertical-align : middle ;
+		margin-right : 4px ;
+		padding : 0 ;
+	}
+	
+	.eq-b-e , .eq-b-ad , .eq-b-l {
+		display : inline-block ;
+		cursor : pointer ;
+		padding : 0 ;
+		height : 13px ;
+		width : 13px ;
+		vertical-align : middle ;
+		margin-left : 2px ;
+		line-height : 19px ;
+	}
+	
+	.eq-b-e {
+		background-image : url( "edit-inv.png" );
+	}
+	
+	.eq-b-ad {
+		background-image : url( "cover-inv.png" );
+	}
+	
+	.eq-b-l {
+		background-image : url( "cover-inv.png" );
+	}
+	
+	.eq- {
+	}
+
+	

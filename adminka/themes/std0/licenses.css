@@ -1,0 +1,133 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	#licenseTooltip {
+		position : absolute ;
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+		/*padding : 4px 8px ;*/
+	}
+
+	.llt {
+		margin-top : 3cm ;
+		border-collapse : collapse ;
+		border : none ;
+		table-layout : fixed ;
+	}
+
+	/*.llt td {
+		border : 1px solid red ;
+	}*/
+
+	.llr-normal {
+		color : #000000 ;
+	}
+	.llr-expired {
+		color : #c0c0c0 ;
+	}
+
+	.llch-1 , .llch-2 , .llch-3 , .llch-4 , .llch-sep {
+		border-bottom : 1px solid #c0c0c0 ;
+		text-align : left ;
+		font-size : 8pt ;
+		color : #808080 ;
+	}
+
+	.llch-1 , .llc-1 {
+		width : 384px ;
+	}
+
+	.llch-2 , .llc-2 {
+		width : 96px ;
+	}
+
+	.llch-3 , .llc-3 {
+		width : 128px ;
+	}
+
+	.llc-1 , .llc-2 , .llc-3 , .llc-4 {
+		text-align : left ;
+	}
+
+	.llc-1 , .llc-2 , .llc-3 , .llc-4 , .llc-sep {
+		font-size : 8pt ;
+		border-bottom : 1px solid #e0e0e0 ;
+
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow: ellipsis ;
+	}
+
+	.llc-sep , .llch-sep {
+		width : 16px ;
+	}
+
+	.date-no-limit {
+		font-weight : bold ;
+	}
+
+	.date-point {
+		font-weight : bold ;
+	}
+
+	.lic-count {
+		font-weight : bold ;
+	}
+
+	.cllt {
+		border-collapse : collapse ;
+		margin : 4px 8px ;
+		float : left ;
+	}
+
+	/*.cllt td {
+		border : 1px solid red ;
+	}*/
+
+	.cllc-b {
+		border-bottom : 1px solid #e0e0e0 ;
+	}
+
+	.cllch-1 , .cllch-2 {
+		font-size : 8pt ;
+		color : #808080 ;
+		border-bottom : 1px solid #c0c0c0 ;
+	}
+
+	.cllch-1 , .cllc-1 {
+		width : 128px ;
+	}
+
+	.cllch-2 , .cllc-2 {
+		width : 64px ;
+	}
+
+	.cllch-2 , .cllc-2 {
+		text-align : right ;
+	}
+
+	.cllc-1 , .cllc-2 {
+		font-size : 8pt ;
+
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow: ellipsis ;
+	}
+
+	.lic-link {
+		color : #000000 ;
+		text-decoration : none ;
+		cursor : pointer ;
+		margin-right : 3px ;
+	}
+
+	.lic-link:hover {
+		color : #ff0000 ;
+		text-decoration : underline ;
+	}
+
+
+

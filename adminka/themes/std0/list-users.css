@@ -1,0 +1,10 @@
+
+	.users-list {
+		border-collapse : collapse ;
+	}
+
+	.users-list td {
+		border : 1px solid #404040 ;
+	}
+
+

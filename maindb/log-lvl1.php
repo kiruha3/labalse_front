@@ -1,0 +1,80 @@
+<?php
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	include_once( "../core.php" );
+	require_once( "lconfig.php" );
+
+	TryLoginFromCookie( $PlaceID );
+	if ( !$LoginOk ) {
+		Redirect( "../auth.php" );
+	}
+
+	if ( count( $UserRights ) == 1 ) {
+		$Rights = ParseRights( strtoupper( $UserRights[ 0 ] ) );
+		if ( array_key_exists( "EXTENTIONS" , $Rights ) ) {
+			$maySEARCH = in_array( "SEARCH" , $Rights[ "EXTENTIONS" ] );
+		} else {
+			$maySEARCH = false ;
+		}
+
+		$GoOut = !$maySEARCH ;
+	} else {
+		$GoOut = true ;
+	}
+
+	$GoOut = false ;
+	if ( $GoOut ) {
+		MainHead_L2( "" , "" , array( "../%UT/buttons.css" , "../%UT/forms.css" ) , array() , "hlp/no_access.html" );
+		echo "<br><br><br><br><br>" ;
+		MessageForm();
+		closeHtml();
+		exit ;
+	}
+
+	MainHead_L2( "База - карточка 1 уровня" , "<a href=\"main.php\">База</a> - карточка 1 уровня" , array( "../%UT/buttons.css" , "%UT/log-lvl1.css" ) , array( "files/log-lvl1.js" ) , "hlp/main.html" );
+
+	$res = $portalDB->row( "select min( YEAR( `date` ) ) as `miy` , max( YEAR( `date` ) ) as `may` from `matincoming`" );
+
+	echo "<form method=\"post\" action=\"log-lvl1.print.php\">
+		<table align=\"center\" class=\"ST\">
+			<tr>
+				<td colspan=\"3\" class=\"ST-CT\">" ;
+					for ( $i = intval( $res[ "miy" ] ) ; $i <= intval( $res[ "may" ] ) ; $i++ ) {
+						if ( $i == intval( $res[ "may" ] ) ) {
+							echo "<span class=\"i-year\"><input name=\"i_year\" type=\"radio\" value=\"".$i."\" checked> ".$i."</span>" ;
+						} else {
+							echo "<span class=\"i-year\"><input name=\"i_year\" type=\"radio\" value=\"".$i."\"> ".$i."</span><span class=\"i-year-sep\"></span>" ;
+						}
+					}
+				echo "</td>
+			</tr>" ;
+
+			for( $i = 1 ; $i <= 3 ; $i++ ) {
+				echo "<tr>
+					<td class=\"D\">
+						Номер дела
+					</td>
+					<td class=\"I\">
+						<textarea id=\"i_mat_number_".$i."\" name=\"i_mat_number_".$i."\" rows=\"1\" ".( $i == 1 ? "onkeyup=\"mnc()\"" : "" )." class=\"i-mat-number\"></textarea>
+					</td>
+					<td class=\"log-params\">
+						<div class=\"log-param\"><input name=\"i_ex_data_".$i."_1\" type=\"checkbox\" unchecked> Сведения о приостановлении срок производства экспертизы</div>
+						<div class=\"log-param\"><input name=\"i_ex_data_".$i."_2\" type=\"checkbox\" unchecked> Дата сдачи заключения, акта и др для отправки</div>
+						<div class=\"log-param\"><input name=\"i_ex_data_".$i."_3\" type=\"checkbox\" unchecked> Дата и способ отправки заключения, акта и др.</div>
+					</td>
+				</tr>" ;
+			}
+
+			echo "<tr>
+				<td colspan=\"3\" class=\"ST-CT\">
+					<input type=\"submit\" value=\"пред просмотр\" class=\"btn\">
+				</td>
+			</tr>
+		</table>
+	</form>" ;
+	closeHtml_Print();
+?>

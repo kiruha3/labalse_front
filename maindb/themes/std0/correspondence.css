@@ -1,0 +1,1310 @@
+@CHARSET "UTF-8" ;
+
+	body ~ :checked {}
+
+
+	input , select , textarea , .nrr-dlg-wrapper , .nrr-dlg {
+		box-sizing : border-box ;
+	}
+	
+	label {
+		cursor : pointer ;
+	}
+	
+	label:hover {
+		background-color : #fec ;
+	}
+
+	.pages {
+		text-align : center ;
+		min-width : 32px ;
+		width : 32px ;
+		max-width : 32px ;
+	}
+	
+	.cor-title {
+		text-align : center ;
+		font-size : 16pt ;
+		margin-top : 1em ;
+		margin-bottom : 1em ;
+	}
+	
+	.cor-marks-col {
+		width : 80px ;
+		min-width : 80px ;
+		font-size : 9pt !important ;
+	}
+	
+	.cor-marks-area {
+		position : relative ;
+		font-size : inherit !important ;
+	}
+	
+	.cor-num {
+		text-decoration : none ;
+		cursor : pointer ;
+		color : #fff ;
+	}
+	.cor-num:hover {
+		color : #0f0 ;
+		text-decoration : underline ;
+	}
+	
+	.cor-reply {
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow : ellipsis ;
+	}
+	
+	.cor-reply + .cor-reply {
+		border-top : 1px dotted #666 ;
+		
+	}
+	
+	.cor-reply:hover {
+		color : #fc0 ;
+	}
+	
+	.cor-files-lnk {
+		padding : 2px 8px ;
+		border : 1px solid #c80 ;
+		border-radius : 3px ;
+		color : #000 ;
+		background-color : #fc0 ;
+		display : inline-block ;
+		vertical-align : middle ;
+		
+		white-space : nowrap ;
+		overflow : hidden ;
+		
+		text-overflow : ellipsis ;
+		box-sizing : border-box ;
+		width : 140px ;
+		maw-width : 140px ;
+		margin : 1px ;
+		
+		cursor : pointer ;
+		text-decoration : none ;
+	}
+	
+	.cor-files-ab {
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -175px ;
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+	}
+	
+	.cor-b-e , .cor-b-c , .cor-b-a , .cor-b-l {
+		background-image : url( "sprites1.png" );
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		margin : 1px ;
+	}
+	
+	.cor-b-e {
+		width : 13px ;
+		height : 13px ;
+		background-position : 0px -119px ;
+	}
+	.cor-b-c {
+		width : 13px ;
+		height : 13px ;
+		background-position : 0px -106px ;
+	}
+	
+	.cor-b-a {
+		width : 13px ;
+		height : 13px ;
+		background-position : 0px -93px ;
+	}
+
+	.cor-b-l {
+		width : 13px ;
+		height : 13px ;
+		background-position : -13px -93px ;
+	}
+
+	.b-l-at {
+		color : #ff0000 ;
+		text-decoration : none ;
+		position : relative ;
+	}
+
+	.b-l-at span {
+		text-shadow : #FFFFFF 1px 0px, #FFFFFF -1px 0px, #FFFFFF 0px 1px, #FFFFFF 0px -1px, #FFFFFF 1px 1px, #FFFFFF -1px -1px, #FFFFFF -1px 1px, #FFFFFF 1px -1px, #FFFFFF 0 0 1px ;
+		padding : 0px ;
+		position : absolute ;
+		right : -2px ;
+		bottom : -4px ;
+	}
+
+
+
+	.nrr-dlg-wrapper {
+		position : fixed ;
+		left : 50% ;
+		top : 5cm ;
+		width : 1440px ;
+		max-width : 100% ;
+		max-width : calc( 100% - 20px ) ;
+	}
+	
+	.nrr-dlg {
+		border : 1px solid black ;
+		padding : 2px 2px 2px 2px ;
+		
+		position : relative ;
+		left : -50% ;
+		width : 100% ;
+		height : 640px ;
+
+		background-color : #ddd ;
+		/*background-image : url( 'bg_337394.png' );*/
+		
+		text-align : center ;
+		
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.nrr-dlg-cap {
+		background-color : #0cf ;
+		height : 19px ;
+		position : absolute ;
+		left : 0px ;
+		right : 0px ;
+		top : 0px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -293px ;
+		line-height : 19px ;
+		padding : 0px 0px 0px 6px ;
+		color : #fff ;
+		font-size : 9pt ;
+		text-align : left ;
+		text-shadow : #000 1px 1px 1px ;
+	}
+	
+	.nrr-dlg-close-btn {
+		background-color : #0cf ;
+		height : 14px ;
+		width : 25px ;
+		position : absolute ;
+		right : 2px ;
+		top : 2px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -66px ;
+		line-height : 14px ;
+		padding : 0px ;
+		color : #fff ;
+		font-size : 8pt ;
+		font-weight : bold ;
+		text-align : center ;
+		cursor : pointer ;
+	}
+	
+	.nrr-dlg-close-btn:hover {
+		background-position : 0px -52px ;
+	}
+	
+	.nrr-coll {
+		position : absolute ;
+		left : 4px ;
+		right : 67% ;
+		top : 23px ;
+		bottom : 44px ;
+	}
+	
+	.nrr-colc {
+		position : absolute ;
+		left : 33% ;
+		right : 33% ;
+		top : 23px ;
+		bottom : 44px ;
+	}
+	
+	.nrr-t {
+		position : absolute ;
+		width : 100% ;
+		height : 100% ;
+		/*background-color : #ff0000 ;*/
+		border-collapse : collapse ;
+	}
+	
+	.nrr-t-d , .nrr-t-v , .nrr-toa-c , .nrr-descr-c {
+		padding : 4px ;
+		text-align : center ;
+		/*border : 1px dotted #808080 ;*/
+		height : 1px ;
+	}
+	
+	.nrr-t-d {
+		font-size : 10pt ;
+	}
+	
+	.nrr-type {
+		width : 100% ;
+	}
+	
+	.nrr-date , .nrr-num {
+		font-size : 11pt ;
+		text-align : center ;
+	}
+	
+	.nrr-date::-ms-clear , .nrr-num::-ms-clear {
+		display : none ;
+	}
+	
+	.nrr-num {
+		width : 128px ;
+	}
+	td.nrr-ext-num .nrr-field-wrapper {
+		width : 108px ;
+		display : inline-block ;
+	}
+	
+		
+	.nrr-date {
+		width : 96px ;
+	}
+	
+	.nrr-name {
+		width : 100% ;
+	}
+	
+	.nrr-field-wrapper {
+		padding-right : 20px ;
+		position : relative ;
+	}
+	
+	.nrr-field-wrapper input {
+		width : 100% ;
+	}
+
+	
+	.nrr-descr {
+		width : 100% ;
+		height : 4em ;
+	}
+	
+	.nrr-page-num {
+		width : 32px ;
+		text-align : center ;
+	}
+	
+	.nrr-addressee-contacts-label {
+		text-align : left ;
+		margin-top : 1em ;
+		margin-bottom : 0.25em ;
+	}
+	.nrr-addressee-contacts-area {
+		text-align : left ;
+		border : 1px solid #888 ;
+		padding : 2px ;
+		min-height : 8em ;
+		height : 8em ;
+		max-height : 8em ;
+		overflow-x : auto ;
+		overflow-y : scroll ;
+	}
+	
+	.nrr-addressee-contacts-tab {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+	
+	.nrr-act-row + .nrr-act-row {
+		border-top : 1px dotted #444 ;
+	}
+	
+	.nrr-act-name , .nrr-act-value ,
+	.nrr-act-repl , .nrr-act-btns {
+		padding : 1px 0px ;
+		margin : 0px ;
+	}
+	
+	.nrr-act-name {
+		width : 64px ;
+	}
+
+	.nrr-act-value {
+	}
+
+	.nrr-act-repl {
+		width : 19px ;
+		text-align : center ;
+	}
+	
+	.nrr-act-repl input {
+		margin : 0px ;
+		vertical-align : middle ;
+	}
+	
+	.nrr-act-btns {
+		width : 19px ;
+		text-align : center ;
+	}
+	
+	.nrr-addressee-contacts-btn {
+		text-align : center ;
+	}
+	
+	.nrr-act-dcb , .nrr-act-abp , .nrr-alt-dab {
+		width : 15px ;
+		height : 15px ;
+		display : inline-block ;
+		background : url( 'sprites1.png' );
+		vertical-align : middle ;
+	}
+
+	.nrr-act-dcb , .nrr-alt-dab {
+		background-position : 0px -145px ;
+		cursor : pointer ;
+	}
+
+	.nrr-act-abp {
+		background-position : 0px -175px ;
+		margin-right : 4px ;
+	}
+
+	.nrr-addressee-list-label {
+		text-align : left ;
+		margin-top : 1em ;
+		margin-bottom : 0.25em ;
+	}
+	.nrr-addressee-list-area {
+		text-align : left ;
+		margin-bottom : 1em ;
+		border : 1px solid #888 ;
+		padding : 2px ;
+		min-height : 3em ;
+		height : 7em ;
+		max-height : 7em ;
+		
+		overflow-x : auto ;
+		overflow-y : scroll ;
+	}
+	
+	.nrr-addressee-list-tab {
+		width : 100% ;
+		border-collapse : collapse ;
+		font-size : 8pt ;
+	}
+	
+	.nrr-alt-row + .nrr-alt-row {
+		border-top : 1px dotted #444 ;
+	}
+	
+	.nrr-alt-name , .nrr-alt-cnt ,
+	.nrr-alt-btns {
+		padding : 1px 0px ;
+		margin : 0px ;
+	}
+	
+	.nrr-alt-name {
+		
+	}
+
+	.nrr-alt-cnt div {
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow : ellipsis ;
+	}
+	
+	.nrr-alt-cnt {
+		width : 128px ;
+		max-width : 128px ;
+	}
+	
+	.nrr-alt-ss-ok , .nrr-alt-ss-wait {
+		width : 13px ;
+		height : 13px ;
+		background-image : url( "sprites1.png" );
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		margin-right : 4px ;
+	}
+	
+	.nrr-alt-ss-ok {
+		background-position : -13px -39px ;
+	}
+	.nrr-alt-ss-wait {
+		background-position : -13px -26px ;
+	}
+	
+	.nrr-alt-sd {
+		width : 80px ;
+		display : inline-block ;
+		vertical-align : middle ;
+		margin-right : 4px ;
+		text-align : right ;
+	}
+
+	.nrr-alt-btns {
+		width : 19px ;
+		text-align : center ;
+	}
+	
+	.nrr-alt-cnt , .nrr-alt-btns {
+		border-left : 1px dotted #888 ;
+	}
+	
+	
+	.nrr-addressee-list-btn {
+		text-align : center ;
+	}
+	
+	.nrr-m-c {
+		padding : 2px 4px ;
+		width : 100% ;
+		height : 100% ;
+	}
+
+	.nrr-marks-area {
+		min-height : 48px ;
+		text-align : center ;
+		height : 100% ;
+		width : 100% ;
+		padding : 0px ;
+		min-height : 4em ;
+		position : relative ;
+	}
+	
+	.nrr-mark-cont {
+		white-space : nowrap ;
+		padding : 0px ;
+		margin : 0px ;
+	}
+	.nrr-mark-cont + .nrr-mark-cont {
+	}
+	
+	.nrr-mark-add-btn {
+		position : absolute ;
+		display : inline-block ;
+		left : 0px ;
+		top : 0px ;
+		bottom : 0px ;
+		right : 0px ;
+		overflow-y : auto ;
+	}
+	
+	.nrr-mark-add-btn-img {
+		display : inline-block ;
+		width : 15px ;
+		height : 15px ;
+		background-image : url( 'sprites1.png' );
+		background-position : 0px -175px ;
+		margin : 2px ;
+		cursor : pointer ;
+	}
+	
+	.nrr-mark-add-lst {
+		display1 : none ;
+		position : relative ;
+		border : 1px solid #000 ;
+		background-color : #fff ;
+		text-align : left ;
+		padding : 2px 4px ;
+	}
+	
+	/*.nrr-mark-add-btn:hover .nrr-mark-add-lst {
+		display : inline-block ;
+	}*/
+	
+	.nrr-mark-red , .nrr-mark-green , .nrr-mark-blue , .nrr-mark-yellow , .nrr-mark-grey , .nrr-mark-purple {
+		display : inline-block ;
+		padding : 0.125em 1em ;
+		border-radius : 0.25em ;
+		font-size : 10pt ;
+		font-family : 'Helvetica Neue' , Helvetica , sans-serif ;
+		margin : 1px ;
+	}
+	
+	.nrr-marks-area .nrr-mark-red , 
+	.nrr-marks-area .nrr-mark-green ,
+	.nrr-marks-area .nrr-mark-blue ,
+	.nrr-marks-area .nrr-mark-yellow ,
+	.nrr-marks-area .nrr-mark-grey ,
+	.nrr-marks-area .nrr-mark-purple {
+		border-width : 1px ;
+		border-style : solid ;
+	}
+	
+	.cor-marks-area .nrr-mark-red , 
+	.cor-marks-area .nrr-mark-green ,
+	.cor-marks-area .nrr-mark-blue ,
+	.cor-marks-area .nrr-mark-yellow ,
+	.cor-marks-area .nrr-mark-grey ,
+	.cor-marks-area .nrr-mark-purple {
+		position : absolute ;
+		border-width : 1px ;
+		border-style : solid ;
+		font-size : inherit !important ;
+		
+		min-width : 100% ;
+		min-width : calc( 100% + 8px ) ;
+		width : 100% ;
+		width : calc( 100% + 8px ) ;
+		max-width : 100% ;
+		max-width : calc( 100% + 8px ) ;
+		
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow : ellipsis ;
+
+		box-sizing : border-box ;
+		
+		cursor : pointer ;
+		
+		margin : -0.75em 0 0 -8px ;
+		margin-top : calc( -0.75em - 1px );		
+	}
+
+	.cor-marks-area .nrr-mark-red:hover , 
+	.cor-marks-area .nrr-mark-green:hover ,
+	.cor-marks-area .nrr-mark-blue:hover ,
+	.cor-marks-area .nrr-mark-yellow:hover ,
+	.cor-marks-area .nrr-mark-grey:hover ,
+	.cor-marks-area .nrr-mark-purple:hover {
+		overflow : visible ;
+		width : auto ;
+		max-width : none ;
+		z-index : 10 ;
+	}
+
+	.nrr-mark-red {
+		border-color : #800 ;
+		color : #fff ;		
+		text-shadow : #633 1px 1px 0 ;
+		
+		background: #d64b4b;
+		background: -webkit-gradient(linear, left top, left bottom, from(#d64b4b), to(#ab2c2c));
+		background: -webkit-linear-gradient(top, #d64b4b, #ab2c2c);
+		background: -moz-linear-gradient(top, #d64b4b, #ab2c2c);
+		background: -ms-linear-gradient(top, #d64b4b, #ab2c2c);
+		background: -o-linear-gradient(top, #d64b4b, #ab2c2c);
+		background-image: -ms-linear-gradient(top, #d64b4b 0%, #ab2c2c 100%);
+	}
+	
+	.nrr-mark-green {
+		border-color : #060 ;
+		color : #fff ;
+		text-shadow : #242 1px 1px 0 ;
+		
+		background: #3ca34a;
+		background: -webkit-gradient(linear, left top, left bottom, from(#3ca34a), to(#207a2c));
+		background: -webkit-linear-gradient(top, #3ca34a, #207a2c);
+		background: -moz-linear-gradient(top, #3ca34a, #207a2c);
+		background: -ms-linear-gradient(top, #3ca34a, #207a2c);
+		background: -o-linear-gradient(top, #3ca34a, #207a2c);
+		background-image: -ms-linear-gradient(top, #3ca34a 0%, #207a2c 100%);
+	}
+
+	.nrr-mark-blue {
+		border-color : #048 ;
+		color : #fff ;
+		text-shadow : #336 1px 1px 0 ;
+		
+		background: #0099bf;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0099bf), to(#006980));
+		background: -webkit-linear-gradient(top, #0099bf, #006980);
+		background: -moz-linear-gradient(top, #0099bf, #006980);
+		background: -ms-linear-gradient(top, #0099bf, #006980);
+		background: -o-linear-gradient(top, #0099bf, #006980);
+		background-image: -ms-linear-gradient(top, #0099bf 0%, #006980 100%);
+	}
+
+	.nrr-mark-yellow {
+		border-color : #860 ;
+		color : #fff ;
+		text-shadow : #430 1px 1px 0px ;
+		
+		background: #fc0 ;
+		background: -webkit-gradient(linear, left top, left bottom, from(#fc0), to(#c90));
+		background: -webkit-linear-gradient(top, #fc0, #c90);
+		background: -moz-linear-gradient(top, #fc0, #c90);
+		background: -ms-linear-gradient(top, #fc0, #c90);
+		background: -o-linear-gradient(top, #fc0, #c90);
+		background-image: -ms-linear-gradient(top, #fc0 0%, #c90 100%);
+	}
+	
+	.nrr-mark-grey {
+		border-color : #444 ;
+		color : #fff ;
+		text-shadow : #430 1px 1px 0px ;
+		
+		background: #ccc ;
+		background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+		background: -webkit-linear-gradient(top, #ccc, #999);
+		background: -moz-linear-gradient(top, #ccc, #999);
+		background: -ms-linear-gradient(top, #ccc, #999);
+		background: -o-linear-gradient(top, #ccc, #999);
+		background-image: -ms-linear-gradient(top, #ccc 0%, #999 100%);
+	}
+
+
+	.nrr-mark-purple {
+		border-color : #608 ;
+		color : #fff ;
+		text-shadow : #304 1px 1px 0px ;
+		
+		background: #c0f ;
+		background: -webkit-gradient(linear, left top, left bottom, from(#c0f), to(#90c));
+		background: -webkit-linear-gradient(top, #c0f, #90c);
+		background: -moz-linear-gradient(top, #c0f, #90c);
+		background: -ms-linear-gradient(top, #c0f, #90c);
+		background: -o-linear-gradient(top, #c0f, #90c);
+		background-image: -ms-linear-gradient(top, #c0f 0%, #90c 100%);
+	}
+
+	.nrr-toa {
+		width : 100% ;
+	}
+	
+	.nrr-from-agency {
+		width : 100% ;
+		height : 48px ;
+	}
+	
+	.nrr-a-c {
+		padding : 2px 4px ;
+		width : 100% ;
+		height : 100% ;
+		text-align : center ;
+		/*border : 1px dotted #808080 ;*/
+	}
+	
+	.nrr-a-c1 {
+		padding : 0px ;
+		width : 100% ;
+		height : 100% ;
+		min-height : 4em ;
+		text-align : center ;
+		position : relative ;
+	}
+	
+	.nrr-a-c2 {
+		position : absolute ;
+		left : 0px ;
+		right : 0px ;
+		top : 0px ;
+		bottom : 0px ;
+		width : 100% ;
+		height : 100% ;
+	}
+	
+	.nrr-agency-sel {
+		width : 100% ;
+		height : 100% ;
+	}
+	
+	.nrr-from-agency-address-c {
+		height : 2.5em ;
+		min-height : 2.5em ;
+		font-size : 9pt ;
+		width : 100% ;
+	}
+	
+	.nrr-from-agency-address {
+		cursor : pointer ;
+		text-decoration : none ;
+		
+	}
+	
+	.nrr-inline-label {
+		float : left ;
+		font-size : 8pt ;
+	}
+	
+	.nrr-contact {
+		width : 100% ;
+	}
+	
+	.nrr-colr {
+		position : absolute ;
+		left : 67% ;
+		right : 4px ;
+		top : 23px ;
+		bottom : 44px ;
+		/*border-top : 1px dotted #808080 ;
+		border-right : 1px dotted #808080 ;
+		border-bottom : 1px dotted #808080 ;*/
+	}
+		
+	.nrr-elt-area {
+		position : absolute ;
+		width : 100% ;
+		right : 0px ;
+		top : 32px ;
+		bottom : 0px ;
+		overflow-y : scroll ;
+		font-size : 10pt ;
+		/*border-top : 1px dotted #808080 ;*/
+	}
+	
+	
+	.nrr-elt {
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+	
+	.nrr-elt-n {
+		text-align : left ;
+	}
+	
+	.nrr-elt-mark1 {
+		color : #f00 ;
+		font-weight : bold ;
+	}
+	.nrr-elt-mark2 {
+		color : #00f ;
+		font-weight : bold ;
+	}
+	.nrr-elt-mark3 {
+		color : #c60 ;
+		font-weight : bold ;
+	}
+
+	.nrr-tool-panel {
+		position : absolute ;
+		bottom : 4px ;
+		left : 4px ;
+		right : 4px ;
+	}
+	
+	.nrr-lnk {
+		font-size : 10pt ;
+		text-decoration : none ;
+		cursor : pointer ;
+	}
+	.nrr-lnk + .nrr-lnk {
+		margin-left : 16px ;
+	}
+
+	.lnk-ok {
+		color : #008000 ;
+	}
+	
+	.lnk-cancel {
+		color : #ff0000 ;
+	}
+	
+	.nrr-lnk:hover {
+		text-decoration : underline ;
+	}
+	
+	select option[disabled] {
+		display : none ;
+	}
+	
+	.tmpl-dlg-mark-execute {
+		width : 16px ;
+		height : 16px ;
+		background-image : url( "mark.png" );
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		right : 0px ;
+		position : absolute ;
+		top : 50% ;
+		margin-top : -8px ; 
+	}
+
+	.tmpl-dlg-mark-add {
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -175px ;
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		right : 0px ;
+		position : absolute ;
+		top : 50% ;
+		margin-top : -8px ; 
+	}
+	
+	
+	
+	
+	
+	/* ******************************************************************** */
+	
+	.fu-dlg-wrapper {
+		position : fixed ;
+		left : 50% ;
+		top : 5cm ;
+		width : 1200px ;
+		max-width : 100% ;
+		max-width : calc( 100% - 20px ) ;
+	}
+	
+	.fu-dlg-bg {
+		position : fixed ;
+		left : -3px ;
+		top : -3px ;
+		right : -3px ;
+		bottom : -3px ;
+		background-color : #000 ;
+		opacity : 0.8 ;
+	}
+	
+	.fu-dlg {
+		border : 1px solid black ;
+		padding : 8px ;
+		
+		position : relative ;
+		left : -50% ;
+		width : 100% ;
+		/*height : 384px ;*/
+
+		background-color : #ddd ;
+		/*background-image : url( 'bg_337394.png' );*/
+		
+		text-align : center ;
+		
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.fu-dlg-cap {
+		background-color : #0cf ;
+		height : 19px ;
+		position : absolute ;
+		left : 0px ;
+		right : 0px ;
+		top : 0px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -293px ;
+		line-height : 19px ;
+		padding : 0px 0px 0px 6px ;
+		color : #fff ;
+		font-size : 9pt ;
+		text-align : left ;
+		text-shadow : #000 1px 1px 1px ;
+	}
+	
+	.fu-dlg-close-btn {
+		background-color : #0cf ;
+		height : 14px ;
+		width : 25px ;
+		position : absolute ;
+		right : 2px ;
+		top : 2px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -66px ;
+		line-height : 14px ;
+		padding : 0px ;
+		color : #fff ;
+		font-size : 8pt ;
+		font-weight : bold ;
+		text-align : center ;
+		cursor : pointer ;
+	}
+	
+	.fu-dlg-close-btn:hover {
+		background-position : 0px -52px ;
+	}
+	
+	.fu-tla {
+		border : 1px solid #444 ;
+		padding : 8px ;
+		display : inline-block ;
+		position : relative ;
+		background-color : #fff ;
+	}
+	
+	.fu-tla * {
+		box-sizing : border-box ;
+	}
+	
+	.fu-tlal {
+		position : absolute ;
+		left : 0px ;
+		top : 0px ;
+		right : 0px ;
+		bottom : 0px ;
+		background-color : #000 ;
+		opacity : 0.7 ;
+	}
+	
+	.fu-tl {
+		height : 384px ;
+		max-height : 384px ;
+		overflow-x : hidden ;
+		overflow-y : auto ;
+	}
+	
+	.fu-tgt-lnk {
+		display : block ;
+		font-size : 10pt ;
+		width : 384px ;
+		overflow-x : hidden ;
+		text-overflow : ellipsis ;
+		white-space : nowrap ;
+		padding-left : 8px ;
+		cursor : pointer ;
+		text-align : left ;
+	}
+	.fu-tgt-lnk:hover {
+		background-color : #444 ;
+		color : #fff ;
+	}
+	
+
+	.fu-pdf-pa {
+		border : 1px solid #444 ;
+		padding : 8px ;
+		display : inline-block ;
+		margin-left : 16px ;
+		vertical-align : top ;
+		/*background-color : #456 ;*/
+	}
+	
+	.fu-pa-sizer {
+		height : 0px ;
+		width : 720px ; 
+	}
+	
+	.fu-pdf-pw {
+		height : 384px ;
+		max-height : 384px ;
+		overflow-y : auto ;
+		overflow-x : hidden ;
+	}
+	
+	.fu-toolbar {
+		margin-top : 16px ;
+		text-align : center ;
+	}
+	
+	.fu-toolbar * {
+		vertical-align : middle ;
+	}
+	
+	/* all tabs */
+	
+	.fu-tabs {
+		margin-top : 15px ;
+		text-align : left ;
+		background-color : inherit ;
+		position : relative ;
+	}
+	
+	.fu-tabs > span {
+		margin-bottom : 8px ;
+		border-bottom : 1px solid #666 ;
+		display : block ;
+	}
+
+	.fu-tabs > input {
+		display : none ;
+	}
+
+	.fu-tabs > label {
+		border : 1px solid #666 ;
+		border-bottom : none ;
+		border-radius : 4px 4px 0 0 ;
+		cursor : pointer ;
+		display : inline-block ;
+		padding : 0.125em 1em ;
+		font-size : 12pt ;
+		margin : 1px 1px -1px 1px ;
+		color : #888 ;
+	}
+	
+	.fu-tabs :checked + * + label {
+		background-color : inherit ;
+		padding : 0.25em 1em ;
+		border-top : 0.125em solid #444 ;
+		color : #444 ;
+	}
+	.fu-tabs > label:hover {
+		background-color : inherit ;
+		color : #000 ;
+	}
+	.fu-tabs :checked + * + label:hover {
+		border-color : #000 ;
+		color : #000 ;
+	} 
+	
+	.fu-tabs > div {
+		visibility : hidden ;
+	}
+	.fu-tabs :checked + * + * + * + * + div {
+		visibility : visible ;
+	}
+	
+	.fu-file-select-area {
+		position : absolute ;
+		top : 40% ;
+		left : 50% ;
+	}
+	
+	.fu-file-select-area div {
+		 position : relative ;
+		 left : -50% ;
+	}
+	
+	.fu-file {
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		padding : 1px ;
+	}
+	
+	/* ************************************************ */
+	
+	.error-dlg-wrapper {
+		
+	}
+	
+	.error-dlg {
+		
+	}
+
+	/* ********************************************************* */
+	.letter-dlg {
+		position : fixed ;
+		margin-left : -400px ;
+		padding : 20px 10px 10px 10px ;
+		width : 800px ;
+		top : 7cm ;
+		left : 50% ;
+
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+
+
+		box-shadow : 6px 6px 8px #000 ;
+	}
+
+	.letter-dlg-cont {
+		width : 100% ;
+		max-height : 400px ;
+
+		border : none ;
+		overflow-x : auto ;
+		overflow-y : auto ;
+		white-space : nowrap ;
+		padding-right : 4px ;
+	}
+
+	.letter-dlg-tab {
+		border-collapse : collapse ;
+		margin : 0px ;
+		width : 100% ;
+	}
+
+	.letter-dlg-ex {
+		margin : 1px 0px 16px 0px ;
+		text-align : center ;
+		font-size : 8pt ;
+		border : 1px solid #606060 ;
+		background-color : #e0e0e0 ;
+		white-space : normal ;
+	}
+
+	.weight-inp {
+		text-align : right ;
+		width : 64px ;
+	}
+
+	.price-inp {
+		text-align : right ;
+		width : 128px ;
+	}
+
+	.letter-dlg-close-box {
+		position : absolute ;
+		top : -8px ;
+		left : 807px ;
+		width : 21px ;
+		padding-top : 3px ;
+		border : 1px solid #c0c0c0 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	}
+
+	.dlg-close-box-btn {
+		cursor : pointer ;
+		display : inline-block ;
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -145px ;
+	}
+
+	.letter-dlg-btn-panel {
+		text-align : center ;
+	}
+
+	.letter-label-fmt {
+		text-align : center ;
+	}
+
+	.letter-dlg-button {
+		width : 320px ;
+	}
+
+	.ldt-cap , .ldt2-cap {
+		font-size : 8pt ;
+		text-align : center ;
+		border : 1px solid #606060 ;
+		font-weight : bold ;
+		color : #ffffff ;
+		background-color : #404040 ;
+		background-image : url( "cap.gif" );
+		height : 19px ;
+		padding : 0px ;
+	}
+
+	.ldt-prna-btn , .ldt-addressee , .ldt-destination , .ldt2-radio-btn , .ldt2-worker {
+		font-size : 8pt ;
+		border : 1px solid #444 ;
+		white-space : normal ;
+	}
+
+	.ldt2-radio-btn , .ldt2-worker {
+		background-color : #eee ;
+	}
+
+	tr.atc {
+		background-color : #eee ;
+	}
+	tr.at {
+		background-color : #444 ;
+		color : #fff ;
+	}
+
+	#letter-dlg--show-hide-at-addr:checked ~ .letter-dlg-cont > #letter_dlg_tab tr.at {
+		display : none ;
+	}
+
+	label[for="letter-dlg--show-hide-at-addr"] {
+		display : inline-block ;
+		width : 13px ;
+		height : 13px ;
+		background-image : url( "sprites1.png" );
+		background-position : -13px -132px ;
+	}
+	#letter-dlg--show-hide-at-addr:checked ~ .letter-dlg-cont > .letter-dlg-ex > label[for="letter-dlg--show-hide-at-addr"] {
+		background-position : 0 -132px ;
+	}
+
+
+	.ldt-prna-btn , .ldt2-radio-btn {
+		min-width : 23px ;
+		width : 23px ;
+		max-width : 23px ;
+
+		text-align : center ;
+	}
+
+	.ldt-prna-img {
+		display : inline-block ;
+		cursor : pointer ;
+		background-image : url( "print.gif" );
+		width : 13px ;
+		height : 13px ;
+		border : 0px ;
+	}
+
+	.ldt-addressee {
+		min-width : 320px ;
+		width : 320px ;
+		max-width : 320px ;
+	}
+
+	.ldt-destination {
+	}
+
+	.ldt2-worker {
+	}
+
+	/* ************************************************** */
+
+
+
+
+	.date-selector-panel {
+		margin : 1em 3em 1em 3em ;
+		padding : 4px 6px ;
+		border-bottom : 1px dotted #444 ;
+	}
+	
+	.cmon_link A {
+		padding : 3px 6px ;
+		border : 1px solid #000000 ;
+		text-decoration : none ;
+		background-color : #e0e0e0 ;
+		font-size : 10pt ;
+		color : #000000 ;
+	}
+
+	/*  ������ �����/���  */
+	.mon_link A {
+		padding : 3px 6px ;
+		border : 1px solid #000000 ;
+		text-decoration : none ;
+		background-color : #404040 ;
+		font-size : 9pt ;
+		color : #d0d0d0 ;
+	}
+	.mon_link A:hover {
+		padding : 3px 6px ;
+		border : 1px solid #000000 ;
+		text-decoration : none ;
+		background-color : #606060 ;
+		color : #ffffff ;
+	}
+
+	#marks-flt-panel {
+		
+	}
+	
+	@media screen and (max-height: 768px) {
+		.nrr-dlg-wrapper {
+			top : 0cm ;
+		}
+	}
+
+	.cor-reply--contact-value {
+		position : relative ;
+		cursor : copy ;
+	}
+
+	.cor-reply--contact-value .copy-to-clipboard--anima {
+		position : absolute ;
+		top : 0 ;
+		left : 0 ;
+		right : 0 ;
+		bottom : 0 ;
+		padding-left : 200em ;
+		background-color : #fff ;
+		color : #000 ;
+		/*border : 1px solid #000 ;
+		border-radius: 3px ;*/
+		animation-name : animation--copy-to-clipboard--anima ;
+		animation-duration : 2s ;
+		animation-iteration-count : 1 ;
+		opacity : 0 ;
+	}
+
+	@keyframes animation--copy-to-clipboard--anima {
+		0% {
+			opacity : 1 ;
+			padding-left : 2em ;
+		}
+
+		50% {
+			opacity : 1 ;
+			padding-left : 2em ;
+		}
+
+		100% {
+			opacity : 0 ;
+			padding-left : 200em ;
+		}
+	}

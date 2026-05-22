@@ -1,0 +1,33 @@
+
+	.mat-id {
+		text-align : right ;
+		display : block ;
+	}
+	
+	.spec {
+		border-bottom : 1px dashed #f00 ;
+		cursor : pointer ;
+	}
+	
+	.header {
+		text-align : center ;
+		font-size : 14pt ;
+		margin-top : 5em ;
+		margin-bottom : 1em ;
+	}
+
+	.header + .header {
+		margin-top : 1em ;
+	}
+	
+	.total {
+		text-align : center ;
+		font-size : 14pt ;
+		margin-top : 1em ;
+		margin-bottom : 1em ;
+	}
+	
+	.total + .total {
+		margin-top : 1em ;
+	}
+	

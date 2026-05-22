@@ -1,0 +1,230 @@
+	* {
+		box-sizing : border-box ;
+	}
+	
+	.search-panel , .add-panel {
+		position : absolute ;
+		left : 0px ;
+		
+		padding : 4px ;
+		border : 1px solid black ;
+		background-color : #c08000 ;
+		text-align : center ;
+	}
+	
+	.search-panel {
+		top : 0px ;
+	}
+		
+	.add-panel {
+		top : 96px ;
+	}
+	
+	#search-exp-number , #search-exp-date ,
+	#cell-x , #cell-y {
+		text-align : center ;
+		font-size : 14pt ;
+		width : 96px ;
+		margin-top : 4px ;
+		margin-bottom : 4px ;
+	}
+	
+	#worker-id {
+		font-size : 13pt ;
+		width : 192px ;
+		margin-top : 4px ;
+		margin-bottom : 4px ;
+	}
+	
+	#main-tab {
+		background-color : #c08000 ;
+	}
+	
+	.mt-cell {
+		border : 1px solid #000000 ;
+		text-align : center ;
+		background-color : #604000 ;
+		padding : 0px ;
+	}
+	
+	.cell-container {
+		width : 144px ;
+		height : 96px ;
+		position : relative ;
+	}
+	
+	.exp-name {
+		width : 100% ;
+		border-top : 1px solid #000000 ;
+		bottom : 0px ;
+		position : absolute ;
+		font-size : 8pt ;
+		background-color : #ffffff ;
+		height : 16px ;
+		min-height : 16px ;
+		line-height : 16px ;
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow : ellipsis ;
+	}
+	
+	.cell-container:hover .exp-name {
+		bottom : -64px ;
+		z-index : 1100 ;
+		border : 1px solid #000000 ;
+	}
+	
+	.tool-buttons {
+		display : none ;
+		border : 1px solid #000000 ;
+		top : 0px ;
+		right : -76px ;
+		position : absolute ;
+		font-size : 8pt ;
+		background-color : #ffc000 ;
+		z-index : 1000 ;
+		
+		box-shadow: 6px 6px 12px #000;
+
+	}
+	
+	.cell-container:hover .tool-buttons {
+		display : block ;
+	}
+	
+	.mat-list {
+		position : absolute ;
+		left : 0px ;
+		top : 0px ;
+		right : 0px ;
+		bottom : 17px ;
+	}
+	
+	.cell-container:hover .mat-list {
+		left : -3px ;
+		right : -3px ;
+		bottom : -50px ;
+		top : -50px ;
+		z-index : 900 ;
+		padding : 3px ;
+		border : 1px solid #000000 ;
+		background-color : #008080 ;
+
+		box-shadow: 6px 6px 12px #000;
+	}
+	
+	.mat-list-container {
+		width : 100% ;
+		height : 100% ;
+		overflow-y : auto ;
+	}
+	
+	.mat-list-table {
+		font-size : 8pt ;
+		/*position : absolute ;*/
+		width : 100% ;
+		/*bottom : 0px ;*/
+		border : none ;
+		border-collapse : collapse ;
+	}
+	
+	.mat-item-container {
+		position : relative ;
+	}
+	
+	.mat-item {
+		border-bottom : 1px solid black ;
+		background-color : #ffe080 ;
+	}
+	
+	.mat-item-btn {
+		position : absolute ;
+		right : 2px ;
+		top : 4px ;
+		display : none ;
+		cursor : pointer ;
+	}
+	
+	.mat-item:hover .mat-item-btn {
+		display : inline-block ;
+	}
+	
+	.tool-btn {
+		display : block ;
+		border : 1px solid black ;
+		height : 17px ;
+		min-height : 17px ;
+		line-height : 17px ;
+		margin : 2px ;
+		width : 72px ;
+		cursor : pointer ;
+		background-image : url( "bg-t-h.png" );
+		background-position : 0px -57px ;
+		background-repeat : repeat-x ;
+		
+		position : relative ;
+	}
+	
+	.tool-btn:hover {
+		color : #008000 ;
+	}
+	
+	.signal {
+		display : none ;
+		position : absolute ;
+		left : -5px ;
+		top : -5px ;
+		right : -5px ;
+		bottom : -5px ;
+		background-color : #00ff00 ;
+		opacity : 0.75 ;
+		filter : alpha( opacity = 75 );
+		vertical-align : middle ;
+		font-size : 24pt ;
+		color : #ff0000 ;
+	}
+	
+	.pos-data {
+		display : none ;
+		position : absolute ;
+		left : -100px ;
+		top : 10px ;
+		width : 96px ;
+		height : 36px ;
+		line-height : 36px ;
+		background-color : #ffffff ;
+		border : 1px solid #000000 ;
+		font-size : 24pt ;
+		color : #000000 ;
+	}
+	
+	.cut-menu {
+		width : 192px ;
+		position : absolute ;
+		right : -128px ;
+		top : 8px ;
+		background-color : #ffc000 ;
+		border : 1px solid #000000 ;
+		display : none ;
+		
+		box-shadow: 6px 6px 12px #000;
+		
+		z-index : 1100 ;
+	}
+	
+	.tool-btn:hover .cut-menu {
+		display : block ;
+	}
+	
+	.cut-menu-lnk {
+		text-decoration : none ;
+		color : #000000 ;
+		cursor : pointer ;
+	}
+	
+	.cut-menu-lnk:hover {
+		text-decoration : underline ;
+		color : #ff0000 ;
+	}
+	
+	

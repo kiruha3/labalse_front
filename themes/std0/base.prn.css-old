@@ -1,0 +1,48 @@
+	* {
+		font-family : "verdana" , "arial" , sans-serif ;
+	}
+
+	a {
+		outline : none ;
+	}
+
+	html , body {
+		height : 100% ;
+	}
+
+	body {
+		margin : 0px ;
+		padding : 0px ;
+	}
+
+	#page {
+		min-height : 100% ;
+		position : relative ;
+		height : auto !important ;
+		height : 100% ;
+		width : 100% ;
+	}
+
+	#page-head {
+		position : relative ;
+		padding : 4px ;
+	}
+
+	#page-content {
+		/*height: 100% ;*/
+		padding-left : 4px ;
+		padding-right : 4px ;
+		padding-top : 4px ;
+		padding-bottom : 48px ;
+		position : relative ;
+	}
+
+	#page-footer {
+		clear : both ;
+		padding-bottom : 0px ;
+		bottom : 0px ;
+		padding-top : 1px ;
+		position : absolute ;
+		height : 30px ;
+		width : 100% ;
+	}

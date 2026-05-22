@@ -1,0 +1,54 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+.ST {
+	border-collapse : collapse ;
+	margin-top : 2cm ;
+	border : 1px dashed #c0c0c0 ;
+}
+
+.ST-CT {
+	text-align : center ;
+}
+
+.i-year {
+	font-size : 16pt ;
+}
+
+.i-year-sep {
+	min-width : 1cm ;
+	display : inline-block ;
+}
+
+.D , .I , .log-params {
+	font-size : 16pt ;
+	border : 1px dashed #c0c0c0 ;
+}
+
+.D {
+	width : 144px ;
+}
+
+.I {
+}
+
+.log-params {
+}
+
+.log-param {
+	margin : 12px 16px ;
+}
+
+.log-param input {
+	width : 24px ;
+	height : 24px ;
+}
+
+.i-mat-number {
+	font-size : 16pt ;
+	text-align : center ;
+	width : 96px ;
+}

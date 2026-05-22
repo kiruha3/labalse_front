@@ -1,0 +1,543 @@
+	
+	* {
+		box-sizing : border-box ;
+	}
+	
+	.woe-area-container {
+		margin-top : 2cm ;
+		text-align : center ;
+	}
+	
+	.woe-area {
+		border : 1px dotted #c0c0c0 ;
+		display : inline-block ;
+		padding : 8px ;
+	}
+	
+	.woe-case-num-v , .woe-date-d , .woe-date-m , .woe-date-y , .woe-num-v , .woe-ep-num-v {
+		text-align : center ;
+	}
+	
+	.woe-case-num-v , .woe-num-v , .woe-ep-num-v {
+		font-size : 14pt ;
+	}
+	
+	.woe-case-num {
+		font-size : 14pt ;
+		display : inline-block ;
+		float : left ;
+	}
+	
+	.woe-case-num-v {
+		width : 12cm ;
+		
+		border-left : none ;
+		border-top : none ;
+		border-right : none ;
+		border-bottom : 1px solid black ;
+	}
+	
+	.woe-dates-wrapper {
+		float : right ;
+		text-align : right ;
+		display : inline-block ;
+	}
+	
+	.woe-date {
+		width : 4cm ;
+		text-align : center ;
+	}
+	
+	.woe-date-label {
+		font-size : 10pt ;
+		font-style : italic ;
+		font-weight : normal ;
+	}
+	
+	.woe-date-v {
+		width : 3.5cm ;
+		font-size : 12pt ;
+		text-align : center ;
+	}
+	
+	.woe-agency {
+		text-align : center ;
+	}
+	
+	.woe-agency-ta , .woe-agency-sel , .woe-agency-addr-ta , .woe-agent-ta , .woe-agent-sel {
+		width : 18cm ;
+	}
+	
+	.woe-agency-alt-addr {
+		border : 1px dashed #808080 ;
+		padding : 4px 8px ;
+		height : 1cm ;
+	}
+	
+	.woe-agency-alt-addr-lnk {
+		color : #0080ff ;
+		cursor : pointer ;
+		text-decoration : underline ;
+	}
+
+	
+	.woe-agency-label {
+		font-size : 8pt ;
+		font-weight : normal ;
+		font-style : italic ;
+	}
+	
+	.woe-payers-area {
+	}
+	
+	.woe-payers-table-wrapper {
+		max-height : 4cm ;
+		overflow-y : scroll ;
+		border : 1px solid #404040 ;
+	}
+	
+	.woe-payers-table {
+		border-collapse : collapse ;
+		border : none ;
+		margin : 0px ;
+	}
+	
+	.woe-pt-row {
+		
+	}
+	
+	.woe-pt-h-0 , .woe-pt-h-n , .woe-pt-h-p , .woe-pt-h-al {
+		border : 1px solid #404040 ;
+		height : 17px ;
+		background-image : url( "miaw.gif" );
+		color : #ffffff ;
+		font-size : 10pt ;
+		font-weight : normal ;
+		text-align : center ;
+	}
+	
+	.woe-pt-h-0 , .woe-pt-d-0 , .woe-pt-fd-0 ,
+	.woe-pt-h-al , .woe-pt-d-al , .woe-pt-fd-al {
+		width : 0.75cm ;
+		text-align : center ;
+	}
+	
+	.woe-pt-h-n , .woe-pt-d-n , .woe-pt-fd-n {
+		width : 14.0cm ;
+	}
+
+	
+	.woe-pt-h-p , .woe-pt-d-p , .woe-pt-fd-p {
+		width : 3cm ;
+	}
+	
+	.woe-pt-d-0 , .woe-pt-d-n , .woe-pt-d-p , .woe-pt-d-al ,
+	.woe-pt-fd-0 , .woe-pt-fd-n , .woe-pt-fd-p {
+		border : 1px solid #808080 ;
+	}
+	
+	.woe-pt-fd-n {
+		text-align : left ;
+	}
+	
+	.woe-pt-fd-p {
+		text-align : right ;
+	}
+	
+	.woe-pt-i-0 {
+		cursor : pointer ;
+	}
+	
+	.woe-pt-i-n , .woe-pt-i-p {
+		font-size : 11pt ;
+		width : 100% ;
+		padding : 0px ;
+		margin : 0px ;
+	}
+	
+	.woe-pt-i-p {
+		text-align : right ;
+	}
+	
+	.woe-pt-d-wrapper {
+		height : 27px ;
+		margin : 0px ;
+		line-height : 27px ;
+	}
+		
+	.woe-pt-btn-area {
+		margin-top : 0.25cm ;
+		text-align : right ;
+	}
+	
+	.woe-num , .woe-ep-num {
+		margin-top : 1cm ;
+		font-size : 10pt ;
+	}
+	
+	.woe-num-v , .woe-ep-num-v {
+		color : #ff0000 ;
+		margin-left : 0.4cm ;
+		width : 7cm ;
+		
+		letter-spacing : 0.07cm ;
+	}
+	
+	.pm-activate-lnk {
+		font-size : 12pt ;
+		font-weight : bold ;
+		color : #008000 ;
+		text-decoration : none ;
+		cursor : pointer ;
+	}
+	
+	.pm-activate-lnk:hover {
+		color : #ff0000 ;
+	}
+	
+	.payer-menu {
+		position : fixed ;
+		border : 1px solid black ;
+		padding : 2px ;
+		
+		right : 0.5cm ;
+		top : 5cm ;
+		max-width : 512px ;
+		min-width : 512px ;
+		width : 512px ;
+		background-color : #ffffff ;
+		
+		text-align : center ;
+
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.woe-pt-row:hover .payer-menu {
+		display : block ;
+	}
+	
+	.pm-pn-label {
+		padding-bottom : 2px ;
+		margin-bottom : 2px ;
+		border-bottom : 1px solid #c0c0c0 ;
+	}
+	
+	.pm-pt-wrapper {
+		max-height : 350px ;
+		overflow-y : auto ;
+		margin-bottom : 6px ;
+	}
+	
+	.pm-pt {
+		border-collapse : collapse ;
+	}
+	
+	.pm-pt-h-row td {
+		border-bottom : 1px solid #808080 ;
+	}
+	
+	.pm-pt-d-row + .pm-pt-d-row td {
+		border-top : 1px dotted #c0c0c0 ;
+	}
+	
+	.pm-pt-d-row:hover {
+		background-color : #ffe000 ;
+	}
+	
+	.pm-pt-h-t , .pm-pt-h-d , .pm-pt-h-pa , .pm-pt-h-p , .pm-pt-h-n {
+		font-size : 9pt ;
+		color : #404040 ;
+		text-align : center ;
+	}
+	
+	.pm-pt-h-t , .pm-pt-h-d , .pm-pt-h-pa , .pm-pt-h-p {
+		border-right : 1px solid #808080 ;
+	}
+	
+	.pm-pt-d-d , .pm-pt-d-pa , .pm-pt-d-p , .pm-pt-d-n {
+		font-size : 9pt ;
+		color : #000000 ;
+	}
+	
+	.pm-pt-d-d , .pm-pt-d-pa , .pm-pt-d-p {
+		border-right : 1px dotted #c0c0c0 ;
+	}
+	
+	.pm-pt-h-t , .pm-pt-d-t {
+		width : 23px ;
+	}
+	
+	.pm-pt-d-t {
+		text-align : center ;
+	}
+	
+	.pm-pt-d-t--del {
+		display : inline-block ;
+		width : 15px ;
+		height : 15px ;
+		background-image : url("sprites1.png");
+		background-position : 0 -145px ;
+		cursor : pointer ;
+	}
+	
+	.pm-pt-h-d , .pm-pt-d-d {
+		width : 64px ;
+	}
+	.pm-pt-d-d {
+		text-align : center ;
+	}
+	.pm-pt-d-pa {
+		text-align : left ;
+		width : 256px ;
+	}
+	
+	.pm-pt-h-p , .pm-pt-d-p {
+		width : 96px ;
+	}
+	.pm-pt-d-p {
+		text-align : right ;
+		padding-right : 4px ;
+	}
+	
+	.pm-pt-h-n , .pm-pt-d-n {
+		width : 48px ;
+	}
+	.pm-pt-d-n {
+		text-align : center ;
+	}
+	
+
+	
+	.pm-total {
+		font-size : 10pt ;
+	}
+	
+	.pm-total-v {
+		color : #008000 ;
+	}
+	
+	.pm-ap-lnk {
+		font-size : 10pt ;
+		color : #0080ff ;
+		text-decoration : underline ;
+		cursor : pointer ;
+	}
+	
+	.pm-ap-lnk:hover {
+		color : #ff8000 ;
+	}
+	
+	.add-payment-dlg {
+		position : fixed ;
+		border : 1px solid black ;
+		padding : 2px ;
+		
+		left : 50% ;
+		margin-left : -256px ;
+		width : 450px ;
+		top : 4cm ;
+		background-color : #ffffff ;
+		
+		text-align : center ;
+
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.ap-t {
+		border-collapse : collapse ;
+		margin-bottom : 8px ;
+		width : 100% ;
+	}
+	
+	.ap-t-d , .ap-t-v {
+		border : 1px dotted #808080 ;
+		padding : 2px 4px ;
+	}
+	
+	.ap-t-d {
+		text-align : center ;
+		font-size : 10pt ;
+	}
+	
+	.ap-t-v {
+		text-align : center ;
+	}
+	
+	.ap-date , .ap-price , .ap-num {
+		font-size : 12pt ;
+		width : 128px ;
+	}
+	
+	.ap-date , .ap-num {
+		text-align : center ;
+	}
+	
+	.ap-price {
+		text-align : right ;
+	}
+	
+	.ap-lnk {
+		font-size : 10pt ;
+		text-decoration : none ;
+		cursor : pointer ;
+		margin-left : 4px ;
+		margin-right : 4px ;
+	}
+	
+	.lnk-ok {
+		color : #008000 ;
+	}
+	
+	.lnk-cancel {
+		color : #ff0000 ;
+	}
+	
+	.ap-lnk:hover {
+		text-decoration : underline ;
+	}
+	
+	.ap-toa {
+		width : 420px ;
+	}
+	
+	.ap-from-agency {
+		width : 420px ;
+	}
+	
+	.ap-agency-sel {
+		width : 420px ;
+	}
+	
+	.woe-panel {
+		position : fixed ;
+		text-align : center ;
+		
+		border : 1px solid black ;
+		background-color : #ffffff ;
+		
+		padding : 12px 24px ;
+
+		box-shadow : 6px 6px 12px #000 ;
+	}
+	
+	.woe-panel-pos-1 {
+		left : 0.5cm ;
+		top : 5cm ;
+		width : 4cm ;
+	}
+	
+	.woe-panel-pos-2 {
+		left : 0.5cm ;
+		top : 8cm ;
+		width : 4cm ;
+	}
+	
+	.woe-panel-pos-3 {
+		left : 6.5cm ;
+		top : 5cm ;
+		width : 5cm ;
+	}
+	
+	.woe-panel-pos-4 {
+		left : 0.5cm ;
+		top : 13cm ;
+		width : 11cm ;
+		bottom : 1cm ;
+		text-align : left ;
+		overflow-x : auto ;
+	}
+	
+	.woe-panel-pos-3 a {
+		color : #08c ;
+		text-decoration : none ;
+		font-size : 9pt ;
+	}
+	.woe-panel-pos-3 a:hover {
+		color : #c80 ;
+		text-decoration : underline ;
+	}
+	
+	.woe-close-lnk , .woe-unclose-lnk , .woe-delete-lnk , .woe-copy-lnk {
+		cursor : pointer ;
+		color : #008000 ;
+		text-decoration : underline ;
+	}
+	
+	.woe-close-lnk:hover , .woe-unclose-lnk:hover , .woe-delete-lnk:hover , .woe-copy-lnk:hover {
+		color : #ff0000 ;
+	}
+	
+	.woe-unclose-lnk , .woe-delete-lnk {
+		color : #800000 ;
+		font-size : 8pt ;
+	}
+	
+	.woe-state-label {
+		position : fixed ;
+		left : 6.5cm ;
+		top : 8cm ;
+		
+		border : 3px solid #a000a0 ;
+		background-color : #ffffff ;
+		color : #a000a0 ;
+		
+		font-size : 24pt ;
+		
+		padding : 12px 24px ;
+		
+		text-align : center ;
+	}
+	
+	.woe-state-sub-label {
+		font-size : 14pt ;
+	}
+	
+	.btn-area {
+		margin-top : 1cm ;
+		text-align : center ;
+	}
+	
+	input[type="button"] {
+		width : 3cm ;
+	}
+	
+	
+	#docs-panel {
+		display : block ;
+		width : 256px ;
+		height : 128px ;
+		position : fixed ;
+		right : 0.5cm ;
+		bottom : 2cm ;
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		
+		box-shadow: 4px 4px 16px #000;
+
+		overflow : auto ;
+	}
+
+	.woe-num-find-corr-lnk {
+		cursor : pointer ;
+	}
+
+	.doc-generator-list-area {
+		padding-bottom : 0.5em ;
+		margin-bottom : 0.5em ;
+		border-bottom : 1px dotted #444 ;
+	}
+
+	.doc-generator-link {
+		display : block ;
+		margin : 0.125em 0.25em ;
+		color : #08f ;
+		text-decoration : none ;
+		cursor : pointer ;
+		font-size : 10pt ;
+	}
+
+	.doc-generator-link:hover {
+		color : #fc0 ;
+		text-decoration : underline ;
+	}
+	

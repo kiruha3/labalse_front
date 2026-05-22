@@ -1,0 +1,18 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	.PT { border-collapse: collapse; }
+
+	.D { width: 256px; border: 1px dotted #c0c0c0;
+		padding: 6px; text-align: justify; }
+
+	.I { border: 1px dotted #c0c0c0; padding: 6px; }
+
+	.IND { width: 256px; text-align: center; }
+
+	.IDC { width: 256px; }
+
+	.tbPanel { text-align: center; padding-top: 16px; }

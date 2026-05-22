@@ -1,0 +1,184 @@
+<?php
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	include_once( "../core.php" );
+	/**
+	 * @var $LoginOk
+	 * @var TDB $portalDB
+	 * @var $MonthNames
+	 * @var $dbConfig
+	 */
+	require_once( "lconfig.php" );
+	/**
+	 * @var $PlaceID
+	 */
+	require_once( '../cores/core.maindb.php' );
+
+	TryLoginFromCookie( $PlaceID );
+	if ( !$LoginOk ) {
+		Redirect( "../auth.php" );
+	}
+
+	MainHead_Print( "" , array( "%UT/main.multicover.css" ) );
+
+	$tabDepartments = $portalDB->table( "departments" , "id" );
+	$tabWorkers = $portalDB->table( "workers" , "id" );
+	$tabPosts = $portalDB->table( "posts" , "id" );
+	$tabCaseCategory = $portalDB->table( "casecategory" , "id" );
+
+	if ( !isset( $_REQUEST[ "group" ] ) ) {
+		exit();
+	}
+
+	$groupID = intval( $_REQUEST[ "group" ] );
+
+	$t1 = $portalDB->query( "select `t1`.* , `t4`.`name` as `agency` , `t5`.`name` as `agent` from `matincoming` as `t1` , `agency` as `t4` , `agent` as `t5` where ( `t1`.`group_id` = ? ) and ( `t4`.`id` = `t1`.`from_agency` ) and ( `t5`.`id` = `t1`.`from_agent` )" , false , "i" , $groupID );
+	$t1ID = array();
+	$t1Date = null ;
+	$t1Type = null ;
+	$t1Cond = array();
+
+	$t1CondTree = array();
+	foreach ( $t1 as $card ) {
+		$t1ID[]= $card[ "id" ];
+		if ( $t1Type == null ) {
+			$t1Type = $card[ "exp_type" ];
+		}
+		if ( is_null( $t1Date ) || ( $t1Date > strtotime( $card[ "date" ] ) ) ) {
+			$t1Date = strtotime( $card[ "date" ] );
+		}
+
+		$i1 = strtolower( $card[ "agency" ] );
+		if ( !isset( $t1CondTree[ $i1 ] ) ) {
+			$t1CondTree[ $i1 ] = array(
+				"name" => $card[ "agency" ] ,
+				"subtree" => array()
+			);
+		}
+		$v2 = &$t1CondTree[ $i1 ][ "subtree" ];
+
+		$i2 = strtolower( $card[ "agent" ] );
+		if ( !isset( $v2[ $i2 ] ) ) {
+			$v2[ $i2 ] = array(
+				"name" => $card[ "agent" ] ,
+				"subtree" => array()
+			);
+		}
+		$v3 = &$v2[ $i2 ][ "subtree" ];
+
+		$i3 = strtolower( $card[ "ex_data_3" ] );
+		if( !isset( $v3[ $i3 ] ) ) {
+			$v3[ $i3 ] = array(
+				"name" =>  $card[ "ex_data_3" ] ,
+				"subtree" => array()
+			);
+		}
+		$v4 = &$v3[ $i3 ][ "subtree" ];
+
+		$v4[ strtolower( $card[ "ex_data_4" ] ) ] = $card[ "ex_data_4" ];
+
+		unset( $v1 );
+		unset( $v2 );
+		unset( $v3 );
+		unset( $v4 );
+	}
+
+	foreach( $t1CondTree as $v1 ) {
+		$v1st = array();
+		foreach( $v1[ "subtree" ] as $v2 ) {
+			$v2st = array();
+
+			foreach( $v2[ "subtree" ] as $v3 ) {
+				$v2st[]= $v3[ "name" ].": ".implode( " , " , $v3[ "subtree" ] );
+			}
+
+			$v1st[]= $v2[ "name" ]." ".implode( " ; " , $v2st );
+		}
+
+		$t1Cond[]= $v1[ "name" ]." ".implode( " ; " , $v1st );
+	}
+
+	$res = $portalDB->query( "select `t2`.`mat_id` , `t2`.`dep_id` , `t3`.* from `matincominglvl2` as `t2` , `expertize` as `t3` where ( `t2`.`mat_id` in ( ?* ) ) and ( `t3`.`ext_id` = `t2`.`id` )" , false , "*s" , $t1ID );
+
+	list( $std , $stm , $sty )  = explode( "-" , date( "d-m-Y" , $t1Date ) );
+	$expList = array();
+	$numList = array();
+	$finDate = false ;
+	$payData = array();
+	foreach( $res as $row ) {
+		$name = NAMES_Format( NAMES_parse( $tabWorkers[ $row[ "exp_id" ] ][ "name" ] ) , "%F1 %i.%o." );
+		$expList[ $name ] = array( $tabPosts[ $tabWorkers[ $row[ "exp_id" ] ][ "post_1_id" ] ][ "simple_name" ] , $name );
+
+		$num = matincomingNumberFull( $row[ "mat_id" ] , $row[ "dep_id" ] , $t1Type );
+
+		if ( !in_array( $num , $numList ) ) {
+			$numList[]= $num ;
+		}
+
+		if ( $finDate === false ) {
+			$finDate = strtotime( $row[ "fin_date" ] );
+		} else {
+			$finDate = max( $finDate , strtotime( $row[ "fin_date" ] ) );
+		}
+
+		$pd = "<u>".$name."</u>: ".money_format( "%!i" , $row[ "price" ] )." руб. / ".$row[ "pay_details" ].", ".$row[ "pay_date" ];
+		if ( !in_array( $pd , $payData ) ) {
+			$payData[]= $pd ;
+		}
+	}
+
+	list( $etd , $etm , $ety ) = explode( "-" , date( "d-m-Y" , $finDate ) );
+
+		$t1IDs = getCharIDStructure( $t1ID[ 0 ] );
+		$t1IDs[ "t" ] = DOCTYPE_ARCHIVE ;
+		$bc = mkCharID( $t1IDs );
+
+
+		echo "<div class=\"page-container\"><div class=\"pos-ctrl-area\"></div><input type=\"checkbox\" class=\"pos-ctrl\"><div id=\"page-area\"><div id=\"data-area\">
+
+		<div id=\"page-head\">".strtoupper( inForm( $dbConfig[ "org.name.full.head" ] , 1 ) )."<br>
+		".strtoupper( inForm( $dbConfig[ "org.name.full.type" ] , 1 ) )."<br>
+		".strtoupper( inForm( $dbConfig[ "org.name.full.name" ] , 1 ) )."</div>
+
+		<img id=\"barcode\" src=\"../barcode.php?src=".$bc."\">
+
+		<div id=\"page-title\">НАБЛЮДАТЕЛЬНОЕ ПРОИЗВОДСТВО</div>
+
+		<div id=\"case-number\">" ;
+
+			echo "№№ <div>&nbsp;".implode( "&nbsp;</div> <div>&nbsp;" , $numList )."&nbsp;</div>" ;
+
+		echo "</div>" ;
+
+		if ( !( $t1Type == 1 || $t1Type == 5 ) ) {
+			echo "<div id=\"pay-data\">".implode( "<br>" , $payData )."</div>" ;
+		}
+
+		echo "<div id=\"case-description\">".implode( ". " , $t1Cond )."</div>" ;
+
+		echo "<table id=\"expert-data\">" ;
+		foreach( $expList as $exp ) {
+			echo "<tr><td class=\"expert-post\" valign=\"bottom\">".$exp[ 0 ]."</td><td class=\"expert-name\" valign=\"bottom\">".$exp[ 1 ]."</td></tr>" ;
+		}
+		echo "</table>
+
+		<table id=\"case-date\">
+			<tr>
+				<td class=\"case-date-title\">Н А Ч А Т О:</td>
+				<td class=\"case-date-date\">«".$std."» ".inForm( $MonthNames[ $stm - 1 ] , 2 )." ".$sty." г.</td>
+			</tr>
+			<tr>
+				<td class=\"case-date-title\">ОКОНЧЕНО: </td>
+				<td class=\"case-date-date\">«".$etd."» ".inForm( $MonthNames[ $etm - 1 ] , 2 )." ".$ety." г.</td>
+			</tr>
+		</table>
+
+
+		</div></div></div>" ;
+
+	closeHtml_Print();
+?>

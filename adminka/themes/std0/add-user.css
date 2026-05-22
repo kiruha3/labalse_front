@@ -1,0 +1,128 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+	.worker-name-div {
+		margin-top : 24px ;
+		margin-bottom : 24px ;
+		padding : 8px ;
+		width : 800px ;
+		background-color : #e0e0e0 ;
+		border : 1px solid #808080 ;
+		text-align : center ;
+	}
+	
+	.w-fio-fill {
+		color : #0080ff ;
+		text-decoration : underline ;
+		cursor : pointer ;
+	}
+	.w-fio-fill:hover {
+		color : #008000 ;
+	}
+	
+	.w-fio-label {
+		text-align : left ;
+	}
+	
+	.w-fio {
+		font-size : 12pt ;
+		width : 192px ;
+		
+	}
+	
+	.w-fio-hlp {
+		font-size : 8pt ;
+		margin-left : 12px ;
+	}
+
+	.worker-datas-table {
+		width : 576px ;
+	}
+
+	.worker-data {
+		padding : 0px ;
+		border : 1px solid #808080 ;
+	}
+
+	.worker-data-table {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.data-name {
+		height : 19px ;
+		padding : 0px ;
+		background : #e0e0e0 url( cap.gif );
+		text-indent : 8px ;
+		vertical-align : middle ;
+		font-size : 9pt ;
+		font-weight : bold ;
+		color : #ffffff ;
+	}
+
+	.param-name {
+		width : 160px ;
+		border-top : 1px solid #808080 ;
+		border-bottom : 1px solid #808080 ;
+		padding : 4px 16px 4px 16px ;
+		background : #e0e0e0 /*url(cap2.gif)*/ ;
+		vertical-align : middle ;
+		font-size : 10pt ;
+		color : #000000 ;
+	}
+
+	.param-value {
+		width : 416px ;
+		border-top : 1px solid #808080 ;
+		border-bottom : 1px solid #808080 ;
+		padding : 4px ;
+		background : #e0e0e0 /*url(cap2.gif)*/ ;
+		vertical-align : middle ;
+		font-size : 10pt ;
+		color : #000000 ;
+	}
+
+	.i_department {
+		width: 384px ;
+	}
+
+	.i_post {
+		width: 384px ;
+	}
+	
+	.i_cab , .i_skype , .i_email {
+		width: 384px ;
+	}
+
+	.spec-num {
+		color : #ff0000 ;
+	}
+
+	.i_ip {
+		text-align: center;
+	}
+
+	.i_guid_list {
+		width : 256px ;
+	}
+
+	.i_mac_addr_list {
+		width : 256px ;
+	}
+
+	.i_ip_addr_list {
+		width : 256px ;
+	}
+
+
+	.formBtn {
+		text-align: center;
+		padding-top: 16px;
+	}
+	
+	/*.w-fio {
+		width : 
+	}*/
+

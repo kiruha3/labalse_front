@@ -1,0 +1,458 @@
+* {
+	font-family : "Times" ;
+	box-sizing : border-box ;
+}
+
+.ctrl-area {
+	background-color : #fc0 ;
+	position : fixed ;
+	right : 0.5cm ;
+	top : 2cm ;
+	width : 15cm ;
+	text-align : center ;
+	z-index : 1000 ;
+	border : 1px solid #000 ;
+	padding : 4px ;
+}
+
+.ctrl-area * {
+	font-family : "verdana" , "arial" , sans-serif !important ;
+}
+
+.ctrl-area > div+div {
+	margin-top : 0.5em ;
+}
+
+@media print {
+	.ctrl-area {
+		display : none ;
+	}
+}
+
+#doc-vis {
+	display : none ;
+}
+
+.document-area {
+	position : absolute ;
+	left : 42cm ;
+	top : 1cm ;
+	bottom : 1cm ;
+	width : 29.7cm ;
+	
+	overflow-x : hidden ;
+	overflow-y : scroll ;
+	border : 1px solid #000 ;
+	background-color : #cef ;
+	text-align : center ;
+	transition : left 0.5s ease ;
+}
+
+#doc-vis:checked ~ .document-area {
+	left : 1cm ;
+}
+
+#doc-vis-ctrl {
+	display : block ;
+	border : 1px dotted #000 ;
+	height : 16px ;
+}
+
+.page-area {
+	border : 1px solid #000 ;
+	
+	position : relative ;
+	margin : 0.25cm ;
+	display : inline-block ;
+	background-color : #fff ;
+	text-align : left ;
+}
+
+@media print {
+	.page-area {
+		border : none ;
+		margin : 0 ;
+	}
+}
+
+.page-paper-size-A4 , .page-paper-size-A4 .data-area-wrapper {
+	min-width : 21cm ;
+	width : 21cm ;
+	max-width : 21cm ;
+	
+	min-height : 29.7cm ;
+	height : 29.7cm ;
+	
+	/*max-height : 29.7cm ;*/
+}
+
+.page-paper-size-A4 {
+	overflow : hidden ;
+}
+
+
+.page-paper-size-A4 .data-area {
+	left : 2cm ;
+	top : 2cm ;
+	right : 1cm ;
+	bottom : 2cm ;
+	
+	column-width : 18cm ;
+	column-gap : 3cm ;
+	column-fill : auto ;
+		
+}
+
+.data-area-wrapper {
+	overflow : visible ;
+	position : absolute ;
+	left : 0 ;
+	top : 0 ;
+}
+
+.data-area {
+	position : absolute ;
+}
+
+.tgt-displayable {
+	transition : height 0.5s , opacity 0.5s ;
+	overflow : hidden ;
+	width : 100% ;
+}
+/*.tgt-displayable:hover {
+	background-color : #ff8 ;
+}*/
+
+#page-head {
+	font-size : 9pt ;
+	text-align : center ;
+	margin-bottom : 3em ;
+}
+
+#head-left, #head-right {
+	width : 8.5cm ;
+	display : inline-block ;
+}
+
+#head-left {
+	float : left ;
+}
+#head-right {
+	float : right ;
+}
+
+.org-name {
+	font-weight : bold ;
+	text-transform : uppercase ;
+	margin-top : 1em ;
+	margin-bottom : 1em ;
+}
+
+#barcode {
+	border : none ;
+}
+#barcode[data-type="1D"] , #barcode[data-type="CODE128"] {
+	height : 0.7cm ;
+}
+#barcode[data-type="DMTX"] {
+	height : 2cm ;
+}
+#barcode[data-type="QR"] {
+	height : 2cm ;
+}
+
+.barcode {
+	/*float : right ;*/
+	text-align : center ;
+	margin-bottom : 1em ;
+}
+
+[data-type="1D"] ~ .barcode-text , [data-type="CODE128"] ~ .barcode-text {
+	letter-spacing : 0.5em ;
+	font-family : sans-serif ;
+}
+#barcode[data-type="DMTX"] ~ * , #barcode[data-type="QR"] ~ * {
+	display : none ;
+}
+
+.addressee {
+	text-align : center ;
+	font-size : 12pt ;
+}
+
+.clear {
+	clear : both ;
+}
+
+.nationalEmblem {
+	height : 2.09cm ;
+}
+
+.e-mail {
+	color : #06f ;
+}
+
+#title {
+	font-size : 12pt ;
+	font-weight : bold ;
+	text-transform : uppercase ;
+	text-align : center ;
+	margin-bottom : 2em ;
+}
+
+.title {
+	font-size : 12pt ;
+	font-weight : bold ;
+	text-transform : uppercase ;
+	text-align : center ;
+}
+
+.title:after {
+	display : block ;
+	content : "" ;
+	height : 1.25em ;
+	line-height : 1.25 ; 
+}
+
+#boss-signature {
+	text-align : center ;
+	margin-bottom : 2em ;
+}
+
+.signature {
+	padding-top : 2em ;
+}
+
+#prepend-text , #boss-signature , .signature , .main-text {
+	font-size : 13pt ;
+}
+
+#prepend-text .doc-p , .main-text .doc-p {
+	margin : 0 ; 
+}
+#prepend-text .doc-p:first-letter , .main-text .doc-p:first-letter {
+	text-transform : uppercase ;
+}
+.main-text .doc-p:empty {
+	line-height : 1.25 ;
+	height : 1.25em ; 
+}
+
+
+#prepend-text {
+	margin-bottom : 1em ;
+}
+
+.thl , .thlg {
+	background-color : #0f0 ;
+}
+.thln {
+	background-color : #f8f ;
+}
+.thle , .thlr {
+	background-color : #f00 ;
+}
+.thli {
+	background-color : #0ff ;
+	padding : 0px ;
+	margin : 0px ;
+	position : relative ;
+	
+	-webkit-user-select : none ;
+	-moz-user-select : none ;
+	-ms-user-select : none ;
+	-o-user-select : none ;
+	user-select : none ;
+}
+
+.thli-list {
+	display : none ;
+	position : absolute ;
+	background-color : #fff ;
+	border : 1px solid #000 ;
+	top : 1em ;
+	left : 0px ;
+	text-indent : 0px ;
+	margin : 0px ;
+	text-align : left ;
+	white-space : nowrap ;
+	
+	box-shadow : 6px 6px 8px #000 ;
+	z-index : 2000 ;
+	cursor : pointer ;
+}
+
+.thli:hover .thli-list {
+	display : block ;
+}
+
+.thli-list-item {
+	padding : 1px 4px ;
+}
+.thli-list-item:hover {
+	background-color : #0ff ;
+}
+
+.thl:empty:before , .thlg:empty:before , .thle:empty:before , .thlr:empty:before , .thli:empty:before {
+	content : attr(title);
+	font-style : italic ;
+}
+#title:empty:before , .title:empty:before {
+	content : "{ ��������� }" ;
+	font-style : italic ;
+	color : #888 ;
+}
+
+#tgt-date-i {
+	width : 128px ;
+}
+
+#tgt-time-i {
+	width : 64px ;
+}
+
+#tgt-date-i , #tgt-time-i {
+	text-align : center ;
+	font-size : 14pt ;
+	font-family : sans-serif ;
+}
+
+#tgt-date-i::-ms-clear , #tgt-time-i::-ms-clear {
+	display : none ;
+}
+
+#tgt-object-i {
+	width : 100% ;
+	height : 7em ;
+	/*text-indent : 1cm ;
+	font-family : "Times New Roman" ;
+	font-size : 12pt ;
+	text-align : justify ;*/
+}
+
+#tgt-displayable-ia {
+	text-align : left ;
+}
+
+.var-area {
+	text-align : center ;
+	max-height : 512px ;
+	overflow-y : scroll ;
+	border : 1px solid #666 ;
+	padding : 0px ;
+}
+
+@media (max-height : 640px) {
+	.var-area {
+		max-height : 256px ;
+	}
+}
+
+
+.var-area table {
+	text-align : left ;
+	background-color : #eee ;
+	border-collapse : collapse ;
+}
+.var-area td {
+	padding : 2px 4px ;
+}
+.var-area td+td {
+	border-left : 1px dotted #888 ;
+}
+.var-area tr {
+	border-top : 1px solid #aaa ;
+}
+.var-area tr:first-child {
+	border-top : none ;
+}
+
+.var-desc-el {
+	display : block ;
+	color : #888 ;
+	font-size : 7pt ;
+	/*margin-left : 4px !important ;
+	padding : 0px ;*/
+}
+.var-desc-el:last-child {
+	color : #000 ;
+	font-size : 8pt ;	
+}
+.var-desc-el:first-letter {
+	text-transform : uppercase ;
+}
+
+.var-lnk {
+	text-decoration : none ;
+	cursor : pointer ;
+	color : #000 ;
+	font-size : 10pt ;
+}
+.var-lnk:hover {
+	color : #08f ;
+	text-decoration : underline ;
+}
+.var-lnk-icon , .var-e-lnk-icon {
+	vertical-align : middle ;
+	width : 13px ;
+	height : 13px ;
+	display : inline-block ;
+	text-decoration : none ;
+}
+.var-lnk-icon {
+	margin-right : 4px ;
+	background-image : url( "paste.png" );
+}
+.var-e-lnk-icon {
+	margin-left : 4px ;
+	background-image : url( "sprites1.png" );
+	background-position : 0px -119px ;
+}
+
+.doc-table {
+	display : inline-block ;
+}
+
+.doc-table:after {
+	display : block ;
+	content : "" ;
+	height : 1.25em ;
+	line-height : 1.25 ; 
+}
+
+
+.doc-tr {
+	display : table-row ;
+}
+
+.doc-tr-wrapper:not(:first-child) > .doc-tr > .doc-td {
+	border-top : none ;
+}
+
+
+.doc-td {
+	display : table-cell ;
+	border : 1px solid #000 ;
+	vertical-align : top ;
+}
+
+.doc-td:not(:first-child) {
+	border-left : none ;
+}
+
+@media print {
+	#data-area {
+		border : none ;
+	}
+	
+	.thl , .thle , .thlg , .thlr , .thli {
+		background-color : #fff ;
+	}
+}
+
+.pb-before {
+	break-before : column ;
+}
+.pb-after {
+	break-after : column ;
+}

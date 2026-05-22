@@ -1,0 +1,235 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.letter-menu {
+		text-align : center ;
+		position : fixed ;
+		left : 4px ;
+		top : 6cm ;
+		border : 1px solid #404040 ;
+		background-color : #ffffff ;
+		width : 5cm ;
+		padding : 8px ;
+	}
+
+	.letter-menu-item {
+		color : #0080ff ;
+		text-decoration : none ;
+		cursor : pointer ;
+		padding-left : 2px ;
+		padding-right : 2px ; 
+	}
+	
+	.letter-menu-item:hover {
+		color : #ff8000 ;
+		text-decoration : underline ; 
+	}
+	
+	.accounts-table {
+		width: 768px;
+	}
+	
+	.letter-label {
+		margin-top : 16px ;
+		color : #ff0000 ;
+		padding : 16px 8px 2px 8px ;
+		font-size : 14pt ;
+	}
+
+	.account {
+		padding: 0px;
+		border: 1px solid #808080;
+	}
+
+	.account-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.account-head {
+		height: 19px;
+		padding: 0px;
+    background: #e0e0e0 url(cap.gif);
+		text-indent: 8px;
+		vertical-align: middle;
+		font-size: 9pt;
+		font-weight: bold;
+		color: #ffffff;
+	}
+
+	.account-sub-head {
+		height: 19px;
+		border-top: 1px solid #808080;
+		border-bottom: 1px solid #808080;
+		padding: 0px;
+		background: #e0e0e0 url(cap2.gif);
+		text-indent: 12px;
+		vertical-align: middle;
+		font-size: 8pt;
+		color: #000000;
+	}
+
+	.account-sub-head A {
+		margin-right: 8px;
+		float: right;
+		vertical-align: middle;
+		font-size: 8pt;
+		color: #0000ff;
+		text-decoration: none;
+	}
+
+	.account-sub-head A:hover {
+		color: #008000;
+		text-decoration: underline;
+	}
+
+	.sub-head-img {
+		border: 0;
+		vertical-align: middle;
+	}
+
+	.account-body {
+		padding: 0px;
+		font-size: 10pt;
+	}
+
+	.account-body-table {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.account-l-body {
+		width: 50%;
+		background-color: #f8f8f8;
+		color: #000000;
+		padding: 4px;
+	}
+
+	.account-l-body-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.account-r-body {
+		width: 50%;
+		background-color: #f8f8f8;
+		color: #000000;
+		padding: 4px;
+	}
+
+	.account-r-body-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.spec-desc {
+		border-bottom : 1px dashed #000000 ;
+	}
+
+	.item-name {
+		font-size: 9pt ;
+		color: #b0b0b0 ;
+	}
+
+	.body-link {
+	}
+
+	.body-link A {
+		color: #0000ff;
+		text-decoration: none;
+		font-size: 10pt;
+	}
+
+	.body-link A:hover {
+		color: #008000;
+		text-decoration: underline;
+		font-size: 10pt;
+	}
+	
+	
+	
+	.dep-error , .post-error , .spec-error {
+		display : inline-block ;
+		padding : 1px 6px ;
+		margin : 2px !important ;
+		background-color : #c00 ;
+		color : #fff ;
+		border : 1px solid #800 ;
+		border-radius : 3px ;
+		cursor : pointer ;
+		text-transform : uppercase ;
+		text-shadow : 1px 1px 1px #000 ;
+		text-align : center ;
+	}
+	
+	.spec-in-stat , .spec-no-stat {
+		display : inline-block ;
+		padding : 1px 2px ;
+		border-bottom : 1px dashed #ff0 !important ;
+		margin : 2px !important ;
+		cursor : pointer ;
+	}
+
+	.spec-no-stat {
+		color : #0cf ;
+	}
+	
+	.tab-cap {
+		text-align : center ;
+		font-size : 18pt ;
+		margin-top : 2cm ;
+		margin-bottom : 0.5cm ;
+	}
+	
+	.btn-e {
+		text-align : center ;
+	}
+	
+	.btn-edit {
+		display : inline-block ;
+		width : 13px ;
+		height : 13px ;
+		margin : 0px 1px ;
+		background-image : url( "edit.gif" );
+		vertical-align : middle ;
+	}
+	
+	.rights-edit {
+		color : #fc0 ;
+		text-decoration : none ;
+		font-size : 10pt ;
+	}
+	.rights-edit:hover {
+		color : #0f0 ;
+		text-decoration : underline ;
+	}
+
+	.acc-data {
+		width : 400px ;
+	}
+
+	.acc-data-table {
+		width: 100% ;
+		border-collapse : collapse ;
+	}
+
+	.time-data {
+		text-align : right ;
+		color : #888 ;
+	}
+
+	.time-data:hover {
+		color : #fff ;
+	}
+
+	.time-data.time-alert {
+		color : #f00 ;
+	}
+
+	.time-data .date ,
+	.time-data .time {
+		font-weight : bold ;
+	}

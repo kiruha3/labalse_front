@@ -1,0 +1,144 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.PT {
+		border-collapse: collapse;
+	}
+
+	.D {
+		width: 192px;
+		border: 1px dotted #c0c0c0;
+		padding: 6px;
+		text-align: justify;
+	}
+
+	.I {
+		border: 1px dotted #c0c0c0;
+		padding: 6px;
+	}
+
+	.i_date {
+		text-align: center;
+	}
+
+	.i_reason , .i_payer , .i_address , .i_customer {
+		width : 512px ;
+	}
+
+	.items-table {
+		border-collapse: collapse;
+	}
+
+	.item-select-c {
+		width: 28px;
+		background-color: #404040;
+		text-align: center;
+		border: 1px solid #808080;
+	}
+
+	.item-name-c {
+		width: 516px;
+		background-color: #404040;
+		color: #ffffff;
+		font-size: 8pt;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid #808080;
+	}
+
+	.item-count-c {
+		width: 102px;
+		background-color: #404040;
+		color: #ffffff;
+		font-size: 8pt;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid #808080;
+	}
+
+	.item-price-c {
+		width: 102px;
+		background-color: #404040;
+		color: #ffffff;
+		font-size: 8pt;
+		font-weight: bold;
+		text-align: center;
+		border: 1px solid #808080;
+	}
+
+	.item-select {
+		background-color: #f0f0f0;
+		text-align: center;
+		border: 1px solid #808080;
+		padding: 2px;
+	}
+
+	.item-name {
+		background-color: #f0f0f0;
+		text-align: center;
+		border: 1px solid #808080;
+		padding: 2px;
+	}
+
+	.item-count {
+		background-color: #f0f0f0;
+		text-align: center;
+		border: 1px solid #808080;
+		padding: 2px;
+	}
+
+	.item-price {
+		background-color: #f0f0f0;
+		text-align: center;
+		border: 1px solid #808080;
+		padding: 2px;
+	}
+
+	.i-item-name {
+		width: 512px;
+	}
+
+	.i-item-count {
+		width: 96px;
+		text-align: center;
+	}
+
+	.i-item-price {
+		width: 96px;
+		text-align: right;
+	}
+
+	.btnTB {
+		text-align: center;
+		padding-top: 16px;
+	}
+
+	.optTB {
+		text-align: left;
+		padding-top: 16px;
+	}
+	
+	.inv-error {
+		width : 512px ;
+		border : 1px dashed #000 ;
+		font-size : 12pt ;
+		text-align : center ;
+		padding : 8px 16px ;
+		margin : 0 auto 32px ;
+		background-color : #fcc ;
+	}
+	
+	.bill-err-msg {
+		margin : 1cm ;
+		padding : 0.5cm ;
+		border : 1px solid #000 ;
+		background-color : #f88 ;
+		text-transform : uppercase ;
+		font-size : 12pt ;
+		text-align : center ;
+		letter-spacing : 4px ;
+		word-spacing : 16px ;
+	}

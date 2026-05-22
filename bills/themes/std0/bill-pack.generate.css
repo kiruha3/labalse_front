@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+	.form-container {
+		left : 50% ;
+		top : 2cm ;
+		margin-left : -256px ;
+		width : 512px ;
+		position : relative ;
+	}
+	
+	.form {
+		border : 1px solid #000 ;
+	}
+	
+	.form div {
+		text-align : center ;
+		margin : 8px ;
+	}
+	
+	.form label {
+		margin-left : 32px ;
+	}
+	
+	.form label:first-child {
+		margin-left : 0px ;
+	}
+	
+	.bpg-year , .bpg-from , .bpg-to {
+		text-align : center ;
+		margin-left : 8px ;
+	}
+	
+	.bpg-year {
+		width : 3em ;
+		
+	}
+	
+	.bpg-from , .bpg-to {
+		width : 3em ;
+	}
+	
+	.bpg-lnk {
+		text-align : center ;
+		color : #8cf ;
+	}
+	
+	.bpg-lnk:hover {
+		color : #fc0 ;
+	}
+	

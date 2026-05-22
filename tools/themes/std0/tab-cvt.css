@@ -1,0 +1,80 @@
+
+	.cap {
+		margin-top : 1cm ;
+		margin-bottom : 0.25cm ;
+		text-align : center ;
+		font-size : 18pt ;
+	}
+
+	.tgtFile {
+		width : 256px ;
+	}
+	
+	.skip {
+		width : 48px ;
+		text-align : right ;
+	}
+	
+	.fltColumns {
+		width : 192px ;
+		text-align : center ;
+	}
+	
+	.delim-symbols {
+		padding : 4px 8px ;
+		width : 48px ;
+		border : 1px dotted #404040 ;
+		display : inline-block ;
+		font-family : "lucida console" ;
+	}
+	.delim-symbols + .delim-symbols {
+		margin-left : 16px ;
+	}
+	
+	.checkRowsCount {
+		width : 64px ;
+		text-align : right ;
+	}
+	
+	.preview {
+		font-family : monospace ;
+		border : 1px solid #404040 ;
+		background-color : #fff0e0 ;
+		padding : 0px ;
+		/*position : absolute ;*/
+		overflow : auto; ;
+		max-height : 384px ;
+		white-space : nowrap ;
+	}
+	
+	.preview-res {
+		background-color : #fff0e0 ;
+		overflow : auto ;
+		max-height : 384px ;
+		text-align : center ;
+		/*white-space : nowrap ;*/
+	}
+	
+	.preview-res-tab {
+		border-collapse : collapse ;
+	}
+	
+	.preview-res-tab td {
+		padding : 2px 4px ;
+		border : 1px solid #606060 ;
+	}
+	
+	.lineNum {
+		padding-right : 6px ;
+		background-color : #ffe0c0 ;
+		width : 48px ;
+		border-right : 1px dotted #404040 ;
+		text-align : right ;
+		display : inline-block ;
+	}
+	
+	.skipFlt {
+		width : 640px ;
+		height : 128px ;
+	}
+	

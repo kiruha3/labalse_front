@@ -1,0 +1,69 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+* {
+	font-family : "verdana" , "arial" , sans-serif ;
+}
+
+.img-tab {
+	border-collapse : collapse ;
+}
+
+.gr-panel {
+	text-align : center ;
+	padding-bottom : 2cm ;
+	vertical-align : middle ;
+}
+
+.ab1 , .ab2 , .af1 , .af2 {
+	border : 1px solid #c0c0c0 ;
+	display : inline-block ;
+	width : 16px ;
+	height : 64px ;
+	margin : 1px ;
+	background-repeat : no-repeat ;
+	background-position : center ;
+}
+
+.ab1:hover , .ab2:hover , .af1:hover , .af2:hover {
+	border : 1px solid #000000 ;
+}
+
+
+.ab1 {
+	background-image : url( "ab1-g.png" );
+}
+
+.ab1:hover {
+	background-image : url( "ab1-b.png" );
+}
+
+.ab2 {
+	background-image : url( "ab2-g.png" );
+}
+
+.ab2:hover {
+	background-image : url( "ab2-b.png" );
+}
+
+.af1 {
+	background-image : url( "af1-g.png" );
+}
+
+.af1:hover {
+	background-image : url( "af1-b.png" );
+}
+
+.af2 {
+	background-image : url( "af2-g.png" );
+}
+
+.af2:hover {
+	background-image : url( "af2-b.png" );
+}
+
+.ctrl-panel {
+	text-align : center ;
+}

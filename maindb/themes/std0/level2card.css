@@ -1,0 +1,313 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+
+	.PT { border-collapse: collapse; }
+
+	.D { width: 384px;
+		border-style: dotted; border-color: #c0c0c0; border-width: 1px; padding: 6px;
+		text-align: justify; }
+
+	.I { border-style: dotted; border-color: #c0c0c0; border-width: 1px; padding: 6px; }
+
+	.number {
+		position: relative ;
+	}
+
+	.add-ex-num-area {
+		padding-left : 12px ;
+	}
+
+	.aen-row {
+		position : relative ;
+		padding-left : 24px ;
+		border-top : 1px dotted #888 ;
+	}
+
+	.aen-btn-del {
+		display : inline-block ;
+		width : 13px ;
+		height : 13px ;
+		background-image : url( "sprites1.png" );
+		background-position : -13px 0px ;
+		vertical-align : middle ;
+		margin-top : -6px ;
+		position : absolute ;
+		top : 50% ;
+		cursor : pointer ;
+		left : 0px ;
+	}
+
+
+	.aen-number {
+	}
+	.aen-agency {
+		margin-left : 20px ;
+	}
+	.aen-agent {
+		margin-left : 20px ;
+	}
+	.aen-ed4 {
+		margin-left : 20px ;
+	}
+
+	.add-ex-num-btn {
+		display : inline-block ;
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "sprites1.png" );
+		background-position : 0px -175px ;
+		vertical-align : middle ;
+		margin-left : 32px ;
+		margin-top : -7px ;
+		position : absolute ;
+		top : 50% ;
+		cursor : pointer ;
+	}
+
+	.i_spec {
+		width: 64px;
+	}
+
+	.i_worker {
+		width: 384px;
+	}
+
+	.i_date {
+		text-align: center;
+	}
+
+	.i_materials {
+		width: 512px;
+		height: 64px;
+	}
+
+	.i_ex_data_6 {
+		width: 512px;
+		height: 64px;
+	}
+
+	.i_ex_data_7 {
+		width: 512px;
+		height: 96px;
+	}
+
+	.i_ex_data_8 {
+		width: 512px;
+		height: 64px;
+	}
+
+	.i_ex_data_9 {
+		width: 512px;
+		height: 64px;
+	}
+
+	.i_ex_data_10 {
+		width: 512px;
+		height: 96px;
+	}
+
+	.i_ex_data_12 {
+		width: 512px;
+		height: 96px;
+	}
+
+	.i_selected_worker {
+		margin-left : 1cm ;
+		margin-right : 2cm ;
+		font-size : 16pt ;
+	}
+	.i_selected_spec {
+		font-size : 16pt ;
+	}
+
+	.btnTB {
+		text-align: center;
+		padding-top: 16px;
+	}
+
+	.stat-panel {
+		display : block ;
+		width : 480px ;
+		height : auto ;
+		position : fixed ;
+		right : 0.5cm ;
+		top : 5cm ;
+		border : 1px solid #444 ;
+		background-color : #fff ;
+
+		box-shadow: 4px 4px 16px #000;
+
+		overflow : auto ;
+	}
+
+	@media (max-width : 1600px) {
+		.stat-panel {
+			right : auto ;
+			left : -400px ;
+			transition : left 0.5s  ;
+		}
+		.stat-panel:hover {
+			right : auto ;
+			left : 0.5cm ;
+		}
+
+	}
+
+	.stat-panel * {
+		box-sizing : border-box ;
+	}
+
+	.stat-panel-container {
+		margin : 8px ;
+		max-height : 512px ;
+		overflow-y : auto ;
+	}
+
+	.stat-panel-legend.no-stat , .stat-panel-legend-2.no-stat {
+		display : inline-block ;
+		width : 1em ;
+		height : 1em ;
+		/*opacity : 50% ;*/
+	}
+
+	.spec-area:hover {
+		background-color : #eee ;
+	}
+
+	.spec-row {
+		margin-top : 0.5em ;
+		/*font-size : 10pt ;*/
+		/*color : #aaa ;*/
+	}
+
+	.spec-area:hover .spec-row {
+		/*color : #444 ;*/
+	}
+
+	.stat-row {
+		padding : 2px 0px ;
+		position : relative ;
+	}
+
+	.stat-row + .stat-row {
+		border-top : 1px dotted #888 ;
+	}
+
+	.spec-row + .stat-row {
+		border-top : 1px solid #444 ;
+	}
+
+	.stat-row.no-stat {
+		/*opacity : 50% ;*/
+	}
+
+	.stat-row-name {
+		text-decoration : none ;
+		color : #000 ;
+		display : inline-block ;
+		position : absolute ;
+		cursor : pointer ;
+	}
+
+	.stat-row-name:hover {
+		text-decoration : underline ;
+		color : #08c ;
+	}
+
+	.stat-row-name.locked {
+		cursor : auto ;
+		text-decoration : none ;
+		color : #888 ;
+	}
+
+	.stat-row-name-details {
+		display : none ;
+		font-weight : bold ;
+		font-size : 10pt ;
+		color : #08c ;
+		text-decoration : none ;
+		margin-left : 2ch ;
+	}
+
+	.stat-row-name-details:hover {
+		color : #f00 ;
+		text-decoration : underline ;
+	}
+
+	.stat-row-name-details:before , .stat-row-name-details:after {
+		color : #000 ;
+		font-weight : normal ;
+	}
+	.stat-row-name-details:before {
+		content : '(' ;
+	}
+	.stat-row-name-details:after {
+		content : ')' ;
+	}
+
+	.stat-row-name:hover .stat-row-name-details {
+		display : inline-block ;
+	}
+
+
+	.stat-row-data {
+		display : inline-block ;
+		width : 100% ;
+		padding-left : 256px ;
+		padding-right : 3ch ;
+	}
+
+	.stat-row-data-label {
+		/*color : #369 ;*/
+		color : #000 ;
+		text-align : right ;
+		position : absolute ;
+		font-size : 10pt ;
+	}
+
+	.stat-row-data-label.left {
+		padding-right : 0.5ch ;
+		right : 100% ;
+	}
+
+	.stat-row-data-label.right {
+		padding-left : 0.5ch ;
+		left : 100% ;
+	}
+
+	.stat-row.no-stat .stat-row-data-label {
+		/*color : #844 ;*/
+		color : #000 ;
+	}
+
+	.stat-row-data-bar {
+		display : inline-block ;
+		background-color : #8cf ;
+		border : 1px solid #246 ;
+		color : #fff ;
+		position : relative ;
+		line-height : 10pt ;
+		height : 10pt ;
+	}
+
+	.stat-row.no-stat .stat-row-data-bar , .stat-panel-legend.no-stat {
+		background-color : #fcc ;
+		border : 1px solid #c66 ;
+	}
+
+	.stat-row-data-bar-sub {
+		display : inline-block ;
+		background-color : #48c ;
+		position : absolute ;
+		left : 0 ;
+		top : 0 ;
+		bottom : 0 ;
+	}
+
+	.stat-row.no-stat .stat-row-data-bar-sub , .stat-panel-legend-2.no-stat {
+		background-color : #c66 ;
+	}

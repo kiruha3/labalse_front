@@ -1,0 +1,198 @@
+<?php
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	require_once ( "../core.php" );
+	/**
+	 * @var $LoginOk
+	 * @var TDB $portalDB
+	 * @var $MonthNames
+	 * @var $dbConfig
+	 */
+	require_once ( "../barcode.php" );
+	require_once ( "lconfig.php" );
+	require_once ( '../cores/core.maindb.php' );
+	require_once ( "../ext-lib/rtf-gen.php" );
+
+	TryLoginFromCookie();
+	if ( !$LoginOk ) {
+		Redirect( "../auth.php" );
+	}
+
+	if ( isset( $_REQUEST[ "id" ] ) ) {
+		$eID = intval( $_REQUEST[ "id" ] );
+	} else {
+		echo "ДоZZвидания!" ;
+		exit();
+	}
+
+	$res = $portalDB->query( "select `t1`.* from `workers` as `t1` where ( `t1`.`actual` <=> 1 )" );
+	$ndct = array();
+	foreach ( $res as $r ) {
+		$n = NAMES_Format( NAMES_parse( $r[ "name" ] ) , "%F1 %i.%o." );
+		$nt = NAMES_Format( NAMES_parse( $r[ "name" ] ) , "%F1 %i.%o." );
+		$nr = NAMES_Format( NAMES_parse( $r[ "name" ] ) , "%F3 %i.%o." );
+		$ndct[ $n ] = array(
+			"t" => $nt ,
+			"r" => $nr ,
+			"i" => $r[ "dep" ]
+		);
+	}
+
+	$res = $portalDB->row( "select `t1`.* , `t2`.`name` as `agency` , `t3`.`name` as `agent` , `t4`.`descr` , `t4`.`inc_date` , `t4`.`out_comment` from `matincoming` as `t1` , `agency` as `t2` , `agent` as `t3` , `evidence` as `t4` where ( `t1`.`id` = `t4`.`ext_id` ) and ( `t2`.`id` = `t1`.`from_agency` ) and ( `t3`.`id` = `t1`.`from_agent` ) and ( `t4`.`id` = ? )" , "i" , $eID );
+	$t1ID = $res[ "id" ];
+
+	$m = array();
+	$n = preg_match( "/([А-Яа-яёЁ]+ [А-Яа-яёЁ]\\.[А-Яа-яёЁ]\\.)/" , $res[ "ex_data_6" ] , $m );
+	if ( $n == 1 ) {
+		$n = $m[ 1 ];
+		if ( isset( $ndct[ $n ] ) ) {
+			$nt = $ndct[ $n ][ "t" ];
+			$nr = $ndct[ $n ][ "r" ];
+			$depID = $ndct[ $n ][ "i" ];
+		} else {
+			$nt = $n ;
+			$nr = $n ;
+			$depID = null ;
+		}
+
+	} else {
+		$nt = "  " ;
+		$nr = "  " ;
+		$depID = null ;
+	}
+
+	$t1Date = explode( "-" , date( "d-m-Y" , strtotime( $res[ "date" ] ) ) );
+
+	$t1Date = $t1Date[ 0 ]." ".inForm( $MonthNames[ intval( $t1Date[ 1 ] ) - 1 ] , 2 )." ".$t1Date[ 2 ]." г." ;
+
+	function packText( $t ) {
+		$res = trim( $t );
+		$res = preg_replace( '/\s+/' , " " , $res );
+		$res = preg_replace( '/,([а-я])/i' , ', ${1}' , $res );
+		return $res ;
+	}
+
+	header( "Content-Type: application/rtf" );
+	header( "Content-Disposition: attachment;filename=\"Поручение ".date( "Y.m.d H-i" , time() ).".rtf\"" );
+
+	$doc = new RTFDocument();
+
+	$doc->paperFormat = isset( $dbConfig[ CFG__MATINCOMING_CARDS_FORMAT_EVIDENCE_SIDE_2 ] ) ? $dbConfig[ CFG__MATINCOMING_CARDS_FORMAT_EVIDENCE_SIDE_2 ] : PAPER_SIZE_A5_LANDSCAPE ;
+	$doc->margins = "10mm" ;
+
+	$doc->setFontName( FONT_CALIBRI )->setTextColor( "#000000" );
+
+	$doc->setMainContext()->setTextAlign( TEXT_ALIGN_CENTER )->setFontSize( "8pt" )
+		->addTextLine()->addTextLine();
+
+	$tbl = $doc->addTable();
+
+		$r = $tbl->insertRow();
+		$r->height = "8mm" ;
+
+			$c = $r->insertCell();
+			$c->width = "140mm" ;
+			$c->verticalAlign = CELL_ALIGN_CENTER ;
+			$c->setBorders( "ltrb" , "none" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_RIGHT )->setFontSize( "11pt" )
+				->addText( "Вещ.док. (объекты исследования) к экспертизе (экспертному исследованию) №" );
+
+			$c = $r->insertCell();
+			$c->width = "50mm" ;
+			$c->verticalAlign = CELL_ALIGN_CENTER ;
+			$c->setBorders( "ltrb" , "none" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_LEFT )->setFontSize( "20pt" )
+				->addText( matincomingNumberFull( $t1ID , $depID , $res[ "exp_type" ] ) );
+
+		$r = $tbl->insertRow();
+		$r->height = "2mm" ;
+
+			$c = $r->insertCell();
+			$c->width = "190mm" ;
+			$c->verticalAlign = CELL_ALIGN_BOTTOM ;
+			$c->setBorders( "ltrb" , "none" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_CENTER )->setFontSize( "1pt" );
+
+		$r = $tbl->insertRow();
+		$r->height = "7mm" ;
+
+			$exData3 = packText( $res[ "ex_data_3" ]." ".$res[ "agent" ]." ".$res[ "agency" ] );
+
+			$c = $r->insertCell();
+			$c->width = "190mm" ;
+			$c->verticalAlign = CELL_ALIGN_TOP;
+			$c->setBorders( "ltrb" , "s" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_JUSTIFIED )
+				->setFontSize( "11pt" )->addTag( "b" )->addTag( "ul" )->addText( "основание: " )->addTag( "ul0" )->addTag( "b0" )
+				->setFontSize( ( strlen( $exData3 ) > 130 ? "11pt" : "14pt" ) )->addText( $exData3 );
+
+		$r = $tbl->insertRow();
+		$r->height = "7mm" ;
+
+			$exData4 = packText( $res[ "ex_data_4" ] );
+			$c = $r->insertCell();
+			$c->width = "190mm" ;
+			$c->verticalAlign = CELL_ALIGN_TOP ;
+			$c->setBorders( "ltrb" , "s" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_JUSTIFIED )
+				->setFontSize( "11pt" )->addTag( "b" )->addTag( "ul" )->addText( "материалы: " )->addTag( "ul0" )->addTag( "b0" )
+				->setFontSize( ( strlen( $exData4 ) > 500 ? "11pt" : "14pt" ) )->addText( $exData4 );
+
+		$r = $tbl->insertRow();
+		$r->height = "18mm" ;
+
+			$evDescr = packText( $res[ "descr" ] );
+
+			$c = $r->insertCell();
+			$c->width = "190mm" ;
+			$c->verticalAlign = CELL_ALIGN_TOP ;
+			$c->setBorders( "ltrb" , "s" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_JUSTIFIED )
+				->setFontSize( "9pt" )->addTag( "b" )->addTag( "ul" )->addText( "Описание объекта(ов): " )->addTag( "ul0" )->addTag( "b0" )
+				->setFontSize( ( strlen( $evDescr ) > 500 ? "8pt" : "11pt" ) )->addText( $evDescr );
+
+		$r = $tbl->insertRow();
+		$r->height = "7mm" ;
+
+			$exData9 = packText( $res[ "out_comment" ] );
+			$c = $r->insertCell();
+			$c->width = "190mm" ;
+			$c->verticalAlign = CELL_ALIGN_TOP ;
+			$c->setBorders( "ltrb" , "s" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_JUSTIFIED )
+				->setFontSize( "11pt" )->addTag( "b" )->addTag( "ul" )->addText( "данные о получателе: " )->addTag( "ul0" )->addTag( "b0" )
+				->setFontSize( ( strlen( $exData4 ) > 500 ? "11pt" : "14pt" ) )->addText( $exData9 );
+
+		$r = $tbl->insertRow();
+		$r->height = "15mm" ;
+
+			$c = $r->insertCell();
+			$c->width = "45mm" ;
+			$c->verticalAlign = CELL_ALIGN_BOTTOM ;
+			$c->setBorders( "ltrb" , "none" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_LEFT )
+				->setFontSize( "11pt" )->addText( "Вещ.док. (объекты исследования) получил: " );
+
+			$c = $r->insertCell();
+			$c->width = "60mm" ;
+			$c->verticalAlign = CELL_ALIGN_BOTTOM ;
+			$c->setBorders( "ltrb" , "none" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_CENTER )->setFontSize( "16pt" )
+				->addTag( "u171" )->addText( "\"__" )->addTag( "u187" )->addText( "\" _________ ".substr( date( "Y" , time() ) , 0 , 3 )."__г." );
+
+			$c = $r->insertCell();
+			$c->width = "85mm" ;
+			$c->verticalAlign = CELL_ALIGN_BOTTOM ;
+			$c->setBorders( "ltrb" , "none" );
+			$doc->setTableCellContext( $c )->setTextAlign( TEXT_ALIGN_RIGHT )->setFontSize( "16pt" )
+				->addText( "__________ _______________ " );
+
+
+		$doc->setMainContext()->addTag( "v" )->addTextLine()->addTag( "v0" );
+
+		$doc->write();
+?>

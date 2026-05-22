@@ -1,0 +1,173 @@
+
+	.MainTable {
+		margin-top : 1cm ;
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+
+	.cap1 , .cap2 {
+		border : 1px solid #000000 ;
+		text-align : center ;
+		font-size : 8pt ;
+	}
+
+	.dat1 , .dat2 {
+		border : 1px solid #000000 ;
+		font-size : 10pt ;
+	}
+
+	.cap1 , .dat1 {
+		width : 96px ;
+	}
+
+	.dat1 {
+		text-align : center ;
+		padding : 4px 0px ;
+	}
+
+	.dat2 {
+		text-align : left ;
+	}
+
+	.lnk {
+		text-decoration : none ;
+		border : 1px solid #eee ;
+		border-radius : 3px ;
+		padding : 2px 4px ;
+		font-size : 8pt ;
+		color : #fff ;
+		background-color : #eee ;
+	}
+
+	.dat1:hover .lnk {
+		text-decoration : none ;
+		border : 1px solid #444 ;
+		background-color : #888 ;
+	}
+
+	.dat1:hover .lnk:hover {
+		text-decoration : none ;
+		border : 1px solid #000 ;
+		background-color : #444 ;
+	}
+
+	.comment-area {
+		border : 1px solid #888 ;
+		margin : 0 ;
+		padding : 0 ;
+	}
+
+	.comment-author {
+		font-size : 8pt ;
+		background-color : #444 ;
+		color : #fff ;
+		padding : 0px 4px ;
+		display : inline-block ;
+	}
+
+	.comment-text {
+	}
+
+	.exp-name-area {
+		display : flex ;
+		flex-direction : column ;
+		max-height : 480px ;
+		flex-wrap : wrap ;
+		overflow-x : auto ;
+		margin : 0.5cm 5% ;
+		border : 1px solid #444 ;
+		column-gap : 2em ;
+		padding : 0 8px ;
+	}
+
+	.exp-name-group {
+		/*width : 192px ;*/
+		padding : 16px 0 ;
+	}
+
+	.exp-name-group-name {
+	}
+
+	.exp-name {
+	}
+
+	.exp-name.not-actual {
+		opacity : 25% ;
+	}
+
+	.exp-name.not-actual:hover {
+		opacity : 100% ;
+	}
+
+	.cap {
+		text-align : center ;
+		font-weight : bold ;
+		margin-top : 2cm ;
+	}
+
+	.toolbar {
+		text-align : center ;
+	}
+
+	@media print {
+		.lnk {
+			display : none ;
+		}
+	}
+
+	#i-exp-id-list-all {
+		display : none ;
+	}
+
+	#i-exp-id-list-all + .exp-name {
+		cursor : pointer ;
+		font-weight : bold ;
+		padding : 16px 0 ;
+	}
+
+	.exp-name-all-slider {
+		display : inline-block ;
+		width : 32px ;
+		height : 16px ;
+		border : 1px solid #444 ;
+		border-radius : 8px ;
+		background-color : #ccc ;
+		margin-left : 8px ;
+		position : relative ;
+	}
+
+	.exp-name-all-slider:after {
+		content : '' ;
+		position : absolute ;
+		left : 1px ;
+		top : 1px ;
+		width : 12px ;
+		height : 12px ;
+		border : 1px solid #000 ;
+		border-radius : 6px ;
+		background-color : #888 ;
+	}
+
+	#i-exp-id-list-all:checked + label.exp-name > .exp-name-all-slider {
+		background-color : #8f8 ;
+	}
+
+	#i-exp-id-list-all:checked + label.exp-name > .exp-name-all-slider:after {
+		background-color : #080 ;
+		left : auto ;
+		right : 1px ;
+	}
+
+	#i-exp-id-list-all:checked ~ div.exp-name-group > div.exp-name-group-name {
+		color : #888 ;
+		pointer-events : none ;
+	}
+
+	#i-exp-id-list-all:checked ~ div.exp-name-group > div.exp-name > label.exp-name {
+		color : #888 ;
+		pointer-events : none ;
+	}
+
+	#i-exp-id-list-all:checked ~ div.exp-name-group > div.exp-name > label.exp-name > input {
+		pointer-events : none ;
+	}

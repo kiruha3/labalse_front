@@ -1,0 +1,257 @@
+
+	.marks--marks-tab-area , .marks--groups-tab-area {
+		display : inline-block ;
+		margin-left : 0.5cm ;
+		margin-right : 0.5cm ;
+	}
+
+	.marks--marks-tab-area-title ,
+	.marks--groups-tab-area-title {
+		font-size : 14pt ;
+		font-weight : bold ;
+		text-transform : uppercase ;
+		letter-spacing : 0.25em ;
+		text-align : center ;
+		margin : 1em ;
+	}
+
+	.marks--marks-tab-area-message ,
+	.marks--groups-tab-area-message {
+		font-size : 12pt ;
+		font-style : italic ;
+		background-color : #bef ;
+		margin : 1em ;
+		padding : 1em ;
+		border : 1px solid #248 ;
+	}
+
+	.marks--marks-tab-area-message:before ,
+	.marks--groups-tab-area-message:before {
+		content : '!' ;
+		font-size : 18pt ;
+		margin-right : 1em ;
+		color : #fff ;
+	}
+
+	#marks-samples-area {
+		display : none ;
+	}
+
+	.marks--system-mark {
+		display : inline-block ;
+		font-size : 7pt ;
+		color : #fff ;
+		border : 2px solid #f00 ;
+		border-radius : 3px ;
+		padding : 2px ;
+		cursor : pointer ;
+		margin-left : 3px ;
+	}
+
+	.marks--system-mark:nth-child( 2 ) {
+		margin-left : 32px ;
+	}
+
+	.marks--marks-tab--group {
+		display : inline-block ;
+		padding : 2px 8px ;
+		border : 1px solid #777 ;
+		border-radius : 3px ;
+		background-color : #ccc ;
+		color : #000 ;
+		margin : 2px ;
+	}
+
+	.marks--not-actual-field {
+		text-align : center ;
+		width : 48px ;
+	}
+
+	.marks--not-actual {
+		display : inline-block ;
+		width : 13px ;
+		height : 13px ;
+		background-image : url( "/themes/std0/sprites1.png" );
+		background-position : -13px 0px ;
+	}
+
+	*:has(> * > .marks--dlg-client-area ) {
+		background-color : #ccc ;
+	}
+
+	.marks--dlg-client-area {
+		padding : 8px ;
+	}
+
+	.marks--dlg-client-area * {
+		box-sizing : border-box ;
+	}
+
+	.marks--mark-dlg--name-label ,
+	.marks--mark-dlg--descr-label ,
+	.marks--mark-dlg--style-label ,
+	.marks--mark-dlg--state-label ,
+	.marks--mark-dlg--demo-panel-label ,
+	.marks--group-dlg--name-label ,
+	.marks--group-dlg--descr-label ,
+	.marks--group-dlg--members-list-label{
+		display : block ;
+		margin-left : 0.5em ;
+		margin-bottom : 0.25em ;
+	}
+	.marks--mark-dlg--descr-label ,
+	.marks--mark-dlg--param-columns-table ,
+	.marks--mark-dlg--demo-panel-label ,
+	.marks--group-dlg--descr-label ,
+	.marks--group-dlg--members-list-label {
+		margin-top : 1em ;
+	}
+	.marks--mark-dlg--name-input-wrapper {
+	}
+	.marks--mark-dlg--name-input ,
+	.marks--mark-dlg--descr-area ,
+	.marks--mark-dlg--style-select ,
+	.marks--mark-dlg--state-select ,
+	.marks--group-dlg--name-input ,
+	.marks--group-dlg--descr-area {
+		width: 100% ;
+		font-size : 14pt ;
+	}
+
+	.marks--mark-dlg--descr-area {
+		height : 6em ;
+	}
+
+	.marks--group-dlg--descr-area {
+		height : 3em ;
+	}
+
+	.marks--mark-dlg--param-columns-table {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.marks--mark-dlg--demo-panel {
+		display : block ;
+		border : 1px solid #777 ;
+		border-radius : 2px ;
+		text-align : center ;
+		padding : 1em ;
+		background-color : #fff ;
+	}
+
+	.marks--mark-dlg--buttons-panel ,
+	.marks--group-dlg--buttons-panel {
+		text-align : center ;
+		margin-top : 2em ;
+	}
+
+	.marks--group-name {
+		display : inline-block ;
+		padding : 2px 8px ;
+		border : 1px solid #777 ;
+		border-radius : 3px ;
+		background-color : #ccc ;
+		color : #000 ;
+		margin : 2px ;
+		font-size : 12pt ;
+		cursor : pointer ;
+	}
+
+	.marks--group-descr {
+		display : block ;
+		font-size : 10pt ;
+		padding : 2px 8px ;
+		color : #fff ;
+		margin : 2px 2px 2px 8px ;
+	}
+
+	.marks--group-descr:empty {
+		display : none ;
+	}
+
+	.marks--group-dlg--members-table {
+		width : 100% ;
+		display : flex ;
+		flex-direction : row ;
+		column-gap : 8px ;
+	}
+
+
+	.marks--group-dlg--members-col-area {
+		flex : 1 1 50% ;
+		display : inline-block ;
+	}
+
+	.marks--group-dlg--members-list {
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		position : relative ;
+		height : 256px ;
+		overflow : auto ;
+	}
+
+	.marks--group-dlg--members-sub-list {
+		display : block ;
+		margin-top : 1.5em ;
+		position : relative ;
+	}
+
+	.marks--group-dlg--members-sub-list:empty {
+		display : none ;
+	}
+
+	.marks--group-dlg--members-sub-list:before {
+		content : attr( data-sub-list-name );
+		position : absolute ;
+		top : -1.25em ;
+		left : 0.25em ;
+	}
+
+	.marks--group-dlg--members-area {
+		display : inline-block ;
+		margin : 2px ;
+		padding : 2px ;
+		border : 1px dotted #444 ;
+		white-space : nowrap ;
+	}
+
+	.marks--group-dlg--members-area:hover {
+	}
+
+	.marks--group-dlg--members-id {
+		border-right : 1px solid #888 ;
+		padding-right : 2px ;
+		margin-right : 2px ;
+		font-size : 8pt ;
+		display : inline-block ;
+	}
+
+	.marks--group-dlg--members-delete-item-btn {
+		display : inline-block ;
+		width : 13px ;
+		height : 13px ;
+		line-height : 13px ;
+		vertical-align : middle ;
+		background-image : url( "/themes/std0/sprites1.png" );
+		background-position : -13px 0px ;
+		margin-right : 4px ;
+		cursor: pointer ;
+		opacity : 25% ;
+	}
+
+	.marks--group-dlg--members-area:hover .marks--group-dlg--members-delete-item-btn {
+		opacity : 100% ;
+	}
+
+	[data-mark-element="mark"].drag-mode {
+	}
+
+	[data-mark-element="mark"].drag-mode.element-draggable ,
+	[data-mark-element="group"].drag-mode.element-draggable {
+	}
+
+	[data-mark-element="mark"].drag-mode.element-non-draggable ,
+	[data-mark-element="group"].drag-mode.element-non-draggable {
+		opacity : 25% ;
+	}

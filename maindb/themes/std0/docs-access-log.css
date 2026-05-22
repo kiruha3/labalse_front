@@ -1,0 +1,24 @@
+
+	
+	.topPanel {
+		margin-top : 3em ;
+		margin-bottom : 1em ;
+	}
+	
+	.exp-lnk {
+		color : #00f ;
+	}
+	
+	.tgt-lnk {
+		color : #00f ;
+	}
+	
+	.fltInfo {
+		margin-top : 3em ;
+		margin-bottom : 1em ;
+		text-align : center ;
+	}
+	
+	.fltInfo span {
+		font-weight : bold ;
+	}

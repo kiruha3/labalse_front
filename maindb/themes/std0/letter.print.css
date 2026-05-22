@@ -1,0 +1,102 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+* {
+	/*color : #ffff00 ;*/
+}
+.main {
+	position : fixed ;
+	min-width : 220mm ;
+	width : 220mm ;
+	max-width : 220mm ;
+
+	min-height : 110mm ;
+	height : 110mm ;
+	max-height : 110mm ;
+
+	margin : 0mm ;
+	padding : 0mm ;
+
+	left : 5mm ;
+	top : 1.5mm ;
+
+	/*border : 1px solid #ff0000 ;*/
+}
+
+.from-name , .from-addr , .from-index , .to-name , .to-addr , .to-index , .to-index-2 {
+	position : absolute ;
+}
+
+.from-name , .from-addr , .to-name , .to-addr {
+	font-size : 9pt ;
+}
+
+.from-index , .to-index {
+	letter-spacing : 1.5mm ;
+	font-family : sans-serif ;
+}
+
+.to-name , .to-addr {
+	text-indent : 8mm ;
+	line-height : 6.5mm ;
+
+	min-width : 95mm ;
+	width : 95mm ;
+	max-width : 95mm ;
+}
+
+.from-name , .from-addr {
+	min-width : 75mm ;
+	width : 75mm ;
+	max-width : 75mm ;
+}
+
+.from-name {
+	left : 8mm ;
+	top : 6mm ;
+}
+
+.from-addr {
+	left : 8mm ;
+	top : 12.5mm ;
+}
+
+.from-index {
+	font-size : 16pt ;
+	left : 48mm ;
+	top : 24mm ;
+}
+
+.to-name {
+	left : 96mm ;
+	top : 45.5mm ;
+}
+
+.to-addr {
+	left : 96mm ;
+	top : 58.5mm ;
+}
+
+.to-index {
+	font-size : 18pt ;
+	left : 99mm ;
+	top : 84mm ;
+}
+
+.to-index-2 {
+	left : 11mm ;
+	top : 87.5mm ;
+}
+
+.index-digit {
+	min-width : 5mm ;
+	width : 5mm ;
+	max-width : 5mm ;
+
+	min-height : 10mm ;
+	height : 10mm ;
+	max-height : 10mm ;
+	margin-right : 4mm ;
+}

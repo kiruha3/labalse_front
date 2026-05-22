@@ -1,0 +1,216 @@
+<?php
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+
+	include_once( '../core.php' );
+	/**
+	 * @var $LoginOk
+	 * @var TDB $portalDB
+	 * @var $MonthNames
+	 * @var $dbConfig
+	 */
+	require_once( 'lconfig.php' );
+	/**
+	 * @var $PlaceID
+	 */
+
+	TryLoginFromCookie( $PlaceID );
+	if ( !$LoginOk ) {
+		Redirect( '../auth.php' );
+	}
+
+
+	//print_r_html( $_REQUEST );
+	if ( isset( $_REQUEST[ "i_year_from" ] ) ) {
+		$yf = intval( $_REQUEST[ "i_year_from" ] );
+	} else {
+		$yf = intval( date( "Y" , time() ) );
+	}
+
+	if ( isset( $_REQUEST[ "i_month_from" ] ) ) {
+		$mf = intval( $_REQUEST[ "i_month_from" ] );
+	} else {
+		$mf = intval( date( "m" , time() ) );
+	}
+
+	$dc = intval( date( "t" , mktime( 0 , 0 , 0 , $mf , 1 , $yf ) ) );
+	if ( isset( $_REQUEST[ "i_day_from" ] ) ) {
+		$df = intval( $_REQUEST[ "i_day_from" ] );
+	} else {
+		$df = 1 ;
+	}
+	if ( $df > $dc ) {
+		$df = $dc ;
+	}
+
+	if ( isset( $_REQUEST[ "i_year_to" ] ) ) {
+		$yt = intval( $_REQUEST[ "i_year_to" ] );
+	} else {
+		$yt = intval( date( "Y" , time() ) );
+	}
+
+	if ( isset( $_REQUEST[ "i_month_to" ] ) ) {
+		$mt = intval( $_REQUEST[ "i_month_to" ] );
+	} else {
+		$mt = intval( date( "m" , time() ) );
+	}
+
+	$dc = intval( date( "t" , mktime( 0 , 0 , 0 , $mt , 1 , $yt ) ) );
+	if ( isset( $_REQUEST[ "i_day_to" ] ) ) {
+		$dt = intval( $_REQUEST[ "i_day_to" ] );
+	} else {
+		$dt = 31 ;
+	}
+	if ( $dt > $dc ) {
+		$dt = $dc ;
+	}
+
+	$cookieDomain = $dbConfig[ 'engine.addresses.cookieDomain' ];
+	setcookie( 'ot4et1_ds' , date( 'd.m.Y'  , mktime( 0 , 0 , 0 , $mf , $df , $yf ) ) , time() + 7 * 86400 , '/' , $cookieDomain , '0' );
+	setcookie( 'ot4et1_de' , date( 'd.m.Y'  , mktime( 0 , 0 , 0 , $mt , $dt , $yt ) ) , time() + 7 * 86400 , '/' , $cookieDomain , '0' );
+	setcookie( 'ot4et1_cc' , implode( ',' , $_REQUEST[ "i_case_cat" ] ) , time() + 7 * 86400 , '/' , $cookieDomain , '0' );
+
+	MainHead_Print( "" , array( "%UT/ot4et.css" ) );
+
+	$tabDepartments = $portalDB->table( "departments" , "id" );
+	$tabCaseCategory = $portalDB->table( "casecategory" , "id" );
+
+	$wAll = $portalDB->query( "select * from `workers` where `first_id` = ? order by `id` asc" , false , "i" , intval( $_REQUEST[ "i_worker" ] ) );
+
+	$wa = array();
+	$w = array( "dep" => -1 , "name" => "f=;i=;o=;" );
+	foreach( $wAll as $wd ) {
+		$wa[]= $wd[ "id" ];
+		$w[ "dep" ] = $wd[ "dep" ];
+		$w[ "name" ] = $wd[ "name" ];
+	}
+
+	echo '<table class="MainTable" align="center">
+		<caption>
+			Отчет
+		</caption>
+		<tr class="strk1">
+			<td class="stolb6" colspan="3">
+				О выполнеиии экспертиз за
+			</td>
+			<td class="stolb7" colspan="5">
+				с <b>'.$df.' '.inForm( $MonthNames[ $mf - 1 ] , 2 ).'</b> <b>'.$yf.' года</b><br>
+				по <b>'.$dt.' '.inForm( $MonthNames[ $mt - 1 ] , 2 ).'</b> <b>'.$yt.' года</b>
+			</td>
+		</tr>
+		<tr class="strk1">
+			<td class="stolb6" rowspan="2" colspan="3">
+				По '.$dbConfig[ 'org.name.short' ].'
+			</td>
+			<td class="stolb7" colspan="5">
+				'.$tabDepartments[ $w[ 'dep' ] ][ 'name' ].'
+			</td>
+		</tr>
+		<tr  class="strk1">
+			<td class="stolb7" colspan="5">Эксперт '.NAMES_Format( NAMES_parse( $w[ 'name' ] ) ).'</td>
+		</tr>
+		<tr  class="strk2">
+			<td class="stolb1">
+				№ пп
+			</td>
+			<td class="stolb2">
+				№
+			</td>
+			<td class="stolb3">
+				От кого
+			</td>
+			<td class="stolb3p">
+				Номер дела и пр.
+			</td>
+			<td class="stolb4">
+				Плательщик
+			</td>
+			<td class="stolb5">
+				Стоим.
+			</td>
+			<td class="stolb5-2">
+				Дата поступ. денег
+			</td>
+			<td class="stolb5-2">
+				Дата оплаты
+			</td>
+		</tr>' ;
+
+		$q = "
+			select
+				`t1`.`id` ,
+				`t1`.`exp_type` ,
+				`t4`.`name` as `agency` ,
+				`t5`.`name` as `agent` ,
+				`t1`.`ex_data_3` ,
+			    `t1`.`ex_data_4` ,
+				`t3`.`price` ,
+				`t3`.`pay_date` ,
+				`t3`.`pay_details` ,
+				`t3`.`sndz`
+			from
+				`matincoming` as `t1` ,
+				`matincominglvl2` as `t2` ,
+				`expertize` as `t3` ,
+				`agency` as `t4` ,
+				`agent` as `t5`
+			where
+				( `t3`.`state` = 1 ) and
+				( `t3`.`fin_date` between ? and ? ) and
+				( `t3`.`exp_id` in ( ?* ) ) and
+				( `t1`.`exp_type` in ( ?* ) ) and
+				( `t2`.`id` = `t3`.`ext_id` ) and
+				( `t1`.`id` = `t2`.`mat_id` ) and
+				( `t1`.`from_agency` = `t4`.`id` ) and
+				( `t1`.`from_agent` = `t5`.`id` )
+			order by `t1`.`id`" ;
+
+		$res = $portalDB->query( $q , false , "ss*i*i" , $yf."-".$mf."-".$df , $yt."-".$mt."-".$dt , $wa , $_REQUEST[ "i_case_cat" ] );
+		$i = 1 ;
+
+		$mIDL = array_column( $res , 'id' );
+
+		$docsLinks = $portalDB->query( "select * from `documents` where ( `ext_id` in ( ?* ) ) and ( `ext_type` = 'docs' )" , false , '*s' , $mIDL );
+		$docsMap = remap( $docsLinks , 'ext_id' );
+
+		foreach( $res as $r ) {
+			$mID = $r[ 'id' ];
+			if ( isset( $docsMap[ $mID ] ) ) {
+				$dl = $docsMap[ $mID ];
+			} else {
+				$dl = array();
+			}
+
+			$dl = array_map( function( $v ) {
+				return '<a href="/documents.php?download='.$v[ 'id' ].'" target="_blank">doc</a>' ;
+			} , $dl );
+
+			echo '<tr class="strk2">
+				<td class="stolb1">
+					'.$i.'
+				</td>
+				<td class="stolb2">
+					<a href="main.php?idlist='.$mID.'" target="_blank">'.matincomingNumber( $mID ).' / - '.$tabCaseCategory[ $r[ 'exp_type' ] ][ 'index' ].'
+				</td>
+				<td class="stolb3">
+					'.$r[ 'agency' ].', '.$r[ 'agent' ].', '.$r[ 'ex_data_3' ].( $r[ 'sndz' ] ? ' <div class="sndz-label">СНДЗ</div>' : '' ).' 
+				</td>
+				<td class="stolb3p">
+					'.$r[ 'ex_data_4' ].' 
+				</td>
+				<td class="stolb4">'.$r[ 'pay_details' ].'</td>
+				<td class="stolb5">'.money_format( '%!i' , $r[ 'price' ] ).'</td>
+				<td class="stolb5-2"></td>
+				<td class="stolb5-2">'.$r[ 'pay_date' ].'</td>
+				<td class="stolb6">'.implode( ' ' , $dl ).'</td>
+			</tr>' ;
+			$i++ ;
+		}
+
+		echo '</table>' ;
+
+	closeHtml_Print();

@@ -1,0 +1,227 @@
+
+	.date-selector-panel {
+		margin-top : 1cm ;
+		margin-bottom : 0.5cm ;
+	}
+
+	.dsp-selected {
+		display : inline-block ;
+		border : 1px solid #000000 ;
+		background-color : #c0c0c0 ;
+		text-align : center ;
+		padding : 3px 6px 1px 6px ;
+	}
+
+	.dsp-unselected {
+		display : inline-block ;
+		border : 1px solid #000000 ;
+		background-color : #404040 ;
+		text-align : center ;
+		padding : 1px 6px ;
+		color : #e0e0e0 ;
+		text-decoration : none ;
+	}
+
+	.main-tab {
+		border-collapse : collapse ;
+		margin-bottom : 1cm ;
+	}
+
+	.mt-c-1 , .mt-c-1-2 , .mt-c-2 , .mt-c-3 , .mt-c-4 , .mt-c-5 , .mt-c-6 {
+		font-size : 8pt ;
+		text-align : center ;
+		border : 1px solid #c0c0c0 ;
+		font-weight : bold ;
+		color : #ffffff ;
+		background-color: #404040 ;
+		background-image: url( "cap.gif" );
+		height : 19px ;
+		padding : 0px ;
+	}
+
+	.mt-d-1 , .mt-d-1-2 , .mt-d-2 , .mt-d-3 , .mt-d-4 , .mt-d-5 , .mt-d-6 {
+		border : 1px solid #808080 ;
+		font-size : 10pt ;
+		background-color : #404040 ;
+		color : #ffffff ;
+	}
+
+	.mt-d-1 , .mt-d-1-2 , .mt-d-3 {
+		text-align : center ;
+	}
+
+	.mt-d-5 , .mt-d-6 {
+		text-align : right ;
+	}
+
+	.mt-d-2 , .mt-d-4 {
+		text-align : left ;
+	}
+
+	.mt-c-1 , .mt-d-1 {
+		width : 24px ;
+	}
+
+	.mt-c-1-2 , .mt-d-1-2 {
+		width : 48px ;
+	}
+
+	.mt-c-2 , .mt-d-2 {
+		width : 192px ;
+	}
+
+	.mt-c-3 , .mt-d-3 {
+		width : 96px ;
+	}
+
+	.mt-c-4 , .mt-d-4 {
+	}
+
+	.mt-c-5 , .mt-d-5 {
+		width : 144px ;
+	}
+
+	.mt-c-6 , .mt-d-6 {
+		width : 64px ;
+	}
+
+	.mt-d-p-i {
+		width : 136px ;
+		text-align : right ;
+	}
+
+	.mt-d-w-i {
+		width : 56px ;
+		text-align : right ;
+	}
+
+	.addresses-fill-dlg {
+		position : fixed ;
+		margin-left : -400px ;
+		padding : 20px 10px 10px 10px ;
+		width : 800px ;
+		top : 7cm ;
+		left : 50% ;
+
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+
+
+		box-shadow: 6px 6px 8px #000;
+	}
+
+	.addresses-fill-dlg-close-box {
+		position : absolute ;
+		top : -8px ;
+		left : 807px ;
+		width : 21px ;
+		padding-top : 3px ;
+		border : 1px solid #c0c0c0 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	}
+
+	.addresses-fill-dlg-content {
+		background-color : #fff0e0 ;
+		border : 1px dashed #807060 ;
+		margin-top : 8px ;
+		padding : 8px ;
+	}
+
+
+	.letter-dlg-tab {
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+
+	.ldt-cap {
+		font-size : 8pt ;
+		text-align : center ;
+		border : 1px solid #606060 ;
+		font-weight : bold ;
+		color : #ffffff ;
+		background-color: #404040 ;
+		background-image: url( "cap.gif" );
+		height : 19px ;
+		padding : 0px ;
+	}
+
+	.ldt-comment , .ldt-addressee , .ldt-destination , .ldt-weight {
+		font-size : 8pt ;
+		border : 1px solid #606060 ;
+		background-color : #e0e0e0 ;
+		white-space : normal ;
+	}
+
+	.ldt-comment , .ldt-addressee {
+		text-align : center ;
+		min-width : 192px ;
+		width : 192px ;
+		max-width : 192px ;
+		padding : 1px ;
+	}
+
+	.ldt-destination {
+		padding : 0px ;
+	}
+
+	.ldt-weight {
+		padding : 2px ;
+	}
+
+	.buttons-panel {
+		margin-top : 8px ;
+		text-align : center ;
+	}
+
+	.comment-inp , .addressee-inp {
+		width : 186px ;
+	}
+
+	.destination-panel-inp , .destination-panel-btn {
+		text-align : center ;
+	}
+
+	.destination-panel-btn {
+		width : 27px ;
+	}
+	.destination-panel-inp {
+	}
+
+	.destination-panel-top {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.destination-inp {
+		width : 100% ;
+	}
+
+	.weight-inp {
+		text-align : right ;
+		width : 64px ;
+	}
+
+	.price-inp {
+		text-align : right ;
+		width : 128px ;
+	}
+
+	.address-lnk {
+		cursor : pointer ;
+		color : #004080 ;
+	}
+
+	.address-lnk:hover {
+		color : #ff8000 ;
+	}
+	
+	.comment-lnk {
+		color : #fc8 ;
+		text-decoration : none ;
+	}
+	
+	.comment-lnk:hover {
+		color : #0f0 ;
+		text-decoration : underline ;
+	}

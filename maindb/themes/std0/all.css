@@ -1,0 +1,319 @@
+	* {
+		box-sizing : border-box ;
+	}
+
+
+	.mft {
+		border-collapse : collapse ;
+	}
+	
+	.tf-area {
+		border : 1px solid #000000 ;
+	}
+	
+	.fp-area {
+		border-collapse : collapse ;
+	}
+	
+	.fp-area tr:hover {
+		background-color : #fef0c0 ;
+	}
+	
+	.flt-gn , .flt-pn , .flt-d , .flt-v , .flt-s {
+		font-size : 11pt ;
+		border : 1px dotted #c0c0c0 ;
+	}
+	
+	.flt-gn {
+		font-weight : bold ;
+	}
+	
+	.flt-pn {
+		min-width : 384px ;
+		width : 384px ;
+		max-width : 384px ;
+	}
+	
+	.flt-d {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+	
+	.flt-v {
+		min-width : 32px ;
+		width : 32px ;
+		max-width : 32px ;
+		text-align : center ;
+	}
+	
+	.flt-s {
+		min-width : 32px ;
+		width : 32px ;
+		max-width : 32px ;
+		text-align : center ;
+	}
+	
+	.i_err {
+		background-color : #ffc0c0 ;
+	}
+	
+	.i_int , .i_date {
+		text-align : center ;
+		width : 224px ;
+	}
+	
+	.i_text {
+		width : 224px ;
+	}
+	
+	.i_list {
+		text-decoration : underline ;
+		color : #0080ff ;
+		cursor : pointer ;
+	}
+	
+	.i_list:hover {
+		color : #00c000 ;
+	}
+	
+	#blockator {
+		position : fixed ;
+		left : 0px ;
+		top : 0px ;
+		right : 0px ;
+		bottom : 0px ;
+		background-color : rgba( 0 , 0 , 0 , 0.5 );
+	}
+	
+	.frt {
+		border-collapse : collapse ;
+	}
+	
+	.frt td {
+		border : 1px solid #000000 ;
+	}
+	
+	.dlg-calendar {
+		position : fixed ;
+		left : 50% ;
+		top : 7cm ;
+		margin-left : -124px ;
+		
+		/*width : 192px ;
+		height : 192px ;*/
+		border : 1px solid #404040 ;
+		background-color : #ffffff ;
+		
+		
+		box-shadow: 4px 4px 16px #000;
+	}
+	
+	.dlg-calendar-month-area {
+		background-color : #0080ff ;
+		margin : 1px ;
+		font-weight : bold ;
+		color : #ffffff ;
+		font-size : 12pt ;
+		height : 25px ;
+	}
+	
+	.dlg-calendar-month-prev , .dlg-calendar-month-next ,
+	.dlg-calendar-year-prev , .dlg-calendar-year-next {
+		position : absolute ;
+		display : inline-block ;
+		width : 13px ;
+		height : 21px ;
+		background-image : url( "errows-group.png" );
+		background-repeat : no-repeat ;
+		cursor : pointer ;
+		
+		top : 2px ;
+		bottom : 2px ;
+	}
+	
+	.dlg-calendar-month-prev:hover {
+		background-position : -13px center ;
+	}
+	.dlg-calendar-month-next:hover {
+		background-position : -39px center ;
+	}
+	.dlg-calendar-year-prev:hover {
+		background-position : -65px center ;
+	}
+	
+	.dlg-calendar-year-next:hover {
+		background-position : -91px center ;
+	}
+	
+	.dlg-calendar-year-prev {
+		left : 4px ;
+		background-position : -52px center ;
+	}
+	.dlg-calendar-month-prev {
+		left : 17px ;
+		background-position : 0px center ;
+	}
+	.dlg-calendar-month-name {
+		position : absolute ;
+		left : 38px ;
+		right : 38px ;
+		top : 2px ;
+		height : 21px ;
+		line-height : 21px ;
+	}
+	.dlg-calendar-month-next {
+		right : 17px ;
+		background-position : -26px center ;
+	}
+	.dlg-calendar-year-next {
+		right : 4px ;
+		background-position : -78px center ;
+	}
+	
+	.dlg-calendar-table {
+		border-collapse : collapse ;
+		margin : 1px ;
+	}
+	
+	.dlg-calendar-week-day-0 , .dlg-calendar-week-day-1 , .dlg-calendar-empty ,
+	.dlg-calendar-date-0 , .dlg-calendar-date-1 {
+		width : 32px ;
+		height : 18px ;
+		border : 1px dotted #808080 ;
+		font-size : 10pt ;
+		text-align : center ;
+	}
+	
+	.dlg-calendar-week-day-0 {
+		background-color : #c0c0c0 ;
+		color : #000000 ;
+	}
+	
+	.dlg-calendar-date-0 , .dlg-calendar-date-1 {
+		cursor : pointer ;
+	}
+	
+	.dlg-calendar-date-0:hover , .dlg-calendar-date-1:hover {
+		background-color : #fef0c0 ;
+	}
+	
+	.dlg-calendar-date-0 {
+		color : #000000 ;
+	}
+	
+	.dlg-calendar-week-day-1 {
+		background-color : #ff0000 ;
+		color : #ffffff ;
+	}
+	
+	.dlg-calendar-date-1 {
+		color : #ff0000 ;
+	}
+	
+	.dlg-calendar-today {
+		background-color : #c0ffc0 ;
+	}
+	
+	.dlg-calendar-current-date {
+		padding : 2px ;
+		margin-top : 4px ;
+		font-size : 8pt ;
+		cursor : pointer ;
+	}
+	
+	.dlg-calendar-current-date:hover {
+		background-color : #fef0c0 ;
+	}
+	
+	.dlg-calendar-current-date-marker {
+		display : inline-block ;
+		width : 26px ;
+		height : 18px ;
+		border : 1px dotted #808080 ;
+		text-align : center ;
+		vertical-align : middle ;
+	}
+	
+	.dlg-list {
+		position : fixed ;
+		left : 50% ;
+		top : 7cm ;
+		margin-left : -192px ;
+		padding : 10px ;
+		
+		min-width : 384px ;
+		width : 384px ;
+		max-width : 384px ;
+		border : 1px solid #404040 ;
+		background-color : #ffffff ;
+		text-align : center ;
+		
+		
+		box-shadow: 4px 4px 16px #000;
+	}
+	
+	.dlg-list-area {
+		overflow-x : hidden ;
+		overflow-y : scroll ;
+		max-height : 384px ;
+		border : 1px dotted #808080 ;
+		margin-bottom : 10px ;
+	}
+	
+	.dlg-list-table {
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+	
+	.dlg-list-item-cb-area , .dlg-list-item-desc-area {
+	}
+	
+	.dlg-list-item-cb-area {
+		text-align : center ;
+		width : 32px ;
+	}
+	
+	.dlg-list-item-desc-area {
+		text-align : left ;
+		font-size : 10pt ;
+	}
+	
+	.dlg-list-apply , .dlg-list-cancel , .dlg-list-clear {
+		cursor : pointer ;
+		font-size : 10pt ;
+	}
+	
+	.dlg-list-apply:hover , .dlg-list-cancel:hover , .dlg-list-clear:hover {
+		text-decoration : underline ;
+	}
+	
+	.dlg-list-apply {
+		color : #008000 ;
+		margin-right : 16px ;
+	}
+	
+	.dlg-list-clear {
+		color : #ff8000 ;
+		margin-right : 16px ;
+	}
+	
+	.dlg-list-cancel {
+		color : #ff0000 ;
+	}
+	
+	.controls-panel {
+		position : fixed ;
+		left : 4px ;
+		top : 192px ;
+		width : 512px ;
+		border : 1px solid #000000 ;
+		background-color : #ffffff ;
+		padding : 8px ;
+		
+		box-shadow: 4px 4px 16px #000;
+	}
+	
+	.controls-panel a {
+		font-size : 10pt ;
+	}

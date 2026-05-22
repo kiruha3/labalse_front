@@ -1,0 +1,98 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.info-tab {
+		border-collapse : collapse ;
+		border : none ;
+		width : 1024px ;
+		margin-top : 2cm ;
+	}
+
+	.info-tab-title {
+		text-align : center ;
+		font-size : 14pt ;
+		background-color : #404040 ;
+		color : #ffffff ;
+	}
+
+	.info-tab-desc {
+		background-color : #c0c0c0 ;
+		color : #000000 ;
+	}
+
+	.info-tab-title , .info-tab-desc , .info-tab-val {
+		border : 1px solid #000000 ;
+	}
+
+	.worker-info-view-lnk {
+		color : #ffffff ;
+	}
+	.worker-info-view-lnk:hover {
+		color : #ffff00 ;
+	}
+
+	.ta-c {
+		text-align : center ;
+	}
+
+	.itv-w1 {
+		width : 256px ;
+	}
+
+	.itv-w2 {
+		width : 384px ;
+	}
+
+	.info-label {
+		width : 1024px ;
+		padding : 8px 16px ;
+		margin : 2cm auto 0 ;
+		border : 1px solid #000000 ;
+		background-color : #ffc000 ;
+	}
+
+	.num-ext {
+		color : #ff0000 ;
+	}
+
+	.num-lead {
+		text-decoration : underline ;
+	}
+
+	.example {
+		font-style : italic ;
+		font-weight : bold ;
+	}
+	
+	.itv-s-n {
+		width : 48px ;
+		text-align : right ;
+	}
+	
+	.itv-s-d {
+		text-align : left ;
+	}
+	
+	.itv-s-lnk {
+		width : 48px ;
+		text-align : center ;
+	}
+	
+	.itv-s-lnk a {
+		font-size : 10pt ;
+		color : #0080ff ;
+	}
+	
+	.itv-s-lnk a:hover {
+		color : #ff0000 ;
+	}
+	
+	.itv-s-rh {
+		background-color : #e0e0e0 ;
+	}
+		
+
+

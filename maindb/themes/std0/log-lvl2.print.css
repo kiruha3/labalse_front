@@ -1,0 +1,207 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+body {
+	padding : 0 ;
+	margin : 0 ;
+}
+
+.MainTableVisible {
+	border-collapse : collapse ;
+	border : 1px solid #000000 ;
+	color : #000000 ;
+	padding : 0 ;
+	margin : 0 ;
+}
+
+.MainTableInvisible {
+	border-collapse : collapse ;
+	border : 1px solid #ffffff ;
+	color : #ffffff ;
+	padding : 0 ;
+	margin : 0 ;
+}
+
+.strv {
+	min-height : 1.5cm ;
+	height : 1.5cm ;
+	max-height : 1.5cm ;
+}
+
+.stri {
+	min-height : 1.5cm ;
+	height : 1.5cm ;
+	max-height : 1.5cm ;
+}
+
+.strv TH {
+	border : 1px solid #000000 ;
+	overflow : hidden ;
+	padding : 0 ;
+	vertical-align : middle ;
+	text-align : center ;
+	font-size : 8.5pt ;
+	font-weight : normal ;
+}
+
+.stri TH {
+	border : 1px solid #ffffff ;
+	overflow : hidden ;
+	padding : 0 ;
+	vertical-align : middle ;
+	text-align : center ;
+	font-size : 8.5pt ;
+	font-weight : normal ;
+}
+
+.str1v {
+	min-height : 5cm ;
+	height : 5cm ;
+	max-height : 5cm ;
+}
+.str1i {
+	min-height : 5cm ;
+	height : 5cm ;
+	max-height : 5cm ;
+}
+
+.str1v TD {
+	border : 1px solid #000000 ;
+	overflow : hidden ;
+	padding : 0mm ;
+	font-size : 8.5pt ;
+}
+.str1i TD {
+	border : 1px solid #ffffff ;
+	overflow : hidden ;
+	padding : 0mm ;
+	font-size : 8.5pt ;
+}
+
+.col2 {
+	min-width : 1.2cm ;
+	width : 1.2cm ;
+	max-width : 1.2cm ;
+}
+
+.col3 {
+	min-width : 5cm ;
+	width : 5cm ;
+	max-width : 5cm ;
+}
+
+.col4 {
+	min-width : 3cm ;
+	width : 3cm ;
+	max-width : 3cm ;
+}
+
+.col5 {
+	min-width : 3.5cm ;
+	width : 3.5cm ;
+	max-width : 3.5cm ;
+}
+
+.col6 {
+	min-width : 3cm ;
+	width : 3cm ;
+	max-width : 3cm ;
+}
+
+.col7 {
+	min-width : 2cm ;
+	width : 2cm ;
+	max-width : 2cm ;
+}
+
+.col8 {
+	min-width : 2.5cm ;
+	width : 2.5cm ;
+	max-width : 2.5cm ;
+}
+
+.col9 {
+	min-width : 2cm ;
+	width : 2cm ;
+	max-width : 2cm ;
+}
+
+.col10 {
+	min-width : 1.5cm ;
+	width : 1.5cm ;
+	max-width : 1.5cm ;
+}
+
+.dat-col2 {
+	min-width : 1.2cm ;
+	width : 1.2cm ;
+	max-width : 1.2cm ;
+	vertical-align : middle ;
+	text-align : center ;
+}
+
+.dat-col3 {
+	min-width : 5cm ;
+	width : 5cm ;
+	max-width : 5cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col4 {
+	min-width : 3cm ;
+	width : 3cm ;
+	max-width : 3cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col5 {
+	min-width : 3.5cm ;
+	width : 3.5cm ;
+	max-width : 3.5cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col6 {
+	min-width : 3cm ;
+	width : 3cm ;
+	max-width : 3cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col7 {
+	min-width : 2cm ;
+	width : 2cm ;
+	max-width : 2cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col8 {
+	min-width : 2.5cm ;
+	width : 2.5cm ;
+	max-width : 2.5cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col9 {
+	min-width : 1.5cm ;
+	width : 1.5cm ;
+	max-width : 1.5cm ;
+	vertical-align : top ;
+	text-align : left ;
+}
+
+.dat-col10 {
+	min-width : 1.5cm ;
+	width : 1.5cm ;
+	max-width : 1.5cm ;
+	vertical-align : middle ;
+	text-align : center ;
+}

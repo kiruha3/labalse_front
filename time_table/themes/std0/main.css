@@ -1,0 +1,417 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.tt-tabs {
+
+	}
+
+	.tt-tabs {
+		margin-top : 15px ;
+		text-align : left ;
+		background-color : inherit ;
+		position : relative ;
+	}
+
+	.tt-tabs > span {
+		margin-bottom : 8px ;
+		border-bottom : 1px solid #666 ;
+		display : block ;
+	}
+
+	.tt-tabs > input {
+		display : none ;
+	}
+
+	.tt-tabs > label {
+		border : 1px solid #666 ;
+		border-bottom : none ;
+		border-radius : 4px 4px 0 0 ;
+		cursor : pointer ;
+		display : inline-block ;
+		padding : 0.125em 1em ;
+		font-size : 12pt ;
+		margin : 1px 1px -1px 1px ;
+		color : #888 ;
+	}
+
+	.tt-tabs > label:hover {
+		background-color : inherit ;
+		color : #000 ;
+	}
+	.tt-tabs > div {
+		display : none ;
+	}
+
+
+	.cD , .cT {
+		font-weight : bold ;
+	}
+
+	.tt {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.ttcapt_c1 , .ttcapt_c2 , .ttcapt_c3 , .ttcapt_c4 , .ttcapt_c5 {
+		font-size : 8pt ;
+		font-weight : bold ;
+		color : #ffffff ;
+		height : 19px ;
+		border : 1px solid #ffffff ;
+		border-collapse : collapse ;
+		text-align : center ;
+	}
+
+	.ttcapt_c1 , .ttcapt_c3 , .ttcapt_c4 , .ttcapt_c5 {
+		background-image : url( "ttcap_bgimg.gif" );
+
+		background : -webkit-linear-gradient( left top , left bottom , #c0c0c0 , #000000 );
+		background : #404040 ; /* Old browsers */
+
+		background : -moz-linear-gradient( top , #7a7a7a 0% , #444444 65% , #000000 65% , #2b2b2b 100% ); /* FF3.6+ */
+		background : -webkit-gradient( linear , left top, left bottom , color-stop( 0% , #7a7a7a ) , color-stop( 65% , #444444 ) , color-stop( 65% , #000000 ) , color-stop( 100% , #2b2b2b ) ); /* Chrome , Safari4+ */
+		background : -webkit-linear-gradient( top , #7a7a7a 0% , #444444 65% , #000000 65% , #2b2b2b 100% ); /* Chrome10+ , Safari5.1+ */
+		background : -o-linear-gradient( top , #7a7a7a 0% , #444444 65% , #000000 65% , #2b2b2b 100% ); /* Opera 11.10+ */
+		background : -ms-linear-gradient( top , #7a7a7a 0% , #444444 65% , #000000 65% , #2b2b2b 100% ); /* IE10+ */
+		background : linear-gradient( top bottom , #7a7a7a 0% , #444444 65% , #000000 65% , #2b2b2b 100% ); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr = "#7a7a7a" , endColorstr = "#2b2b2b" , GradientType = 0 ); /* IE6-9 */
+	}
+	.ttcapt_c2 {
+		background-image : url( "ttcap_s_bgimg.gif" );
+
+		background : -webkit-linear-gradient( left top , left bottom , #c0c0c0 , #000000 );
+		background : #404040 ; /* Old browsers */
+
+		background : -moz-linear-gradient( top , #dd9595 0% , #dc7272 65% , #d03b3b 65% , #da4242 100% ); /* FF3.6+ */
+		background : -webkit-gradient( linear , left top, left bottom , color-stop( 0% , #dd9595 ) , color-stop( 65% , #dc7272 ) , color-stop( 65% , #d03b3b ) , color-stop( 100% , #da4242 ) ); /* Chrome , Safari4+ */
+		background : -webkit-linear-gradient( top , #dd9595 0% , #dc7272 65% , #d03b3b 65% , #da4242 100% ); /* Chrome10+ , Safari5.1+ */
+		background : -o-linear-gradient( top , #dd9595 0% , #dc7272 65% , #d03b3b 65% , #da4242 100% ); /* Opera 11.10+ */
+		background : -ms-linear-gradient( top , #dd9595 0% , #dc7272 65% , #d03b3b 65% , #da4242 100% ); /* IE10+ */
+		background : linear-gradient( top bottom , #dd9595 0% , #dc7272 65% , #d03b3b 65% , #da4242 100% ); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr = "#dd9595" , endColorstr = "#da4242" , GradientType = 0 ); /* IE6-9 */
+	}
+
+	.ttcapt_c1 {
+		width : 48px ;
+	}
+	.ttcapt_c2 {
+		width : 96px ;
+	}
+	.ttcapt_c4 {
+		width : 192px ;
+	}
+	.ttcapt_c5 {
+		width : 192px ;
+	}
+
+	.ttl {
+		padding : 0px ;
+		margin : 0px ;
+	}
+	.ttl div {
+		margin : 0px 2px 16px 2px ;
+	}
+
+	.ttlt {
+		width : 100% ;
+		border-collapse : collapse ;
+		font-size : 8pt ;
+	}
+
+	.ttMonth {
+		cursor : pointer ;
+		height : 17px ;
+		border : 1px solid #606060 ;
+		letter-spacing : 4px ;
+		text-align : left ;
+		font-size : 9pt ;
+		font-weight : normal ;
+		background-image : url( "ttlcap_bgimg.gif" );
+		color : #000000 ;
+	}
+
+	.ttMonth img {
+		margin : 0px 12px 0px 4px ;
+		vertical-align : middle ;
+	}
+
+	.ttDoW1 {
+		background-color : #ffffff ;
+		color : #000000 ;
+	}
+	.ttDoW2 {
+		background-color : #f0f0f0 ;
+		color : #000000 ;
+	}
+	.ttDoW3 {
+		background-color : #e0e0e0 ;
+		color : #000000 ;
+	}
+	.ttDoW4 {
+		background-color : #d0d0d0 ;
+		color : #000000 ;
+	}
+	.ttDoW5 {
+		background-color : #c0c0c0 ;
+		color : #000000 ;
+	}
+	.ttDoW6 {
+		background-color : #606060 ;
+		color : #ffffff ;
+	}
+	.ttDoW7 {
+		background-color : #404040 ;
+		color : #ffffff ;
+	}
+
+	.ttdc_1 , .ttdc_2 , .ttdc_3 , .ttdc_4 , .ttdc_5 {
+		border : 1px solid #808080 ;
+	}
+
+	.ttdc_1 {
+		width : 48px ;
+		text-align : center ;
+	}
+	.ttdc_2 {
+		width : 96px ;
+		text-align : center ;
+	}
+	.ttdc_3 {
+		text-align : left ;
+	}
+	.ttdc_4 {
+		width : 192px ;
+		text-align : left ;
+	}
+	.ttdc_5 {
+		width : 192px ;
+		text-align : left ;
+	}
+
+	.c-year-link , .year-link {
+		text-decoration : none ;
+		border : 1px solid #000000 ;
+		font-size : 10pt ;
+		cursor : pointer ;
+	}
+
+	.c-year-link {
+		padding : 3px 6px ;
+		color : #000000 ;
+		background-color : #e0e0e0 ;
+	}
+
+	.year-link {
+		padding : 2px 5px ;
+		color : #ffffff ;
+		background-color : #404040 ;
+	}
+
+	.year-link:hover {
+		background-color : #606060 ;
+	}
+
+	.add-record-dlg {
+		position : fixed ;
+		margin-left : -400px ;
+		padding : 20px 10px 10px 10px ;
+		width : 800px ;
+		top : 9cm ;
+		left : 50% ;
+
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+
+
+		box-shadow: 6px 6px 8px #000;
+	}
+
+	.add-record-dlg-cont {
+		margin : 0px ;
+		padding : 0px ;
+		width : 100% ;
+		border : none ;
+	}
+
+	.add-record-dlg-close-box {
+		position : absolute ;
+		top : -8px ;
+		left : 807px ;
+		width : 21px ;
+		padding-top : 3px ;
+		border : 1px solid #c0c0c0 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	}
+
+	.add-record-dlg-close-box img {
+		cursor : pointer ;
+	}
+
+	.ardc-t {
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+
+	.ardc-f1 , .ardc-f2 , .ardc-f3 , .ardc-f4 , .ardc-f5 , .ardc-f6 {
+		font-size : 12pt ;
+	}
+
+	.i-date , .i-date , .i-purpose , .i-destination , .i-experts {
+		font-size : 12pt ;
+	}
+
+	.ardc-f2 , .ardc-f4 , .ardc-f6 {
+		text-align : right ;
+	}
+
+	.ardc-pannel {
+		text-align : center ;
+	}
+
+	.i-date {
+		text-align : center ;
+		width : 96px ;
+	}
+
+	.i-purpose {
+		width : 512px ;
+	}
+
+	.i-destination {
+		width : 640px ;
+	}
+
+	.i-experts {
+		width : 640px ;
+	}
+
+
+	.fill-dlg {
+		position : fixed ;
+		margin-left : -400px ;
+		padding : 20px 10px 10px 10px ;
+		width : 800px ;
+		top : 2cm ;
+		left : 50% ;
+
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+
+
+		box-shadow: 6px 6px 8px #000;
+	}
+
+	.fill-dlg-cont {
+		margin : 0px ;
+		padding : 0px ;
+		width : 100% ;
+		border : none ;
+		max-height : 720px ;
+
+
+		overflow-x : auto ;
+		overflow-y : scroll ;
+		white-space : nowrap ;
+		padding-right : 4px ;
+	}
+
+	.fill-dlg-close-box {
+		position : absolute ;
+		top : -8px ;
+		left : 807px ;
+		width : 21px ;
+		padding-top : 3px ;
+		border : 1px solid #c0c0c0 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	}
+
+	.fill-dlg-close-box img {
+		cursor : pointer ;
+	}
+
+	.fdc-t {
+		border-collapse : collapse ;
+		margin-bottom : 12px ;
+	}
+
+	.fdc-t-cap2 , .fdc-t-cap3 {
+		vertical-align : bottom ;
+	}
+
+	.fdc-t-cap1 {
+		vertical-align : middle ;
+
+	}
+
+	.fdc-t-cap1 , .fdc-t-cap2 , .fdc-t-cap3 {
+		font-size : 8pt ;
+		font-weight : bold ;
+		color : #000000 ;
+		height : 19px ;
+		border : 1px solid #808080 ;
+		border-collapse : collapse ;
+		text-align : center ;
+	}
+
+	.fdc-t-cap1 , .fdc-t-d1 {
+		width : 64px ;
+	}
+
+	.fdc-t-cap2 , .fdc-t-cap3 , .fdc-t-d2 , .fdc-t-d3 {
+		width : 32px ;
+	}
+
+	.fdc-t-d1 {
+		text-align : right ;
+		font-size : 10pt ;
+	}
+
+	.fdc-t-d2 , .fdc-t-d3 {
+		text-align : center ;
+	}
+
+	.fdc-t-d1 , .fdc-t-d2 , .fdc-t-d3 {
+		border : 1px solid #808080 ;
+		padding : 1px ;
+	}
+
+	.fdc-m-panel {
+		text-align : center ;
+		margin-bottom : 12px ;
+	}
+
+	.fdc-m-m {
+		width : 128px ;
+		display : inline-block ;
+	}
+
+	.fdc-m-l {
+		cursor : pointer ;
+		vertical-align : middle ;
+	}
+
+	.fdc-pannel {
+		text-align : center ;
+	}
+
+	.i-date {
+		text-align : center ;
+		width : 96px ;
+	}
+
+	.i-purpose {
+		width : 512px ;
+	}
+
+	.i-destination {
+		width : 640px ;
+	}
+
+	.i-experts {
+		width : 640px ;
+	}

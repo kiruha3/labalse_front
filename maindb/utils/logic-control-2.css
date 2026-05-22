@@ -1,0 +1,81 @@
+
+	.res-tab {
+		border-collapse : collapse ;
+		margin-bottom : 3cm ;
+	}
+	
+	.rtr:hover {
+		background-color : #ffe000 ;
+	}
+	
+	.rtc-lnk-a , .rtc-y , .rtc-c , .rtc-w , .rtc-s {
+		border : 1px dotted #606060 ;
+		font-size : 14pt ;
+		font-family : "courier new" ;
+	}
+	
+	.rtc-lnk-a {
+		text-align : right ;
+		width : 160px ;
+	}
+	
+	.rtc-link {
+		color : #000000 ;
+		text-decoration : none ;
+		margin-right : 4px ;
+		font-family : "courier new" ;
+	}
+	
+	.rtc-link:hover {
+		color : #ff0000 ;
+		text-decoration : underline ;
+	}
+	
+	.rtc-y {
+		width : 96px ;
+		text-align : center ;
+	}
+	
+	.rtc-c {
+		width : 48px ;
+		text-align : center ;
+		color : #ff0000 ;
+	}
+	
+	.rtc-w {
+		text-align : left ;
+	}
+	
+	.rtc-s {
+		text-align : center ;
+	}
+	
+	.desc-a {
+		font-size : 18pt ;
+		font-family : "courier new" ;
+		text-align : center ;
+		background-color : #606060 ;
+		color : #ffffff ;
+		margin-bottom : 0.5cm ;
+		padding : 4px ;
+	}
+	
+	.nav {
+		position : fixed ;
+		left : 4px ;
+		width : 256px ;
+		top : 256px ;
+		font-size : 12pt ;
+		text-align : center ;
+		background-color : #ffffff ;
+		border : 1px solid black ;
+		color : #0080ff ;
+		margin-bottom : 0.5cm ;
+		padding : 4px ;
+	}
+	
+	@media print {
+		.nav {
+			display : none ;
+		}
+	}

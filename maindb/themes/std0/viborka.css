@@ -1,0 +1,67 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+.rpd {
+	white-space : nowrap ;
+	maw-width : 512px ;
+	width : 512px ;
+	overflow-x : scroll ;
+}
+
+.rpdl {
+	cursor : pointer ;
+	text-decoration : none ;
+	color : #0080ff ;
+	margin-left : 4px ;
+	margin-right : 4px ;
+}
+
+.rpdl:hover {
+	text-decoration : underline ;
+	color : #ff8000 ;
+}
+
+.IT {
+	border-collapse : collapse ;
+}
+.B {
+	padding : 6px ;
+	text-align : center ;
+}
+.L {
+	width : 384px ;
+	border : 1px dotted #c0c0c0 ;
+	padding : 6px ;
+	text-align : justify ;
+}
+
+.D {
+	width : 384px ;
+	border : 1px dotted #c0c0c0 ;
+	padding : 6px ;
+	text-align : center ;
+}
+
+.MainTable {
+	border-collapse : collapse ;
+	width : 27cm ;
+	border : 1px solid #606060 ;
+}
+.cap1{
+	width: 2cm;
+	border: 1px solid #606060;
+	text-align:justify;
+}
+.cap2{
+	width: 7cm;
+	border: 1px solid #606060;
+	text-align:justify;
+}
+.cap3{
+	width: 3.5cm;
+	border: 1px solid #606060;
+	text-align:justify;
+}

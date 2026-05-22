@@ -1,0 +1,139 @@
+@CHARSET "UTF-8";
+
+	.target-list-area {
+		border : 1px solid #000 ;
+		border-radius : 5px ;
+		padding : 8px ;
+		display : inline-block ;
+		position : relative ;
+	}
+	
+	.target-list-area * {
+		box-sizing : border-box ;
+	}
+	
+	.target-list-area-locker {
+		border-radius : 3px ;
+		position : absolute ;
+		left : 0px ;
+		top : 0px ;
+		right : 0px ;
+		bottom : 0px ;
+		background-color : #000 ;
+		opacity : 0.7 ;
+	}
+	
+	.target-list {
+		min-height : 384px ;
+		height : 384px ;
+		max-height : 384px ;
+		min-width : 384px ;
+		width : 384px ;
+		max-width : 384px ;
+		overflow-x : hidden ;
+		overflow-y : auto ;
+	}
+	
+	.list-element {
+	}
+	
+	.tgt-lnk {
+		display : block ;
+		font-size : 12pt ;
+		overflow-x : hidden ;
+		text-overflow : ellipsis ;
+		white-space : nowrap ;
+		padding-left : 8px ;
+		cursor : pointer ;
+		position : relative ;
+	}
+	
+	.tgt-lnk:hover {
+		background-color : #444 ;
+		color : #fff ;
+	}
+
+	.tgt-lnk-dnld {
+		display : none ;
+		position : absolute ;
+		right : 0px ;
+		top : 0px ;
+		bottom : 0px ;
+		width : 21px ;
+		background-color : #ccc ;
+		text-align : center ;
+		text-decoration : none ;
+		color : #000 ;
+	}
+	.tgt-lnk:hover .tgt-lnk-dnld {
+		display : inline-block ;
+	}
+
+	.target-list .tgt-lnk[data-sel="1"] {
+		background-color : #ccc ;
+	}
+
+	.pdf-pages-preview {
+		border : 1px solid #000 ;
+		border-radius : 5px ;
+		padding : 8px ;
+		display : inline-block ;
+		margin-left : 16px ;
+		vertical-align : top ;
+		background-color : #456 ;
+	}
+	
+	.pdf-pages-preview * {
+		box-sizing : border-box ;
+	}
+	
+	.pdf-pages-preview-wrapper {
+		max-height : 384px ;
+		overflow-y : auto ;
+		overflow-x : hidden ;
+	}
+	
+	.pdf-pages-preview-wrapper div {
+		border : 2px solid #456 ;
+		margin : 1px ;
+	}
+	
+	.pdf-pages-preview-wrapper img {
+		border : 1px solid #444 ;
+		width : 200px ;
+		height : auto ;
+	}
+	
+	.pdf-preview-area {
+		border : 1px solid #000 ;
+		border-radius : 5px ;
+		padding : 8px ;
+		display : inline-block ;
+		margin-left : 16px ;
+		vertical-align : top ;
+		background-color : #456 ;
+	}
+	
+	.pdf-preview-wrapper {
+		max-height : 384px ;
+		overflow-y : auto ;
+		overflow-x : hidden ;
+	}
+	
+	.toolbar {
+		margin-top : 8px ;
+	}
+	
+	.toolbar * {
+		vertical-align : middle ;
+	}
+	
+	.exp-num {
+		font-size : 14pt ;
+		text-align : center ;
+		width : 96px ;
+	}
+	
+	.exp-year {
+		font-size : 14pt ;
+	}

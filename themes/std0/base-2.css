@@ -1,0 +1,89 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+	* {
+		font-family : "verdana" , "arial" , sans-serif ;
+		box-sizing : border-box ;
+	}
+
+	a {
+		outline : none ;
+	}
+
+	html , body {
+		height : 100% ;
+	}
+
+	body {
+		margin : 0px ;
+		padding : 0px ;
+	}
+
+	#page {
+		position : absolute ;
+		left : 0px ;
+		top : 0px ;
+		right : 0px ;
+		bottom : 0px ;
+	}
+
+	#page-head {
+		position : absolute ;
+		top : 4px ;
+		left : 4px ;
+		right : 4px ;
+	}
+
+	#page-content {
+		position : absolute ;
+		top : 150px ;
+		left : 4px ;
+		right : 4px ;
+		bottom : 48px ;
+	}
+
+	#page-footer {
+		position : absolute ;
+		clear : both ;
+		bottom : 0px ;
+		
+		height : 30px ;
+		width : 100% ;
+	}
+
+	.mhTitle {
+		text-align : center ;
+		margin-bottom : 16px ;
+	}
+	.mhTitle1 {
+		font-size : 14pt ;
+	}
+	.mhTitle2 {
+		font-size : 12pt ;
+	}
+
+	.mhMenu { width : 100% ; border-collapse : collapse ; }
+	.mhMenu TD { font-size : 8pt ; font-weight : normal ; text-align : center ; }
+	.mhMenu a { text-decoration : none ; color : #000000 ; }
+	.mhMenu a:hover { color : #ff0000 ; }
+
+	.mhTable { width : 100% ; border-collapse : collapse ; border : 1px solid #c0c0c0 ; }
+	.mhtCell1 { padding : 0px ; border : 1px solid #c0c0c0 ; }
+
+	.mhInfo { width : 100% ; background-color : #e0e0e0 ; border-collapse : collapse ; }
+	.mhiUserNameL  { font-size : 8pt ; }
+	.mhiUserNameV { font-size : 8pt ; font-weight : bold ; }
+	.mhiLastVisitL  { font-size : 8pt ; }
+	.mhiLastVisitV { font-size : 8pt ; font-weight : bold ; }
+	.mhiSubTable { font-size : 11pt ; font-weight : bold ; text-indent : 12px ; }
+	.mhiSubTable a { font-size : 11pt ; font-weight : bold ;
+		text-decoration : none ; color : #000000 ; }
+	.mhiSubTable a:hover { color : #ff0000 ; }
+
+	.iframe-std-1 {
+		background-color : #fff0e0 ;
+		border : 1px dashed #807060 ;
+		margin-top : 8px ;
+	}

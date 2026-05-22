@@ -1,0 +1,41 @@
+	
+	.main-tab {
+		border-collapse : collapse ;
+		width : 384px ;
+	}
+	
+	.main-tab * {
+		box-sizing : border-box ;
+	}
+	
+	.main-tab td {
+		border : 1px dotted #888 ;
+		padding : 4px ;
+	}
+	
+	.mt-f , .mt-desc , .mt-st {
+		width : 100% ;
+	}
+	
+	.mt-desc , .mt-st {
+		height : 96px ;
+	}
+	
+	.mt-sd {
+		float : right ;
+		text-align : center ;
+		width : 128px ;
+	}
+	
+	
+	.msg-highlight {
+		color : #f00 ;
+	}
+	
+	.msg-highlight:before , .msg-highlight:after {
+		content : "'" ;
+		margin : 2px ;
+		color : #000 ;
+	}
+	
+	

@@ -1,0 +1,484 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.tools-panel {
+
+	}
+
+	.tool-group {
+		border : 1px dashed #606060 ;
+		background-color : #ffc000 ;
+		padding : 2px 6px ;
+		font-size : 12pt ;
+		display : inline-block ;
+		margin-top : 2px ;
+	}
+
+	.search-panel {
+		position : absolute ;
+		background-color : #e0e0e0 ;
+		border : 1px solid #000000 ;
+		padding : 4px ;
+		margin : 0px ;
+		text-align : center ;
+	}
+
+	.search-input {
+		border : 1px solid #80c0ff ;
+		margin : 0px ;
+	}
+
+	.exp-list-table {
+		border-collapse : collapse ;
+		border : none ;
+	}
+
+	.elt-row {
+	}
+
+	.elt-d-cd {
+		padding : 0px 4px ;
+		text-align : right ;
+		color : #606060 ;
+		font-size : 9pt ;
+	}
+
+	.elt-h-en , .elt-h-wn , .elt-h-d , .elt-h-p , .elt-h-f ,
+	.elt-h-pd , .elt-h-pde , .elt-h-cb , .elt-h-ckd , 
+	.elt-d-en , .elt-d-wn , .elt-d-d , .elt-d-p , .elt-d-f ,
+	.elt-d-pd , .elt-d-pde , .elt-d-cb , .elt-d-ckd ,
+	.elt-h-com , .elt-d-com , .elt-h-afi , .elt-h-sndz , .elt-d-sndz ,
+	.elt-h-mark , .elt-d-mark {
+		padding : 0px 4px ;
+		font-size : 10pt ;
+	}
+
+	.elt-h-en , .elt-h-wn , .elt-h-d , .elt-h-p , .elt-h-f ,
+	.elt-h-pd , .elt-h-pde , .elt-h-cb , .elt-h-ckd ,
+	.elt-h-com , .elt-h-afi , .elt-h-sndz , .elt-h-mark {
+		border : 1px solid #000000 ;
+	}
+
+	.elt-d-en , .elt-d-wn , .elt-d-d , .elt-d-p , .elt-d-f ,
+	.elt-d-pd , .elt-d-pde , .elt-d-cb , .elt-d-ckd ,
+	.elt-d-com , .elt-d-afi , .elt-d-sndz , .elt-d-mark {
+		border : 1px solid #808080 ;
+		background-color : #404040 ;
+		color : #ffffff ;
+	}
+
+	.elt-h-en , .elt-h-wn , .elt-h-d , .elt-h-p , .elt-h-f ,
+	.elt-h-pd , .elt-h-pde , .elt-h-cb , .elt-h-ckd ,
+	.elt-d-en , .elt-d-d , .elt-d-cb , .elt-d-ckd , .elt-h-com , .elt-h-afi , .elt-d-afi {
+		text-align : center ;
+	}
+
+	.elt-d-wn {
+		text-align : left ;
+	}
+
+	.elt-d-p {
+		text-align : right ;
+	}
+
+	.elt-h-en , .elt-d-en {
+		min-width : 128px ;
+		width : 128px ;
+		max-width : 128px ;
+	}
+
+	.elt-h-wn , .elt-d-wn {
+		min-width : 144px ;
+		width : 144px ;
+		max-width : 144px ;
+	}
+
+	.elt-h-d , .elt-d-d {
+		min-width : 96px ;
+		width : 96px ;
+		max-width : 96px ;
+	}
+
+	.elt-h-p, .elt-d-p {
+		min-width : 96px ;
+		width : 96px ;
+		max-width : 96px ;
+	}
+
+	.elt-h-f , .elt-d-f {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+
+	.elt-d-f {
+		overflow : hidden ;
+		white-space : nowrap ;
+	}
+
+	.elt-h-pd , .elt-d-pd {
+		min-width : 192px ;
+		width : 192px ;
+		max-width : 192px ;
+	}
+	.elt-h-pde , .elt-d-pde {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+
+	.elt-h-cb , .elt-d-cb {
+		min-width : 28px ;
+		width : 28px ;
+		max-width : 28px ;
+	}
+
+	.elt-h-ckd , .elt-d-ckd {
+		min-width : 128px ;
+		width : 128px ;
+		max-width : 128px ;
+	 }
+
+	.elt-h-com , .elt-d-com {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+
+	.elt-d-com-ta {
+		vertical-align : top ;
+		font-size : 10pt ;
+		width : 250px ;
+	}
+
+	.elt-h-mark , .elt-d-mark {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+
+	.elt-d-afi {
+		min-width : 28px ;
+		width : 28px ;
+		max-width : 28px ;
+	}
+	
+	.elt-d-afi-i {
+		
+	}
+
+	.elt-d-wn-lnk {
+		color : #fff ;
+		text-decoration : none ;
+	}
+	
+	.elt-d-wn-lnk:hover {
+		color : #ff0 ;
+		text-decoration : underline ;
+	}
+
+	.elt-d-en-n {
+		color : #fff ;
+	}
+
+	.elt-d-en-h {
+		color : #f88 ;
+	}
+
+	.elt-d-en-n-lnk {
+		color : #fff ;
+		text-decoration : none ;
+	}
+
+	.elt-d-en-h-lnk {
+		color : #f88 ;
+		text-decoration : none ;
+	}
+
+	.elt-d-en-n-lnk:hover , .elt-d-en-h-lnk:hover {
+		color : #ff0 ;
+		text-decoration : underline ;
+	}
+
+	.elt-d-en-et {
+		margin-left : 6px ;
+		color : #ff0 ;
+	}
+
+	.elt-d-total {
+		padding : 8px 0px 32px 12px ;
+		border : none ;
+		color : #000 ;
+	}
+
+	.elt-d-total-h {
+		color : #f00 ;
+	}
+	
+	.elt-d-p-lnk {
+		color : #fff ;
+		text-decoration : none ;
+		cursor : pointer ;
+	}
+	.elt-d-p-lnk:hover {
+		color : #ff0 ;
+		text-decoration : underline ;
+	}
+
+	.elt-h-period {
+		color : #000000 ;
+		border : none ;
+		text-align : center ;
+	}
+
+	.elt-title {
+		font-size : 14pt ;
+		color : #000000 ;
+		text-align : center ;
+	}
+
+	.elt-h-sm-lnk {
+		position : relative ;
+	}
+
+	.elt-h-sm-m {
+		padding : 4px ;
+		background-color : #e0e0e0 ;
+		border : 1px solid #000000 ;
+
+		width : 192px ;
+		position : absolute ;
+		left : 50% ;
+		margin-left : -96px ;
+	}
+	
+	.flt-lnk {
+		text-decoration : none ;
+		color : #000000 ;
+		cursor : pointer ;
+	}
+	.flt-lnk-hl {
+		text-decoration : none ;
+		color : #008000 ;
+		cursor : pointer ;
+	}
+
+	.flt-lnk:hover {
+		text-decoration : underline ;
+		color : #ff8000 ;
+	}
+	.flt-lnk-hl:hover {
+		text-decoration : underline ;
+		color : #ff8000 ;
+	}
+
+	.mrl-ab {
+		position : fixed ;
+		left : 2px ;
+		top : 50% ;
+	}
+
+	.mrl-ab .mrl-lb {
+		visibility : hidden ;
+	}
+
+	.mrl-ab:hover .mrl-lb {
+		visibility : visible ;
+	}
+
+	.mrl-lb {
+		position : absolute ;
+		left : 23px ;
+		top : 0px ;
+		background-color : #404040 ;
+		min-width : 192px ;
+		width : 192px ;
+		max-width : 192px ;
+		text-align : center ;
+	}
+
+	.mrl-lti {
+		color : #ffffff ;
+		font-size : 9pt ;
+	}
+	
+	.woe-num {
+		min-width : 128px ;
+		width : 128px ;
+		max-width : 128px ;
+		
+		background-color : #404040 ;
+		border : 1px solid #808080 ;
+		text-align : center ;
+	}
+	
+	.woe-num-lnk {
+		font-size : 10pt ;
+		color : #ffffff ;
+		text-decoration : none ;
+	}
+
+	.woe-num-lnk:hover {
+		color : #ffff00 ;
+		text-decoration : underline ;
+	}
+	
+	.woe-closed {
+		text-decoration : line-through ;
+	}
+	
+	.woe-add-lnk {
+		visibility : hidden ;
+	}
+	
+	#woeDataTooltip {
+		position : absolute ;
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+		padding : 4px 8px ;
+	}
+	
+	.woe-tab {
+		border-collapse : collapse ; 
+	}
+	
+	/*.woe-tab td {
+		border : 1px solid red ;
+	}*/
+	
+	.woe-hc1 , .woe-hc2 {
+		border-bottom : 1px solid #808080 ;
+		font-size : 8pt ;
+	}
+	
+	.woe-dr + .woe-dr .woe-dc1 , .woe-dr + .woe-dr .woe-dc2 {
+		border-top : 1px solid #c0c0c0 ; 
+	}
+	
+	.woe-dc1 , .woe-dc2 {
+		font-size : 9pt ;
+	}
+	
+	.woe-hc1 , .woe-dc1 {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+		text-align : left ;
+	}
+	
+	.woe-dc2 , .woe-hc2 {
+		min-width : 192px ;
+		width : 192px ;
+		max-width : 192px ;
+		text-align : right ;
+	}
+	
+	.woe-hc1 , .woe-dc1 {
+		border-right : 1px solid #e0e0e0 ;
+	}
+	
+	.woe-p {
+	}
+	
+	.woe-p2 {
+		color : red ;
+	}
+
+	.elt-row:hover .woe-add-lnk {
+		visibility : visible ;
+	}
+	
+	.uc-area {
+		font-size : 8pt ;
+	}
+	
+	.uc-comment {
+		background-color : #505050 ;
+		border : 1px solid #c0c0c0 ;
+		margin : 2px 0px ;
+	}
+	
+	.uc-comment + .uc-comment {
+		margin-top : 0px ;
+	}
+	
+	.uc-text {
+		padding : 2px 4px ;
+	}
+	
+	.uc-author {
+		background-color : #c0c0c0 ;
+		color : #000000 ;
+		margin-left : 4px ;
+		float : right ;
+		font-style : italic ;
+		padding : 1px 2px ;
+	}
+	
+	.subpoena-mark {
+		border-radius : 3px ;
+		font-size : 8pt ;
+		padding : 2px 6px ;
+		margin-right : 4px ;
+		display : inline-block ;
+		border : 1px solid #003040 ;
+		background-color : #004860 ;
+	}
+	
+	.bill-mark {
+		color : #fff ;
+		text-decoration : none ;
+		border-bottom : 1px dashed #fc0 ;
+	}
+
+	.bill-mark:hover {
+		color : #fc0 ;
+		border-bottom : 1px solid #fc0 ;
+	}
+	
+	.main-tab-container {
+		padding-left : 0px ;
+
+		transition : all 0.5s ;
+	}
+	
+	.main-tab-item-menu {
+		position : fixed ;
+		width : 192px ;
+		left : -204px ;
+		top : 10cm ;
+		border : 1px solid #000 ;
+		background-color : #fff ;
+		
+		text-align : center ;
+		
+		box-shadow : 6px 6px 12px #000 ;
+		
+		transition : all 0.5s ;
+	}
+
+	.limit-warn {
+		background-color : #0df ;
+		border : 1px solid #068 ;
+		font-size : 14pt ;
+		text-align : center ;
+		padding : 0.5em ;
+		
+		margin : 0.5em ;
+		
+		position : relative ;
+	}
+	
+	.limit-warn:after {
+		content : "" ;
+		position : absolute ;
+		right : 25px ;
+		top : -50px ;
+		transform : rotate(30deg);
+		width : 100px ;
+		height : 100px ;
+		background-image : url('http://hvatalkin.ru/cr_images/modelImage/story/6705-icon-icons8-filled-bow-tie-100.png');
+	}

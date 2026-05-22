@@ -1,0 +1,21 @@
+
+	.d1-content {
+		font-family : times ;
+		width : 21cm ;
+		height : 29.7cm ;
+	}
+
+	.d1-title {
+		text-align : center ;
+		font-size : 16pt ;
+	}
+	
+	.d1-info-1 {
+		font-size : 12pt ;
+	}
+	
+	.d1-maintext {
+		text-align : justify ;
+		font-size : 14pt ;
+		text-indent : 0.5cm ;
+	}

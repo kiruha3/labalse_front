@@ -1,0 +1,74 @@
+
+	.main-tab {
+		border-collapse : collapse ;
+	}
+	
+	.mt-h-1 , .mt-h-2 , .mt-h-3 , .mt-h-4 , .mt-h-5g , .mt-h-5 , .mt-h-6 {
+		border : 1px solid #000 ;
+		text-align : center ;
+		font-size : 8pt ;
+	}
+	
+	.mt-c-1 , .mt-c-2 , .mt-c-3 , .mt-c-4 , .mt-c-5 , .mt-c-6 {
+		border : 1px solid #000 ;
+		font-size : 10pt ;
+		white-space : normal ;
+	}
+	
+	.mt-c-1 , .mt-c-3 {
+		text-align : left ;
+	}
+	
+	.mt-c-2 , .mt-c-4 {
+		text-align : center ;
+	} 
+	
+	.mt-c-5 {
+		text-align : right ;
+	}
+	
+	.mt-h-1 , .mt-c-1 {
+		width : 256px ;
+		max-width : 256px ;
+	}
+	
+	.mt-h-2 , .mt-c-2 {
+		width : 128px ;
+		max-width : 128px ;
+	}
+	
+	.mt-h-3 , .mt-c-3 {
+		width : 192px ;
+		max-width : 192px ;
+	}
+	
+	.mt-h-4 , .mt-c-4 {
+		width : 128px ;
+		max-width : 128px ;
+	}
+	
+	.mt-h-5 , .mt-c-5 {
+		width : 32px ;
+		max-width : 32px ;
+	}
+	
+	.mt-h-5g-1 {
+		width : 192px ;
+		max-width : 192px ;
+	}
+	.mt-h-5g-2 {
+		width : 32px ;
+		max-width : 32px ;
+	}	
+	.mt-h-5g-3 {
+		width : 128px ;
+		max-width : 128px ;
+	}
+	
+
+	.mt-h-6 , .mt-c-6 {
+		width : 128px ;
+		max-width : 128px ;
+	}
+	
+	

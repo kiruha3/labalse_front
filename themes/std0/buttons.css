@@ -1,0 +1,116 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.btn , .btn1 , .btn2 , .btn3 ,
+	.btnd , .btn1d , .btn2d , .btn3d {
+		font-family : "verdana" , "arial" , sans-serif !important ;
+		font-size: 9pt ;
+		
+		display : inline-block ;
+		border-radius : 5px ;
+		
+		height: 2.3em ;
+		line-height : 2.3em ;
+		
+		text-align: center ;
+		vertical-align: middle ;
+		padding : 0em 2em ;
+		margin : 2px ;
+		text-decoration : none ;
+		
+		-webkit-user-select : none ;
+		-moz-user-select : none ;
+		-ms-user-select : none ;
+		-o-user-select : none ;
+		user-select : none ;
+		
+		box-sizing : content-box ;
+
+		white-space : nowrap ;
+	}
+	
+	.btn , .btn1 , .btn2 , .btn3 ,
+	.btn3-menu-btn {
+		border : 1px solid #888 ;
+		cursor : pointer ;
+		color: #000 ;
+		
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f0f0+0,c0c0c0+100 */
+		background: #f0f0f0; /* Old browsers */
+		background: -moz-linear-gradient(top,  #f0f0f0 0%, #c0c0c0 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#c0c0c0)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #f0f0f0 0%,#c0c0c0 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #f0f0f0 0%,#c0c0c0 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #f0f0f0 0%,#c0c0c0 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #f0f0f0 0%,#c0c0c0 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#c0c0c0',GradientType=0 ); /* IE6-9 */
+	}
+	
+	.btnd , .btn1d , .btn2d , .btn3d {
+		border : 1px solid #666 ;
+		color: #666 ;
+		
+		background: #ccc ;
+	}
+	
+	.btn:hover , .btn1:hover , .btn2:hover , .btn3:hover ,
+	.btn3-menu-btn:hover {
+		box-shadow : inset 0 0 0.5em #08f ;
+	}
+
+	.btn3-menu-btn:hover {
+		color : #08f ;
+	}
+
+	.btn1 {
+		font-size: 8pt ;
+		height: 1.8em ;
+		line-height : 1.8em ;
+		padding : 0em 1em ;
+	}
+
+	.btn3-w-menu {
+		display : inline-block ;
+		position : relative ;
+		padding : 0 0.5em 0 0 ;
+	}
+
+	.btn3-w-menu:hover {
+		z-index : 10000 ;
+	}
+
+
+	.btn3-menu-btn {
+		position : absolute ;
+		width : 1.5em ;
+		right : 2px ;
+		top : 2px ;
+		bottom : 2px ;
+		border-top-right-radius : 5px ;
+		border-bottom-right-radius : 5px ;
+		line-height : 2.3em ;
+		font-size : 9pt ;
+		text-align : center ;
+	}
+
+	.btn3-menu {
+		display : none ;
+		position : absolute ;
+		left : 0 ;
+		top : 2.3em ;
+		margin-top : -6px ;
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		min-width : 100% ;
+		box-shadow : 6px 6px 12px #000 ;
+		padding : 4px ;
+	}
+
+	.btn3-menu-btn:hover ~ .btn3-menu , .btn3-menu:hover {
+		display : block ;
+	}
+
+

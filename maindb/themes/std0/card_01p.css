@@ -1,0 +1,59 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+	* {
+		font-family: 'Times New Roman';
+		font-size: 14pt;
+	}
+
+	body {
+		margin-top: 1cm;
+	}
+
+	.PT {
+		border-collapse: collapse;
+		width: 28.8cm;
+	}
+
+	.H1 {
+		width: 14.4cm;
+		border: 1px #000000;
+		border-style: solid solid solid none;
+		text-align: center;
+		font-weight: bold;
+	}
+
+  .H2 {
+  	width: 14.4cm;
+  	border: 1px #000000;
+  	border-style: solid solid solid none;
+  	text-align: center;
+  	font-weight: bold;
+  }
+
+	.T {
+		border: 1px #000000;
+		border-style: solid solid solid none;
+		padding: 1cm;
+	}
+
+	.SI {
+		padding: 4px 16px;
+	}
+
+	.LINE {
+		margin: 0px;
+		padding: 0px;
+		height: 1cm;
+		border-bottom: 1pt solid #000000;
+	}
+
+	.W {
+		text-align: right;
+	}
+
+	SPAN {
+		display: table-cell;
+	}

@@ -1,0 +1,356 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	* {
+		box-sizing : border-box ;
+	}
+	
+	.unlink-lnk {
+		cursor : pointer ;
+		text-decoration : underline ;
+		color : #0080ff ;
+	}
+	.unlink-lnk:hover {
+		color : #ff8000 ;
+	}
+
+	.new-link-lnk {
+		cursor : pointer ;
+		text-decoration : underline ;
+		color : #404040 ;
+	}
+	.new-link-lnk:hover {
+		color : #008000 ;
+	}
+	
+	.PT {
+		border-collapse : collapse ;
+		margin-left : 560px ;
+	}
+
+	.D {
+		width : 384px ;
+		border : 1px dotted #c0c0c0 ;
+		padding : 6px ;
+		text-align : justify ;
+	}
+
+	.I {
+		border : 1px dotted #c0c0c0 ;
+		padding: 6px;
+		text-align : center ;
+		max-width : 600px ;
+	}
+
+	.i_date {
+		text-align : center ;
+	}
+
+	.i_from_type_of_agency {
+		width : 100% ;
+	}
+	.i_from_agency {
+		width : 480px ;
+	}
+	.i_from_agency_list {
+		width: 100% ;
+		height: 192px;
+	}
+
+	.i_from_agent {
+		width: 480px;
+	}
+	.i_from_agent_list {
+		width: 100% ;
+		height: 192px;
+	}
+
+
+	.i_state , .i_ex_data_3 , .i_ex_data_4 , .i_ex_data_6 , .i_ex_data_7 , .i_ex_data_8 , .i_ex_data_9 {
+		width: 100% ;
+		display : block ;
+		margin : 0px auto ;
+	}
+
+	.i_ex_data_3 {
+		height: 64px ;
+	}
+
+	.i_ex_data_4 {
+		height: 64px;
+	}
+
+	.i_ex_data_6 {
+		height : 128px ;
+	}
+
+	.i_ex_data_7 {
+		height: 96px;
+	}
+
+	.i_ex_data_8 {
+		height: 64px;
+	}
+
+	.i_ex_data_9 {
+		height: 64px;
+	}
+
+	.i_state {
+	}
+
+	.btnTB {
+		text-align: center;
+		padding-top: 16px;
+	}
+
+	.optTB {
+		text-align: left;
+		padding-top: 16px;
+	}
+	
+	.tmpl-dlg-mark-execute {
+		width : 16px ;
+		height : 16px ;
+		background-image : url( "mark.png" );
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		margin-left : 6px ;
+	}
+
+	.tmpl-dlg-mark-add {
+		width : 15px ;
+		height : 15px ;
+		background-image : url( "btn_add.bmp" );
+		display : inline-block ;
+		vertical-align : middle ;
+		cursor : pointer ;
+		margin-left : 6px ;
+	}
+	
+	#evtab * {
+		box-sizing : border-box ;
+	}
+	
+	/*#nrr td {
+		padding : 2px ;
+	}*/
+	
+	.nrr-i-date {
+		width : 100% ;
+		text-align : center ;
+	}
+	
+	.nrr-i-descr {
+		width : 100% ;
+	}
+	
+	.et-label {
+		margin-top : 2em ;
+		margin-bottom : 0.5em ;
+		text-align : center ;
+	}
+	
+	#evtab {
+		width : 924px ;
+	}
+	
+	.et-btn-del , .et-btn-ok , .et-btn-cover ,
+	.et-state-e , .et-state-w0 , .et-state-w1 , 
+	.et-state-r , .et-state-f {
+		background-image : url( "sprites1.png" );
+		width : 13px ;
+		height : 13px ;
+		display : inline-block ;
+		cursor : pointer ;
+	}
+	
+	.et-btn-cover span {
+		text-shadow : #FFFFFF 1px 0px, #FFFFFF -1px 0px, #FFFFFF 0px 1px, #FFFFFF 0px -1px, #FFFFFF 1px 1px, #FFFFFF -1px -1px, #FFFFFF -1px 1px, #FFFFFF 1px -1px, #FFFFFF 0 0 1px ;
+		padding : 0px ;
+		position : absolute ;
+		right : -2px ;
+		bottom : -4px ;
+		font-size : 7pt ;
+		color : #f00 ;
+	}
+	
+	.et-btn-del {
+		background-position : -13px 0px ;
+		margin-left : 4px ;
+	}
+	
+	.et-btn-ok {
+		background-position : -13px -39px ;
+	}
+	
+	.et-btn-cover {
+		background-position : -13px -80px ;
+		position : relative ;
+	}
+	
+	.et-states {
+		text-align : center ;
+		width : 40px ;
+	}
+
+	.et-state-e {
+		background-position : -13px 0px ;
+	}
+	
+	.et-state-w0 {
+		background-position : -13px -13px ;
+	}
+	
+	.et-state-w1 {
+		background-position : 0px 0px ;
+	}
+	
+	.et-state-r {
+		background-position : -13px -26px ;
+	}
+	
+	.et-state-f {
+		background-position : -13px -39px ;
+	}
+	
+	.et-panel {
+		text-align : center ;
+		margin-top : 0.5em ;
+		margin-bottom : 2em ;
+	}
+	
+	.eth-hidden {
+		border : none !important ;
+	}
+	
+	.et-state-date {
+		color : #f22 ;
+		margin-right : 4px ;
+	}
+	
+	#docs-panel {
+		display : block ;
+		width : 256px ;
+		height : 256px ;
+		position : fixed ;
+		right : 0.5cm ;
+		top : 5cm ;
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		
+		box-shadow: 4px 4px 16px #000;
+
+		overflow : auto ;
+	}
+
+	.docs-lnk , .docs-lnk-green , .docs-lnk-gray , .docs-lnk-blue , .docs-lnk-purple , .docs-lnk-purple-dot , .docs-lnk-lt-blue {
+		padding : 0.25em 1em ;
+		margin : 0.125em 0.25em ;
+		display : block ;
+	 	border-radius : 0.25em ;
+		text-decoration : none ;
+	}
+
+	.docs-lnk {
+		background-color : #fc0 ;
+		color : #000 ;
+		border : 1px solid #860 ;
+	}
+	
+	.docs-lnk-green {
+		background-color : #0f0 ;
+		color : #000 ;
+		border : 1px solid #060 ;
+	}
+
+	.docs-lnk-gray {
+		background-color : #666 ;
+		color : #eee ;
+		border : 1px solid #aaa ;
+	}
+
+	.docs-lnk-blue {
+		background-color : #06c ;
+		color : #fff ;
+		border : 1px solid #034 ;
+	}
+
+	.docs-lnk-lt-blue {
+		background-color : #adf ;
+		color : #000 ;
+		border : 1px solid #578 ;
+	}
+
+	.docs-lnk-purple {
+		background-color : #fad ;
+		color : #000 ;
+		border : 1px solid #857 ;
+	}
+
+	.docs-lnk-purple-dot {
+		background-color : none ;
+		/*color : #000 ;*/
+		border : 1px dotted #857 ;
+	}
+
+	.docs-lnk-alter-border {
+		border-style : dashed !important ;
+		border-width : 3px ;
+	}
+	
+	#contacts-panel {
+		display : block ;
+		width : 512px ;
+		/*height : 10cm ;*/
+		height : auto ;
+		position : fixed ;
+		left : 0.5cm ;
+		top : 5cm ;
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		
+		box-shadow: 4px 4px 16px #000;
+
+		overflow : auto ;
+	}
+	
+	#contacts-panel .std-agents-table {
+		position : relative ;
+	}
+	
+	#contactsListCtrlPanel {
+		display : inline ;
+	}
+
+	#marks-panel {
+		display : block ;
+		width : 384px ;
+		height : 7cm ;
+		position : fixed ;
+		left : 0.5cm ;
+		bottom : 1cm ;
+		border : 1px solid #444 ;
+		background-color : #fff ;
+		
+		box-shadow: 4px 4px 16px #000;
+
+		overflow : scroll ;
+		padding : 4px ;
+	}
+	
+	.address-lnk {
+		display : block ;
+		height : 3em ;
+		text-align : center ;
+		border : 1px dotted #888 ;
+		margin : 4px ;
+		cursor : pointer ;
+		color : #08f ;
+		text-decoration : underline ;
+	}
+	

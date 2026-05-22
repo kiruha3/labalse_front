@@ -1,0 +1,255 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+	* {
+		font-family : "arial" , sans-serif ;
+	}
+
+	body {
+		margin : 0 ;
+		padding : 0 ;
+	}
+
+	.page {
+		width : 100% ;
+		text-align : center ;
+	}
+
+	.page-content {
+		position : absolute ;
+		left : 20mm ;
+		top : 20mm ;
+		padding : 0 ;
+		width : 250mm ;
+		text-align : left ;
+	}
+
+	.title {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+	}
+
+	.title-rem {
+		font-size: 6.5pt ;
+		text-align : right ;
+	}
+
+	.title-title {
+		font-size : 13pt ;
+		font-weight: bold ;
+		text-align : left ;
+	}
+
+	.title-data {
+		font-size : 7pt ;
+	}
+
+	.items-table {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+		border-collapse : collapse ;
+		width : 245mm ;
+		font-size : 10pt ;
+	}
+
+	.pt-h-1 , .pt-h-2 , .pt-h-3 , .pt-h-4 , .pt-h-5 , .pt-h-6 , .pt-h-7 , .pt-h-8 , .pt-h-9 , .pt-h-10 , .pt-h-11 {
+		padding : 0 ;
+		border : 1px solid #000000 ;
+		text-align : center ;
+		font-size : 7pt ;
+	}
+
+	.pt-h2-1 , .pt-h2-2 , .pt-h2-3 , .pt-h2-4 , .pt-h2-5 , .pt-h2-6 , .pt-h2-7 , .pt-h2-8 , .pt-h2-9 , .pt-h2-10 , .pt-h2-11 {
+		padding : 0 ;
+		border : 1px solid #000000 ;
+		text-align : center ;
+		font-size : 7pt ;
+	}
+
+	.pt-d-1 , .pt-d-2 , .pt-d-3 , .pt-d-4 , .pt-d-5 , .pt-d-6 , .pt-d-7 , .pt-d-8 , .pt-d-9 , .pt-d-10 , .pt-d-11 , .pt-t-1 , .pt-t-2 , .pt-t-3 {
+		padding : 0 ;
+		border : 1px solid #000000 ;
+		font-size : 7pt ;
+	}
+
+	.pt-d-1 {
+		text-align : left ;
+	}
+
+	.pt-d-2 , .pt-d-6 , .pt-d-7 , .pt-d-10 , .pt-d-11  {
+		text-align : center ;
+	}
+
+	.pt-d-3 , .pt-d-4 , .pt-d-5 , .pt-d-8 , .pt-d-9 , .pt-t-2 , .pt-t-3 {
+		text-align : right ;
+	}
+
+	.pt-h-1 , .pt-h2-1 , .pt-d-1 {
+		min-width : 43.5mm ;
+		width : 43.5mm ;
+		max-width : 43.5mm ;
+	}
+
+	.pt-h-2 , .pt-h2-2 , .pt-d-2 {
+		min-width : 11mm ;
+		width : 11mm ;
+		max-width : 11mm ;
+	}
+
+	.pt-h-3 , .pt-h2-3 , .pt-d-3 {
+		min-width : 15.5mm ;
+		width : 15.5mm ;
+		max-width : 15.5mm ;
+	}
+
+	.pt-h-4 , .pt-h2-4 , .pt-d-4 {
+		min-width : 17mm ;
+		width : 17mm ;
+		max-width : 17mm ;
+	}
+
+	.pt-h-5 , .pt-h2-5 , .pt-d-5 {
+		min-width : 20mm ;
+		width : 20mm ;
+		max-width : 20mm ;
+	}
+
+	.pt-h-6 , .pt-h2-6 , .pt-d-6 {
+		min-width : 14mm ;
+		width : 14mm ;
+		max-width : 14mm ;
+	}
+
+	.pt-h-7 , .pt-h2-7 , .pt-d-7 {
+		min-width : 14mm ;
+		width : 14mm ;
+		max-width : 14mm ;
+	}
+
+	.pt-h-8 , .pt-h2-8 , .pt-d-8 , .pt-t-2 {
+		min-width : 16mm ;
+		width : 16mm ;
+		max-width : 16mm ;
+	}
+
+	.pt-h-9 , .pt-h2-9 , .pt-d-9 , .pt-t-3 {
+		min-width : 20mm ;
+		width : 20mm ;
+		max-width : 20mm ;
+	}
+
+	.pt-h-10 , .pt-h2-10 , .pt-d-10 {
+		min-width : 24.5mm ;
+		width : 24.5mm ;
+		max-width : 24.5mm ;
+	}
+
+	.pt-h-11 , .pt-h2-11 , .pt-d-11 {
+		min-width : 49.5mm ;
+		width : 49.5mm ;
+		max-width : 49.5mm ;
+	}
+
+	.pt-t-1 {
+		font-size : 8pt ;
+		font-weight : bold ;
+	}
+
+	.text {
+		margin-left : 0.5mm ;
+	}
+
+	.number {
+		margin-right : 0.5mm ;
+	}
+
+	.f-1-1 , .f-2-1 , .f-3-1 , .f-4-1 , .f-1-3 , .f-3-4 , .f-1-5 {
+		position : absolute ;
+		font-size : 7pt ;
+	}
+
+	.f-1-2 , .f-2-2 , .f-3-2 , .f-4-2 , .f-1-4 , .f-2-4 {
+		position : absolute ;
+		font-size : 6.5pt ;
+	}
+
+	.f-1-1 , .f-1-3 {
+		left : 2mm ;
+	}
+
+	.f-2-1 {
+		left : 70mm ;
+	}
+
+	.f-3-1 {
+		left : 118mm ;
+	}
+
+	.f-4-1 {
+		left : 171mm ;
+		background-color : #00ff00 ;
+	}
+
+	.f-1-2 , .f-1-4 {
+		left : 47mm ;
+	}
+
+	.f-2-2 , .f-2-4 {
+		left : 72mm ;
+	}
+
+	.f-3-2 {
+		left : 153mm ;
+	}
+
+	.f-4-2 {
+		left : 173.75mm ;
+	}
+
+	.f-3-4 {
+		left : 125mm ;
+		width : 70mm ;
+	}
+
+	.ex-panel {
+		position : absolute ;
+		left : 5mm ;
+		top : 5mm ;
+		border : 1px solid #000000 ;
+		background-color : #ffc000 ;
+		z-index : 1000 ;
+		padding : 4px ;
+	}
+
+	.payer_data {
+		font-size : 16pt ;
+		text-align : center ;
+		width : 50mm ;
+	}
+
+	.data_payer {
+		background-color : #00ff00 ;
+	}
+
+	.i_ag {
+		font-size : 16pt ;
+		width : 50mm ;
+	}
+
+	@media print {
+		.ex-panel {
+			display : none ;
+		}
+
+		.data_payer {
+			background-color : #ffffff ;
+		}
+
+		.f-4-1 {
+			left : 171mm ;
+			background-color : #ffffff ;
+		}
+	}
+

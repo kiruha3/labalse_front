@@ -1,0 +1,45 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	.msgForm {
+		width: 384px;
+		border-style: solid;
+		border-color: #c0c0c0;
+		border-width: 1px;
+		border-collapse: collapse; }
+
+	.msgFormTitle {
+		height: 19px;
+		text-indent: 4px;
+		font-size: 8pt;
+		font-weight: bold;
+		color: #ffffff;
+		background-image: url(cap.gif);
+	}
+
+	.msgFormDesc {
+		text-align: center;
+		padding: 8px;
+		font-size: 8pt;
+		font-weight: normal;
+		color: #000000;
+		background-color: #ffffff;
+	}
+
+	.inlineMsg {
+		width : 100% ;
+		border : 1px solid #808080 ;
+		border-collapse : collapse ;
+	}
+
+	.inlineMsgDesc {
+		text-align : justify ;
+		padding : 16px ;
+		font-size : 14pt ;
+		font-weight : normal ;
+		color : #000000 ;
+		background-color : #ff8080 ;
+	}

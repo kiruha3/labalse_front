@@ -1,0 +1,185 @@
+
+	.gpinfo-panel {
+		border : 1px solid #888 ;
+		padding : 0px ;
+		background-color : #eee ;
+		margin : 2cm auto 0 ;
+		max-width : 1440px ;
+	}
+	
+	.gpinfo-panel * {
+		box-sizing : border-box ;
+	}
+	
+	.gpinfo-panel + .gpinfo-panel {
+		margin-top : 4px ;
+	}
+	
+	.gpinfo-container {
+		font-size : 12pt ;
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+	
+	.gpinfo-container div {
+		display : inline-block ;
+		text-align : right ;
+		padding-right : 2px ;
+	}
+	
+	.gpinfo-label {
+		padding : 2px 4px 2px 8px ;
+		width : 10cm ;
+		text-align : right ;
+	}
+
+	.gpinfo-total {
+		width : 100% ;
+		background-color : #08f ;
+		border : 1px solid #068 ;
+		color : #fff ;
+		position : relative ;
+	}
+	
+	.gpinfo-total-group {
+		position : absolute ;
+		left : 0px ;
+		border-right : 1px dashed #fff ;
+	}
+	
+	.gpinfo-ca {
+		background-color : #fff ;
+		border : 1px solid #666 ;
+		color : #000 ;
+	}
+	
+	.gpinfo-total > .gpinfo-ca {
+		position : absolute ;
+		left : 0px ;
+		border : none ;
+	}
+	
+	.gpinfo-cd {
+		color : #000 ;
+	}
+
+	.chart-area {
+		border : 1px solid #888 ;
+		background-color : #eee ;
+		margin : 0 auto 0 ;
+		max-width : 1440px ;
+	}
+	.chart-area::part(drawing-area) {
+		height : 320px ;
+	}
+
+	.chart-area::part(axis-labels) {
+		color : #000 ;
+		font-size : 10pt ;
+		font-family : "Calibri" ;
+	}
+
+	.chart-area::part(data-lines) , .control-panel-lines-def-mark {
+		border-width : 1px ;
+		border-style : solid ;
+		font-size : 10pt ;
+		font-family : "Courier New" ;
+		writing-mode : horizontal-tb ;
+	}
+
+	.chart-area::part(data-line-0) , .control-panel-line-0-mark {
+		color : #000 ;
+		background-color : #cff ;
+		border-color : #048 ;
+	}
+
+	.chart-area::part(data-line-1) , .control-panel-line-1-mark {
+		color : #000 ;
+		background-color : #cfc ;
+		border-color : #060 ;
+	}
+
+	.chart-area::part(data-line-2) , .control-panel-line-2-mark {
+		color : #000 ;
+		background-color : #fcc ;
+		border-color : #600 ;
+	}
+
+	.chart-area::part(data-line-3) , .control-panel-line-3-mark {
+		color : #000 ;
+		background-color : #ff8 ;
+		border-color : #840 ;
+	}
+
+	.chart-area::part(data-line-4) , .control-panel-line-4-mark {
+		color : #000 ;
+		background-color : #ccc ;
+		border-color : #444 ;
+	}
+
+	.chart-area::part(data-line-5) , .control-panel-line-5-mark {
+		color : #000 ;
+		background-color : #08f ;
+		border-color : #004 ;
+	}
+
+	.chart-area::part(data-line-6) , .control-panel-line-6-mark {
+		color : #000 ;
+		background-color : #800 ;
+		border-color : #400 ;
+	}
+
+	.chart-area::part(data-line-7) , .control-panel-line-7-mark {
+		color : #000 ;
+		background-color : #080 ;
+		border-color : #040 ;
+	}
+
+	.chart-area::part(data-line-8) , .control-panel-line-8-mark {
+		color : #000 ;
+		background-color : #888 ;
+		border-color : #444 ;
+	}
+
+	.chart-area::part(data-line-9) , .control-panel-line-9-mark {
+		color : #000 ;
+		background-color : #c60 ;
+		border-color : #630 ;
+	}
+
+	.chart-area::part(data-lines-legend) {
+		font-family: "Calibri" ;
+		font-size : 12pt ;
+		color : #000 ;
+		--position : top ;
+		--line-to-line-space : 1cm ;
+	}
+
+	#cart-panel-control {
+		margin : 0.5cm 1cm ;
+		border : 1px solid #000 ;
+		background-color : #fc0 ;
+		min-height : 32px ;
+		max-height : 256px ;
+		overflow-y : auto ;
+	}
+
+	.chart-tr1-line-params-area {
+		display : inline-block ;
+		margin : 1px ;
+		border : 1px solid #444 ;
+		background-color : #fc0 ;
+		padding : 2px 8px ;
+	}
+
+	.control-panel-lines-mark-area {
+		display : inline-block ;
+		padding : 2px ;
+		margin-right : 8px ;
+		vertical-align : middle ;
+	}
+
+	.control-panel-lines-def-mark {
+		width : 1.5em ;
+		height : 1.5em ;
+	}

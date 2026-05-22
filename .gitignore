@@ -1,0 +1,12 @@
+*.log
+*.tmp
+*.swp
+.htaccess
+keys/
+file_store/store/
+file_store/files/
+maindb/reports/
+doc-generator/doc_ex_data/
+doc-generator/files/
+files/labeling/
+errors/

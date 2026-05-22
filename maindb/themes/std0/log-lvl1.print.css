@@ -1,0 +1,78 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+.MainTable-Black , .MainTable-White {
+	border-collapse : collapse ;
+	width : 27cm ;
+	height : 17cm ;
+	margin-top : 1.5cm ;
+}
+
+.MainTable-Black {
+	border : 1px solid #000000 ;
+	color : #000000 ;
+}
+
+.MainTable-Black td {
+	border : 1px solid #606060 ;
+}
+
+.MainTable-White {
+	border : 1px solid #ffffff ;
+	color : #ffffff ;
+}
+
+.MainTable-White td {
+	border : 1px solid #ffffff ;
+}
+
+td {
+	overflow : hidden ;
+}
+
+.mt-d-1 , .mt-d-2 , .mt-d-3 , .mt-d-4 , .mt-d-5 ,
+.mt-d-6 , .mt-d-7 , .mt-d-8 , .mt-d-9 {
+	padding : 0.25mm ;
+	vertical-align : top ;
+	font-size : 7.5pt ;
+
+	min-height : 5cm ;
+	height : 5cm ;
+	max-height : 5cm ;
+}
+
+.mt-d-1 , .mt-d-2 , .mt-d-5 {
+	text-align : center ;
+	width : 2cm ;
+}
+
+.mt-d-3 , .mt-d-4 , .mt-d-6 , .mt-d-7 , .mt-d-8 , .mt-d-9 {
+	text-align : left ;
+	width : 3.5cm ;
+}
+
+.mt-c-1 , .mt-c-2 , .mt-c-3 , .mt-c-4 , .mt-c-5 ,
+.mt-c-6 , .mt-c-7 , .mt-c-8 , .mt-c-9 {
+	padding : 0.25mm ;
+	vertical-align : top ;
+	text-align : center ;
+	font-size : 7.5pt ;
+	min-height : 2cm ;
+	height : 2cm ;
+	max-height : 2cm ;
+}
+
+.mt-c-1 , .mt-c-2 , .mt-c-5 {
+	width : 2cm ;
+}
+
+.mt-c-3 , .mt-c-4 , .mt-c-6 , .mt-c-7 , .mt-c-8 , .mt-c-9 {
+	width : 3.5cm ;
+}
+
+.blacktext {
+	color : #000000 ;
+}

@@ -1,0 +1,97 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+
+	.info-tab {
+		border-collapse : collapse ;
+		border : none ;
+		width : 1024px ;
+		margin-top : 2cm ;
+	}
+
+	.info-tab-title {
+		text-align : center ;
+		font-size : 14pt ;
+		background-color : #404040 ;
+		color : #ffffff ;
+	}
+
+	.info-tab-desc {
+		background-color : #c0c0c0 ;
+		color : #000000 ;
+	}
+
+	.info-tab-title , .info-tab-desc , .info-tab-val {
+		border : 1px solid #000000 ;
+	}
+
+	.doc-table {
+		width : 1024px ;
+		max-width : 1024px ;
+		border-collapse : collapse ;
+		margin-top : 2cm ;
+	}
+
+	.p-text {
+		text-indent : 1cm ;
+		border : 1px dashed #808080 ;
+		padding : 0.5cm 1cm ;
+		font-size : 12pt ;
+	}
+
+	.d-blue {
+		color : #0040ff ;
+		display : inline-block ;
+		text-indent : 0 ;
+	}
+
+	.d-bold-name {
+		color : #000000 ;
+		display : inline-block ;
+		font-weight : bold ;
+		text-indent : 0 ;
+	}
+
+	.d-bold-name:before , .d-bold-name:after {
+		color : #808080 ;
+		display : inline-block ;
+		font-weight : bold ;
+		text-indent : 0 ;
+	}
+
+	.d-bold-name:before {
+		content : "«" ;
+		margin-right : 0.1cm ;
+	}
+	.d-bold-name:after {
+		content : "»" ;
+		margin-left : 0.1cm ;
+	}
+
+	.d-lnk {
+		color : #008000 ;
+		text-decoration : underline ;
+	}
+
+	.d-command {
+		color : #000000 ;
+		display : inline-block ;
+		font-weight : bold ;
+		text-indent : 0 ;
+		border : 1px solid #000000 ;
+		padding : 2px ;
+		word-spacing : 8px ;
+		min-width : 16px ;
+		min-height : 16px ;
+	}
+
+	.ping-ok {
+		background-color : #c0ffc0 ;
+	}
+
+	.ping-err {
+		background-color : #ffc0c0 ;
+	}

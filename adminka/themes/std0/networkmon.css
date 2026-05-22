@@ -1,0 +1,200 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+* {
+	font-family : "verdana" , "arial" , sans-serif ;
+}
+
+.main-tab {
+	border-collapse : collapse ;
+}
+
+.mthu {
+}
+.mthu TD {
+	border : 1px solid #606060 ;
+	padding : 2px 4px ;
+	font-size : 10pt ;
+}
+
+.mthd {
+}
+.mthd TD {
+	border : 1px solid #606060 ;
+	padding : 2px 4px ;
+	font-size : 10pt ;
+}
+
+.cap {
+	background-color : #404040 ;
+	background-image : url( "cap.gif" );
+}
+.cap TD {
+	height : 19px ;
+	border : 1px solid ;
+	border-color : #606060 #ffffff ;
+	text-align : center ;
+	font-weight : bold ;
+	font-size : 8pt ;
+	color : #ffffff ;
+	padding : 0px ;
+}
+
+.cap-ip {
+	width : 128px ;
+}
+
+.cap-port {
+	width : 64px ;
+}
+
+.cap-host {
+	width : 384px ;
+}
+
+.cap-worker {
+	width : 320px ;
+}
+
+.cap-mac {
+	width : 144px ;
+}
+
+.col-ip {
+	text-align : right ;
+}
+
+.col-port {
+	text-align : center ;
+}
+
+.col-host {
+	text-align : left ;
+}
+
+.col-worker {
+	text-align : left ;
+	color : #000000 ;
+}
+
+.col-mac {
+	text-align : right ;
+	color : #a0a0a0 ;
+}
+
+.st-top {
+	font-size : 10pt ;
+	color : #a0a0a0 ;
+}
+
+.st-host {
+	font-size : 10pt ;
+	color : #0070e0 ;
+}
+
+.st-srv {
+	font-size : 10pt ;
+	color : #e0a000 ;
+}
+
+.st-prn {
+	font-size : 10pt ;
+	color : #e00070 ;
+}
+
+.st-dev {
+	font-size : 10pt ;
+	color : #7000e0 ;
+}
+
+.st-comp {
+	font-size : 10pt ;
+	color : #80c080 ;
+}
+
+.st-unknown {
+	font-size : 10pt ;
+	color : #000000 ;
+	text-decoration : underline ;
+	font-style : italic ;
+}
+
+.st-subnet-addr {
+	font-size : 10pt ;
+	color : #a0a0a0 ;
+}
+
+.st-host-addr {
+	font-size : 10pt ;
+	color : #0070e0 ;
+}
+
+.st-unknown-addr {
+	font-size : 10pt ;
+	color : #000000 ;
+	text-decoration : underline ;
+	font-style : italic ;
+}
+
+.total-online {
+	padding : 10px 0px 0px 4px ;
+}
+
+.total-online span {
+	color : #40c040 ;
+}
+
+.head {
+	font-size : 12pt ;
+	color : #000000 ;
+}
+
+.head-bold {
+	font-size : 12pt ;
+	color : #40c040 ;
+	font-style : bold ;
+}
+
+.head-2 {
+	font-size : 10pt ;
+	color : #000000 ;
+}
+
+.head-2-bold {
+	font-size : 10pt ;
+	font-style : bold ;
+	color : #c04040 ;
+}
+
+.lnk-section A {
+	font-size: 10pt;
+	text-decoration: none;
+	color: #0000ff;
+}
+
+.lnk-section A:hover {
+	color: #40c040;
+}
+
+.lnk-seedomain {
+	border-bottom : 1px none #404040 ;
+	border-top : 1px none #404040 ;
+	font-size : 7pt ;
+	text-decoration : none ;
+	color : #808080 ;
+}
+
+.lnk-seedomain:hover {
+	border-bottom : 1px dashed #ff0000 ;
+	border-top : 1px dashed #ff0000 ;
+	background-color : #ffc0c0 ;
+	color : #000000 ;
+}
+
+.services {
+	float : right ;
+	padding : 0px ;
+	margin : 0px ;
+}

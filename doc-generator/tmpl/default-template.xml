@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc-pack>
+    <template version="100" format="A4p" margin-left="20mm" margin-top="10mm" margin-bottom="10mm" margin-right="10mm">
+        <styles>
+            <style name="header-PARTS">
+                <attr group="font" name="bold"/>
+                <attr group="text" name="indent">0</attr>
+                <attr group="text" name="align">center</attr>
+                <attr group="text" name="underline"/>
+                <attr group="box.margin" name="margin-top">12pt</attr>
+                <attr group="box.margin" name="margin-bottom">3pt</attr>
+            </style>
+            <style name="header-1">
+                <attr group="font" name="bold">bold</attr>
+                <attr group="font" name="italic">italic</attr>
+                <attr group="text" name="indent">0</attr>
+                <attr group="text" name="align">center</attr>
+                <attr group="box.margin" name="margin-top">12pt</attr>
+            </style>
+            <style name="header-2">
+                <attr group="font" name="bold">bold</attr>
+                <attr group="text" name="indent">1.25cm</attr>
+                <attr group="text" name="align">justify</attr>
+                <attr group="box.margin" name="margin-top">12pt</attr>
+            </style>
+            <style name="header-3">
+                <attr group="font" name="bold">bold</attr>
+                <attr group="font" name="italic">italic</attr>
+                <attr group="text" name="indent">1.25cm</attr>
+                <attr group="text" name="align">justify</attr>
+                <attr group="box.margin" name="margin-top">12pt</attr>
+            </style>
+            <style name="header-4">
+                <attr group="font" name="bold"/>
+                <attr group="text" name="indent">0</attr>
+                <attr group="text" name="align">center</attr>
+                <attr group="box.margin" name="margin-top">12pt</attr>
+                <attr group="box.margin" name="margin-bottom">3pt</attr>
+            </style>
+            <style name="header-5">
+                <attr group="font" name="bold"/>
+                <attr group="text" name="indent">0</attr>
+                <attr group="text" name="align">center</attr>
+                <attr group="box.margin" name="margin-top">12pt</attr>
+                <attr group="box.margin" name="margin-bottom">3pt</attr>
+            </style>
+            <style name="td-def">
+                <attr group="box.borders" name="border-top">thin solid #000000</attr>
+                <attr group="box.borders" name="border-right">thin solid #000000</attr>
+                <attr group="box.borders" name="border-bottom">thin solid #000000</attr>
+                <attr group="box.borders" name="border-left">thin solid #000000</attr>
+            </style>
+            <style name="th-def">
+                <attr group="font" name="bold"/>
+                <attr group="text" name="align">center</attr>
+                <attr group="box.borders" name="border-top">thin solid #000000</attr>
+                <attr group="box.borders" name="border-right">thin solid #000000</attr>
+                <attr group="box.borders" name="border-bottom">thin solid #000000</attr>
+                <attr group="box.borders" name="border-left">thin solid #000000</attr>
+            </style>
+        </styles>
+        <main-text>
+            <block font-size="14pt">
+            </block>
+        </main-text>
+    </template>
+</doc-pack>

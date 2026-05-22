@@ -1,0 +1,382 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	#main-table {
+		margin: 0;
+		width: 100%;
+	}
+
+	.panel-header {
+		border: 1px solid #ccc ;
+		height: 19px;
+		background: #eee url(cap2.gif);
+		padding: 0;
+		text-indent: 8px;
+		text-align: left;
+		font-size: 10pt;
+		color: #000;
+	}
+	
+	.panel-content {
+		border: 1px solid #c0c0c0;
+		padding: 8px;
+		background-color: #f0f0f0;
+	}
+
+	.panel-content-2 {
+		border: 1px solid #c0c0c0;
+		padding: 8px;
+		background-color: #f0f0f0;
+		text-align : center ;
+	}
+	
+	.panel-spacer {
+		height : 0.5cm ;
+	}
+
+	#left-column {
+		width: 256px;
+		padding-left: 0;
+		padding-top: 0;
+		padding-right: 4px;
+		padding-bottom: 0;
+		vertical-align: top;
+	}
+
+	#sections {
+		margin: 0;
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.section-name {
+	}
+
+	.section-name a {
+		font-weight: bold;
+		font-size: 8pt;
+		color: #000000;
+		text-decoration: none;
+	}
+
+	.section-name a:hover {
+		color: #ff0000;
+	}
+
+	.section-desc {
+		text-align: justify;
+		vertical-align: text-top;
+		padding-left: 8px;
+		padding-bottom: 16px;
+		font-size: 8pt;
+		color: #606060;
+	}
+
+	#tools {
+		margin: 0;
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.tools-buttons {
+
+	}
+
+	.tools-buttons a {
+		font-size: 9pt;
+		color: #0000ff;
+		text-decoration: none;
+	}
+
+	.tools-buttons a:hover {
+		color: #008000;
+		text-decoration: underline;
+	}
+
+
+	#searchers {
+		margin: 0;
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.searchers-links {
+	}
+
+	.searchers-links a {
+		text-decoration: none;
+		font-size: 11pt;
+		font-weight: bold;
+	}
+
+	.searchers-links a:hover {
+		text-decoration: underline;
+	}
+
+	#middle-column {
+		padding-left: 4px;
+		padding-top: 0;
+		padding-right: 4px;
+		padding-bottom: 0;
+		vertical-align: top;
+	}
+
+	#news {
+		margin: 0;
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.news2 {
+		border: 1px solid #c0c0c0;
+		margin-bottom: 4px;
+	}
+
+	.news-title {
+		height: 19px;
+		background: #e0e0e0 url(cap2.gif);
+		padding: 0;
+		text-indent: 8px;
+		text-align: left;
+		font-size: 10pt;
+		color: #000000;
+	}
+
+	.news-content {
+		padding: 8px;
+		font-size: 10pt;
+		background-color: #f0f0f0;
+	}
+
+	.news-content-text {
+		padding-bottom: 36px;
+		text-indent: 16px;
+		text-align: justify;
+	}
+
+	.news-content-text p:first-letter {
+		font-weight: bold;
+		font-size: 11pt;
+		/*color: #ff0000;*/
+	}
+
+	.news-content-footer {
+		text-align: right;
+		font-style: italic;
+		font-size: 9pt;
+	}
+
+	.news2-fresh {
+		border: 1px solid #ff8080;
+		margin-bottom: 4px;
+	}
+
+	.news-title-fresh {
+		height: 19px;
+		background: #ffc0c0 url(cap2-fresh.gif);
+		padding: 0;
+		text-indent: 8px;
+		text-align: left;
+		font-size: 10pt;
+		color: #000000;
+	}
+
+	.news-content-fresh {
+		padding: 8px;
+		font-size: 10pt;
+		background-color: #ffc0c0;
+	}
+
+	.news-content-text-fresh {
+		padding-bottom: 36px;
+		text-indent: 16px;
+		text-align: justify;
+	}
+
+	.news-content-text-fresh p:first-letter {
+		font-weight: bold;
+		font-size: 11pt;
+	}
+
+	.news-content-footer-fresh {
+		text-align: right;
+		font-style: italic;
+		font-size: 9pt;
+	}
+
+	.pdf-preview-area {
+		position : fixed ;
+		left : 2cm ;
+		top : 5cm ;
+		bottom : 1cm ;
+		right : 2cm ;
+
+		box-shadow: 4px 4px 16px #000;
+		padding : 8px ;
+		background-color : #ccc ;
+		z-index : 20000 ;
+		display : none ;
+	}
+
+	.pdf-preview-wrapper {
+		position : absolute ;
+		left : 0 ;
+		top : 0 ;
+		right : 0 ;
+		bottom : 0 ;
+		margin : 8px ;
+		background-color : #eee ;
+		overflow-y : scroll ;
+		border : 1px solid #444 ;
+	}
+
+	.pdf-preview-area-toolbar {
+		margin-top : 8px ;
+		padding-top : 8px ;
+		border-top : #888 ;
+		text-align : right ;
+	}
+
+	.pdf-preview-area-toolbar .btn3 {
+		text-align : center ;
+	}
+
+	#right-column {
+		width: 256px;
+		padding-left: 4px;
+		padding-top: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		vertical-align: top;
+	}
+
+	#documents {
+		margin: 0;
+		width: 100% ;
+		border-collapse : collapse ;
+	}
+
+	.document-name {
+	}
+
+	.document-name-lnk ,
+	.document-name a {
+		font-size : 10pt ;
+		color : #000 ;
+		text-decoration : none ;
+	}
+
+	.document-name-lnk:hover span ,
+	.document-name a:hover {
+		color : #080 ;
+		text-decoration : underline ;
+	}
+
+	#tech-info {
+		margin: 0;
+		width: 100%;
+		border-collapse: collapse;
+
+	}
+	
+	.document-name-highlight {
+		color : #f00 !important ;
+	}
+	
+	.document-path-at-top {
+		font-size : 8pt ;
+		padding-top : 12px ; 
+		/*border : 1px solid #888 ;*/
+	}
+	
+	.document-table {
+		border-collapse : collapse ;
+		border : none ;
+		width : 100% ;
+	}
+	
+	.document-table td.dr {
+		padding : 6px 0px ;
+		color : #000 ;
+		font-size : 9pt ;
+	}
+
+	.important-file , .deleted-file {
+		display : none !important ;
+	}
+	.important-file~span {
+		color : #f00 ;
+	}
+	
+	.deleted-file~span , .deleted-file~div {
+		text-decoration : line-through ;
+		/*opacity : 0.5 ;*/
+	}
+	
+	#search-frame-reserver {
+		background-color : #fec ;
+		border : 1px dashed #ca8 ; 
+	}
+	
+	.gpinfo-panel {
+		border : 1px solid #ccc ;
+		padding : 0px ;
+		background-color : #eee ;
+	}
+	
+	.gpinfo-panel * {
+		box-sizing : border-box ;
+	}
+	
+	.gpinfo-container {
+		font-size : 12pt ;
+		width : 100% ;
+		border-collapse : collapse ;
+	}
+	
+	.gpinfo-container div {
+		display : inline-block ;
+		text-align : right ;
+		padding-right : 2px ;
+	}
+	
+	.gpinfo-label {
+		padding : 2px 4px 2px 8px ;
+		width : 10cm ;
+		text-align : right ;
+	}
+
+	.gpinfo-total {
+		width : 100% ;
+		background-color : #08f ;
+		border : 1px solid #068 ;
+		color : #fff ;
+		position : relative ;
+	}
+	
+	.gpinfo-total-group {
+		position : absolute ;
+		left : 0px ;
+		border-right : 1px dashed #fff ;
+	}
+	
+	.gpinfo-ca {
+		background-color : #fff ;
+		border : 1px solid #666 ;
+		color : #000 ;
+	}
+	
+	.gpinfo-total > .gpinfo-ca {
+		position : absolute ;
+		left : 0px ;
+		border : none ;
+	}
+	
+	.gpinfo-cd {
+		color : #000 ;
+	}
+
+	

@@ -1,0 +1,164 @@
+
+	* {
+		box-sizing : border-box ;
+		vertical-align : middle ;
+	}
+	
+	.t1-state {
+		position : absolute ;
+		width : 320px ;
+		height : 96px ;
+		font-size : 24pt ;
+		color : purple ;
+		border : 3px solid purple ;
+		right : 0px ;
+		top : 0px ;
+		text-align : center ;
+		vertical-align : middle ;
+	}
+
+	#cards-area {
+		border : 1px dotted #808080 ;
+		padding : 8px ;
+		border-collapse : collapse ;
+		position : relative ;
+	}
+	
+	#cards-area td {
+		text-align : center ;
+	}
+	
+	.t1-number-title , .t1-date-title ,
+	.t1-number-value , .t1-date-value ,
+	.t1-from-title , .t1-from-value ,
+	.t1-ex_data_7-title , .t1-ex_data_7-value ,
+	.expert-name , .expert-spec ,
+	.exp-price-title , .exp-price-value {
+		display : inline-block ;
+	}
+	
+	.t1-number-title , .t1-date-title ,
+	.t1-from-title , .t1-ex_data_7-title ,
+	.exp-price-title {
+		color : #606060 ;
+		margin-right : 8px ;
+		text-align : right ;
+	}
+	
+	.t1-date-title {
+		margin-left : 32px ;
+	}
+	
+	.t1-date-title span {
+		font-size : 8pt ;
+	}
+	
+	.t1-number-value , .t1-date-value ,
+	.exp-state , .exp-price-value ,
+	.exp-conclusion-value , .exp-conclusion_1-value ,
+	.exp-conclusion_2-value , .exp-conclusion_3-value {
+		height : 48px ;
+		line-height : 48px ;
+		border : 1px solid black ;
+		font-size : 24pt ;
+		text-align : center ;
+	}
+	
+	.t1-number-value {
+		min-width : 384px ;
+		width : 384px ;
+		max-width : 384px ;
+	}
+
+	.t1-date-value {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+	
+	.t1-from-value {
+		border : none ;
+		font-size : 18pt ;
+		min-width : 720px ;
+		width : 720px ;
+		max-width : 720px ;
+		padding : 8px ;
+	}
+	
+	.t1-ex_data_7-value {
+		border : 1px solid black ;
+		font-size : 24pt ;
+		text-align : justify ;
+		padding : 8px ;
+		min-width : 672px ;
+		width : 672px ;
+		max-width : 672px ;
+		min-height : 48px ;
+	}
+	
+	.t2t3-cards-area-container {
+		margin-top : 16px ;
+		max-width : 1536px ;
+		overflow-x : auto ;
+		border-top : 1px dotted #606060 ;
+		padding-top : 16px ;
+	}
+	
+	.t2t3-cards-area-container-table {
+	}
+	
+	.t2t3-cards-area {
+		vertical-align : top ;
+	}
+	
+	.t2t3-card {
+		border-collapse : collapse ;
+		width : 100% ;
+		min-width : 500px ;
+	}
+	
+	.expert-name {
+		font-size : 24pt ;
+	}
+	
+	.expert-spec {
+		font-size : 18pt ;
+		margin-left : 16px ;
+		color : #606060 ;
+	}
+	
+	.kat_slognost {
+		font-size : 14pt ;
+		text-align : center ;
+	}
+	
+	.exp-state {
+		font-size : 24pt ;
+		border : 1px solid #000000 ;
+		height : 48px ;
+		line-height : 48px ;
+	}
+	
+	.exp-price-value {
+		width : 256px ;
+	}
+		
+	.exp-conclusion-title , .exp-conclusion_1-title ,
+	.exp-conclusion_2-title , .exp-conclusion_3-title {
+		text-align : center ;
+		color : #606060 ;
+	}
+	
+	.pay-details {
+		text-align : center ;
+		font-size : 18pt ;
+	}
+	
+	.pay-data {
+		text-align : left ;
+	}
+	
+	.pay-day {
+		display : inline-block ;
+	}
+	

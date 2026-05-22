@@ -1,0 +1,110 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+.MainTable {
+	border-collapse : collapse ;
+	width : 27cm ;
+}
+
+td {
+	border : 1px solid #606060 ;
+}
+
+.cnv {
+	width : 0.75cm ;
+	text-align : center ;
+	vertical-align : middle ;
+}
+
+.cnv2 {
+	width : 1cm ;
+	text-align : center ;
+	vertical-align : middle ;
+}
+
+.cnh {
+	width : 5cm ;
+	text-align : center ;
+	vertical-align : middle ;
+}
+
+.cnh2 {
+	width : 3.75cm ;
+	font-size : 9pt ;
+	font-weight : bold ;
+}
+
+.cnh3 {
+	width : 3cm ;
+	font-size : 9pt ;
+	font-weight : bold ;
+}
+
+.cnh4 {
+	font-size : 10pt ;
+	font-weight : bold ;
+	text-align : center ;
+	vertical-align : middle ;
+}
+
+.cn {
+	width : 0.75cm ;
+	text-align : center ;
+	font-size : 8pt ;
+}
+
+.mt-d-1 {
+	width : 0.75cm ;
+	text-align : right ;
+	font-size : 8pt ;
+	padding-right : 0.5mm ;
+}
+
+.mt-d-2 {
+	width : 5cm ;
+	text-align : left ;
+	font-size : 8pt ;
+	padding-left : 0.5mm ;
+}
+
+.mt-d-3 {
+	width : 1cm ;
+	text-align : right ;
+	padding-right : 0.5mm ;
+	font-size : 8pt ;
+}
+
+.mt-d-m {
+	width : 0.75cm ;
+	text-align : right ;
+	padding-right : 0.5mm ;
+	font-size : 8pt ;
+}
+
+.mt-d-m.c-d {
+	background-color : #dca ;
+}
+.mt-d-m.c-l {
+	background-color : #fec ;
+}
+
+.mt-d-n {
+	text-align : center ;
+	font-size : 8pt ;
+}
+
+.mt-d-n .mt-d-n-s {
+	display : none ;
+}
+
+
+.mt-d-n:hover .mt-d-n-s {
+	display : inline ;
+}
+
+.mt-d-tn {
+	text-align : center ;
+	font-size : 8pt ;
+}

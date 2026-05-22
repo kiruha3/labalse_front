@@ -1,0 +1,25 @@
+
+	.plan-form {
+		border : 1px solid #000 ;
+		background-color : #fc0 ;
+		margin : 0 auto ;
+		padding : 0.5cm ;
+		display : block ;
+		width : 640px ;
+		text-align : center ;
+	}
+
+	.plan-data {
+		white-space : nowrap ;
+		display : inline-block ;
+		margin-bottom : 1cm ;
+	}
+
+	.plan-data-label {
+		font-size : 12pt ;
+	}
+
+	.plan-data-value {
+		text-align : center ;
+		font-size : 14pt ;
+	}

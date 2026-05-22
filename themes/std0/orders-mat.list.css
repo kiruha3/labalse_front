@@ -1,0 +1,330 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+
+	.olt {
+		margin-top : 3cm ;
+		border-collapse : collapse ;
+		border : none ;
+		table-layout : fixed ;
+	}
+
+	/*.olt td {
+		border : 1px solid red ;
+	}*/
+
+	.ol-fr {
+		background-color : #ffe0c0 ;
+	}
+
+	.ol-ufr {
+		background-color : #ffffff ;
+	}
+
+	.olch-0-0 , .olch-0-1 , .olch-0-2 , .olch-1 , .olch-2 , .olch-3-1 , .olch-3-2 , .olch-4 , .olch-sep {
+		border-bottom : 1px solid #c0c0c0 ;
+	}
+
+	.olch-0-0 {
+		width : 128px ;
+	}
+
+	.olch-0-1 , .olch-0-2 , .olch-2 , .olch-3-1 , .olch-3-2 {
+		text-align : center ;
+	}
+	.olch-2-1 , .olch-3-1 , .olch-3-2 {
+		text-align : right ;
+	}
+
+	.olch-0-2 , .olch-1 , .olch-2 , .olch-3-1 , .olch-3-2 , .olch-4 {
+		font-size : 8pt ;
+		color : #808080 ;
+	}
+
+	.olch-0-1 , .olc-0-1 {
+		width : 48px ;
+	}
+	.t-s-lnk {
+		cursor : pointer ;
+	}
+
+	.olch-0-2 , .olc-0-2 {
+		width : 72px ;
+	}
+
+	.olch-1 , .olc-1 {
+		width : 384px ;
+	}
+
+	.olch-3-1 , .olc-3-1 {
+		width : 80px ;
+	}
+	.olch-3-2 , .olc-3-2 {
+		width : 96px ;
+	}
+
+	.olch-2 {
+		width : 96px ;
+	}
+	.olc-2-1 , .olc-2-2 {
+		width : 48px ;
+	}
+
+
+	.date-old {
+		color : #808080 ;
+	}
+
+	.date-new {
+		color : #000000 ;
+	}
+
+	.order-lnk {
+		color : #0040A0 ;
+		cursor : pointer ;
+	}
+
+	.order-join-lnk {
+		color : #008000 ;
+		cursor : pointer ;
+		font-weight : bold ;
+		font-size : 12pt ;
+		display : none ;
+	}
+
+	.olr-opened:hover .order-join-lnk , .olr-closed:hover .order-join-lnk {
+		display : inline ;
+	}
+
+	.order-join-lnk:hover {
+		color : #e00000 ;
+	}
+
+	.olr-opened:hover .order-lnk , .olr-closed:hover .order-lnk {
+		color : #e07000 ;
+	}
+
+	.olr-opened .order-lnk {
+		font-weight : normal ;
+	}
+
+	.olr-closed .order-lnk {
+		font-weight : bold ;
+	}
+
+	.olc-0-0 , .olc-2-1 , .olc-3-1 , .olc-3-2 {
+		text-align : right ;
+	}
+
+	.olc-0-0 {
+		font-size : 8pt ;
+		width : 128px ;
+	}
+
+	.olc-0-0 , .olc-0-1 , .olc-0-2 , .olc-1 , .olc-2-1 , .olc-2-2 , .olc-3-1 , .olc-3-2 , .olc-4 , .olc-sep {
+		font-size : 8pt ;
+		border-bottom : 1px solid #e0e0e0 ;
+
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow: ellipsis ;
+	}
+
+	.olc-0-1 , .olc-0-2 {
+		text-align : center ;
+	}
+
+	.olc-sep , .olch-sep {
+		width : 16px ;
+	}
+
+	.order-group-lnk {
+		cursor : pointer ;
+	}
+
+	#orderTooltip {
+		position : absolute ;
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+		padding : 4px 8px ;
+	}
+
+	.colt {
+		border-collapse : collapse ;
+	}
+
+	/*.colt td {
+		border : 1px solid red ;
+	}*/
+
+	.colch-1 , .colch-2 {
+		font-size : 8pt ;
+		color : #808080 ;
+		border-bottom : 1px solid #c0c0c0 ;
+	}
+
+	.colch-1 , .colc-1 {
+		width : 128px ;
+	}
+
+	.colch-2 , .colc-2 {
+		width : 64px ;
+	}
+
+	.colch-2 , .colc-2 {
+		text-align : right ;
+	}
+
+	.colc-1 , .colc-2 {
+		font-size : 8pt ;
+		border-bottom : 1px solid #e0e0e0 ;
+
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow: ellipsis ;
+	}
+
+	.order-box {
+		position : fixed ;
+		margin-left : -400px ;
+		padding : 20px 10px 10px 10px ;
+		width : 800px ;
+		top : 7cm ;
+		left : 50% ;
+
+		background-color : #ffffff ;
+		border : 1px solid #c0c0c0 ;
+
+
+		box-shadow: 6px 6px 8px #000;
+	}
+
+	.order-box-cont {
+		width : 100% ;
+		max-height : 400px ;
+
+		border : none ;
+		overflow-x : auto ;
+		overflow-y : auto ;
+		white-space : nowrap ;
+		padding-right : 4px ;
+	}
+
+	.order-box-tab {
+		border-collapse : collapse ;
+		margin : 0px ;
+		width : 100% ;
+	}
+
+	.order-box-close-box {
+		position : absolute ;
+		top : -8px ;
+		left : 807px ;
+		width : 21px ;
+		padding-top : 3px ;
+		border : 1px solid #c0c0c0 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	}
+
+	.order-box-close-box img {
+		cursor : pointer ;
+	}
+
+	.order-ac , .order-tc , .order-dc {
+		background-color : #e0e0e0 ;
+		padding-left : 6px ;
+	}
+
+	.order-ac , .order-tc , .order-dc {
+		white-space : normal ;
+	}
+
+	.order-tc , .order-dc {
+		border-left : 1px solid #c0c0c0 ;
+		border-right : 1px solid #808080 ;
+	}
+
+	.order-dc p {
+		margin : 0px ;
+	}
+
+	.order-title {
+		background : #404040 url( "cap.gif" );
+		color : #ffffff ;
+		font-size : 8pt ;
+		padding : 2px 8px ;
+		border : 1px solid #808080 ;
+	}
+
+	.order-ac {
+		border-left : 1px solid #808080 ;
+		border-top : 1px solid #808080 ;
+		border-right : 1px solid #c0c0c0 ;
+		border-bottom : 1px solid #808080 ;
+
+		font-size : 10pt ;
+
+		min-width : 192px ;
+		width : 192px ;
+		max-width : 192px ;
+	}
+
+	.order-tc {
+		border-top : 1px solid #808080 ;
+		border-bottom : 1px solid #c0c0c0 ;
+
+		font-size : 8pt ;
+	}
+
+	.order-tc-i {
+		width : 432px ;
+	}
+
+	.order-dc {
+		border-top : 1px solid #c0c0c0 ;
+		border-bottom : 1px solid #808080 ;
+
+		font-size : 12pt ;
+		padding : 8px 4px 24px 12px ;
+	}
+
+	.order-dc-ta {
+		/*resize : none ;*/
+		width : 560px ;
+		height : 96px ;
+	}
+
+	.order-pd {
+		margin-top : 12px ;
+		text-align : center ;
+	}
+
+	.price {
+		color : #0080ff ;
+	}
+
+	.count-i {
+		width : 48px ;
+		text-align : center ;
+	}
+
+	.price-i {
+		width : 64px ;
+		text-align : right ;
+	}
+
+
+	.order-row-sep {
+		height : 8px ;
+	}
+
+	.buttons-panel {
+		text-align : center ;
+		margin-top : 8px ;
+	}
+
+

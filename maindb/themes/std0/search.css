@@ -1,0 +1,54 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	.hint {
+		font-size : 7pt ;
+	}
+
+	.ST {
+		border-collapse : collapse ;
+	}
+
+	.D {
+		width : 256px ;
+		border-style : dotted ;
+		border-color : #ccc ;
+		border-width : 1px ;
+		padding : 6px ;
+		text-align : justify ;
+	}
+
+	.I , .sif_params {
+		width : 400px ;
+		border-style : dotted ;
+		border-color : #ccc ;
+		border-width : 1px ;
+		padding : 6px ;
+	}
+
+	.I {
+		text-align : center ;
+	}
+
+	.i_search_string {
+		width : 384px ;
+		height : 64px ;
+	}
+
+	.sif_params {
+		text-align : justify ;
+	}
+
+	.btnTB {
+		text-align : center ;
+		padding-top : 16px ;
+	}
+
+	.ctrl-enter-comment {
+		color : #888 ;
+		font-size : 10pt ;
+		font-style : italic ;
+	}

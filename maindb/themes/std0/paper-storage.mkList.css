@@ -1,0 +1,88 @@
+	* {
+		box-sizing : border-box ;
+	}
+	
+	.label-area {
+		position : absolute ;
+		
+		left : 0.5cm ;
+		top : 0.5cm ;
+		right : 0.5cm ;
+		
+		max-width : 20cm ;
+		
+		max-height : 20cm ;
+		height : 20cm ;
+		
+		border : 1px dotted black ;
+	}
+	
+	.uid {
+		margin-left : 2cm ;
+		border : 1px solid black ;
+		padding-left : 0.5cm ;
+		padding-right : 0.5cm ;
+	}
+	
+	.year {
+		text-align : center ;
+		font-size : 30pt ;
+		margin : 0.3cm ;
+		border-bottom : 1px solid black ;
+		padding-bottom : 0.3cm ;
+	}
+	
+	.i-year {
+		text-align : center ;
+		font-size : 30pt ;
+		width : 40px ;
+	}
+	
+	.name {
+		text-align : center ;
+		font-size : 30pt ;
+	}
+	
+	.num-area {
+		margin : 0.3cm ;
+		column-width : 2.5cm ;
+		column-fill : auto ;
+		
+		-moz-column-width : 2.5cm ;
+		-moz-column-fill : auto ;
+		
+		-webkit-column-width : 2.5cm ;
+		-webkit-column-fill : auto ;
+	}
+	
+	.num-year {
+		text-align : center ;
+		font-size : 16pt ;
+		border : 1px solid black ;
+		
+		break-inside : avoid ;
+		break-after : avoid ;
+	}
+	
+	.num {
+		text-align : center ;
+		font-size : 11pt ;
+		/*display : block ;*/
+	}
+	
+	.num-count {
+		text-align : center ;
+		font-size : 16pt ;
+		margin-top : 0.3cm ;
+		padding-top : 0.3cm ;
+		border-top : 1px solid black ;
+		
+		break-inside : avoid ;
+		break-after : avoid ;
+	}
+	
+	@media print {
+		.i-year {
+			border : none ;
+		}
+	}

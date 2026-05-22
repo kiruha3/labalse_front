@@ -1,0 +1,305 @@
+
+	* {
+		box-sizing : border-box ;
+	}
+	
+	input::-ms-clear {
+		display : none ;
+	}
+
+	.eq-data-area {
+		text-align : center ;
+		position : relative ;
+		border : 1px solid RGBA( 0 , 0 , 0 , 0 );
+	}
+
+	.panel-left {
+		width : 560px ;
+		position : absolute ;
+		left : 0 ;
+	}
+
+	.panel-right {
+		width : 100% ;
+		padding-left : 600px ;
+	}
+
+	.main-cap:before {
+		text-align : center ;
+		font-size : 16pt ;
+
+		position : absolute ;
+		left : 0 ;
+		top : -2em ;
+		right : 0 ;
+		content : attr( data-main-cap );
+	}
+
+	*.main-cap {
+		margin-top : 6em ;
+	}
+	
+	.center {
+		text-align : center ;
+	}
+
+	.tab-cap {
+		text-align : center ;
+		margin-top : 2em ;
+		margin-bottom : 0.5em ;
+		font-size : 16pt ;
+	}
+
+	.ed-container {
+		max-height : 480px ;
+		overflow-y : auto ;
+		border : 1px dotted #000 ;
+	}
+	
+	.ed-tab {
+		width : 480px ;
+		display : inline-block ;
+
+		background-color : #fff ;
+	}
+	.ed-tab-section {
+		border : 1px dotted #444 ;
+		padding : 4px ;
+	}
+	.ed-tab-section:hover {
+		background-color : #fec ;
+	}
+	
+	.ed-tab-section + .ed-tab-section {
+		border-top : none ;
+	}
+	
+	#i_name , #i_label , #i_mop ,
+	#i_miTypeTitle , #i_miTypeType ,
+	#i_miTypeModification , #i_not_in_demand_comment ,
+	#i_reallocation_comment {
+		width : 100% ;
+		height : 5em ;
+		font-size : 12pt ;
+	}
+
+	.ed-param-right {
+		text-align : right ;
+	}
+	.ed-param-left {
+		text-align : left ;
+	}
+	.ed-param-center {
+		text-align : center ;
+	}
+
+	#i_regNumber , #i_startupDate , #i_decommissioned_date , #i_manufactureNumber ,
+	#i_miTypeNumber {
+		text-align : center ;
+		font-size : 12pt ;
+		margin-right : 8px ;
+	}
+
+	#i_startupDate , #i_decommissioned_date {
+		width : 12ch ;
+	}
+
+	#i_reallocation_ready:not(:checked) ~ div > #i_reallocation_comment {
+		display : none ;
+	}
+
+	#i_decommissioned:not(:checked) ~ #i_decommissioned_date {
+		visibility : hidden ;
+	}
+
+	#i_not_in_demand:not(:checked) ~ div > #i_not_in_demand_comment {
+		display : none ;
+	}
+
+	#i_miTypeNumber {
+		width : 144px ;
+	}
+
+	#i_book_value {
+		font-size : 12pt ;
+		text-align : right ;
+		width : 14ch ;
+	}
+
+	#miTypeInfoLink {
+		color : #08f ;
+		text-decoration : none ;
+		display : none ;
+	}
+	
+	#exp-section {
+		padding : 8px ;
+		border : 1px dotted #444 ;
+		display : inline-block ;
+
+		background-color : #fff ;
+	}
+	
+	#ee-tab {
+		/*width : 100% ;*/
+	}
+
+	.ee-period {
+		width : 96px ;
+		text-align : center ;
+	}
+	
+	.ee-result {
+		width : 96px ;
+		text-align : center ;
+	}
+	.ee-result-lnk {
+		background-image : url( 'cover-btn.png' );
+		width : 13px ;
+		height : 13px ;
+		vertical-align : middle ;
+		display : inline-block ;
+	}
+	
+	.ee-result-err {
+		padding : 2px 4px ;
+		background-color : #f00 ;
+	}
+
+	.ee-state {
+		width : 96px ;
+		text-align : center ;
+	}
+
+	.ee-state-ok , .ee-state-err {
+		width : 13px ;
+		height : 13px ;
+		vertical-align : middle ;
+		display : inline-block ;
+	}
+	.ee-state-ok {
+		background-image : url( 'state-fin.png' );
+	}
+	.ee-state-err {
+		background-image : url( 'state-err.png' );
+	}
+	
+
+	.ntiTestDate , .ntiTestPeriod {
+		width : 100% ;
+		text-align : center ;
+	}
+	.ntiTestType {
+		width : 100% ;
+	}
+	
+	.ntiTestResultAdd , .ntiTestResultDel , .ntiTestResultSee {
+		cursor : pointer ;
+		vertical-align : middle ;
+		display : inline-block ;
+	}
+	
+	.ntiTestResultAdd {
+		background-image : url( 'btn_add.png' );
+		width : 15px ;
+		height : 15px ;
+	}
+	.ntiTestResultDel {
+		background-image : url( 'btn_del.png' );
+		width : 15px ;
+		height : 15px ;
+	}
+	.ntiTestResultSee {
+		background-image : url( 'cover-btn.png' );
+		width : 13px ;
+		height : 13px ;
+		margin-right : 8px ;
+	}
+	
+
+
+	.btn-panel {
+		text-align : center ;
+		margin-top : 2em ;
+		margin-bottom : 3em ;
+		clear : both ;
+	}
+	
+	#uploadDlg {
+		position : fixed ;
+		border : 1px solid #000000 ;
+		background-color : #ffffff ;
+		text-align : center ;
+	
+		box-shadow : 6px 6px 12px #000 ;
+		
+		left : 50% ;
+		top : 5cm ;
+		width : 512px ;
+		margin-left : -256px ;
+		
+		padding : 8px ;
+	}
+	
+	#uploadDlg iframe {
+		border : 1px dashed #444 ;
+	}
+
+	.spec-list-area[data-spec-all="1"] {
+		color : #bbb ;
+		text-shadow : #fff 1px 1px 1px ;
+	}
+
+	.spec-list-area[data-spec-all="1"] input {
+		visibility : hidden ;
+	}
+
+	.spec-list-area {
+		border : 1px dotted #000 ;
+	}
+
+	.spec-list {
+		max-height : 480px ;
+		overflow-y : auto ;
+	}
+
+	.spec-list-item {
+		display : block ;
+		border : 1px solid #888 ;
+		background : #eee ;
+		font-size : 10pt ;
+		position : relative ;
+	}
+
+	.spec-list-item + .spec-list-item {
+		border-top : none ;
+	}
+
+	.param-value {
+		text-align : left ;
+		display : block ;
+		vertical-align : middle ;
+		margin-left : 288px ;
+	}
+
+	.param-value:before {
+		content : attr( data-group-label );
+		width : 256px ;
+		padding : 4px 16px 4px 16px ;
+		position : absolute ;
+		left : 0 ;
+		top : 50% ;
+		transform : translateY( -50% );
+		display : inline-block ;
+		white-space : nowrap ;
+		overflow : hidden ;
+		text-overflow : ellipsis ;
+	}
+
+	.param-value {
+		padding : 4px ;
+	}
+
+
+	
+	

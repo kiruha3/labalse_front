@@ -1,0 +1,14 @@
+
+
+
+	.param-wrapper , .tools-wrapper {
+		text-align : center ;
+		margin : 1cm 0 ;
+	}
+
+	.param-area , .tools-area {
+		display : inline-block ;
+		border : 1px solid #444 ;
+		background : #fc0 ;
+		padding : 8px ;
+	}

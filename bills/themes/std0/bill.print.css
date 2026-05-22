@@ -1,0 +1,373 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+	* {
+		font-family : "Times New Roman" ;
+		font-family : "verdana" , "arial" , sans-serif !important ;
+		box-sizing : border-box ;
+	}
+
+	body {
+		margin : 0 ;
+		padding : 0 ;
+	}
+	
+	.menu {
+		position : fixed ;
+		right : 4px ;
+		top : 4px ;
+		background-color : #fc0 ;
+		border : 1px solid #000 ;
+		padding : 8px ;
+		z-index : 1000 ;
+	}
+	
+	@media print {
+		.menu {
+			display : none ;
+		}
+	}
+
+	#page {
+		width : 100% ;
+		text-align : center ;
+	}
+
+	#page-content {
+		position : absolute ;
+		left : 5mm ;
+		top : 15mm ;
+		/*margin : 10 0  ;
+		padding : 0 ;*/
+		width : 190mm ;
+		text-align : left ;
+	}
+
+	#title {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+		text-align : center ;
+	}
+
+	#title-agency {
+		font-size : 14pt ;
+		font-weight : bold ;
+		margin : 0 ;
+		padding : 0 ;
+	}
+
+	#title-address {
+		font-size : 12pt ;
+		font-weight : normal ;
+		/*background-color: #00ff00;*/
+		margin : 0 ;
+		padding : 0 ;
+	}
+
+	#title-address div {
+		display : inline-block ;
+		font-size : 10pt ;
+	}
+
+	#prop-table {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+		border-collapse : collapse ;
+		width: 100% ;
+		font-size: 10pt;
+		/*background-color: #00c0ff;*/
+	}
+
+	#prop-table td {
+		padding : 2px ;
+		border : 1px solid #000000 ;
+	}
+
+	.prop-table-col-2 {
+		text-align: center;
+		/*background-color: #c0c0ff;*/
+	}
+
+	#bill-header {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+		text-align : center ;
+		/*background-color: #ffc0ff;*/
+	}
+
+	#bill-number {
+		padding : 3px ;
+		font-weight : bold ;
+
+	}
+
+	#bill-date {
+		padding : 3px ;
+		font-weight : bold ;
+	}
+
+	#pac-table {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+		border-collapse : collapse ;
+		width : 100% ;
+		font-size : 10pt ;
+	}
+
+	#pac-table td {
+		padding: 2px;
+		border: none;
+	}
+
+	.pac-table-col-1 {
+		width: 60mm ;
+		/*background-color: #c0ffc0;*/
+	}
+	.pac-table-col-2 {
+		/*background-color: #ffc0c0;*/
+	}
+
+	#items-table {
+		margin : 0 0 5mm 0 ;
+		padding : 0 ;
+		border-collapse : collapse ;
+		width : 100% ;
+		font-size : 10pt ;
+		height : 100% ;
+	}
+
+	.items-table-head-0 , .items-table-head-1 , .items-table-head-2 , .items-table-head-3 , .items-table-head-4 {
+		text-align : center ;
+	}
+
+	.items-table-col-0 , .items-table-col-1 , .items-table-col-2 , .items-table-col-3 , .items-table-col-4 ,
+	.items-table-head-0 , .items-table-head-1 , .items-table-head-2 , .items-table-head-3 , .items-table-head-4 {
+		border: 1px solid #000000;
+		padding : 2px ;
+	}
+
+	.items-table-head-0 , .items-table-col-0 {
+		width: 7mm ;
+	}
+	.items-table-head-2 , .items-table-col-2 {
+		width : 10mm ;
+	}
+	.items-table-head-3 , .items-table-col-3 {
+		width : 25mm ;
+	}
+	.items-table-head-4 , .items-table-col-4 {
+		width : 25mm ;
+	}
+	
+	.items-table-col-0 {
+		text-align: right ;
+		
+	}
+	.items-table-col-1 {
+		text-align: left ;
+	}
+	.items-table-col-2 {
+		text-align: center ;
+	}
+	.items-table-col-3 {
+		text-align: right ;
+	}
+	.items-table-col-4 {
+		text-align: right ;
+		padding : 0px ;
+	}
+
+	.items-table-total-0 {
+		border : none ;
+	}
+
+	.items-table-total-1 {
+		text-align: left;
+		border: none;
+	}
+
+	.items-table-total-2 {
+		text-align: right;
+		border: 1px solid #000000;
+	}
+
+	.items-table-total-1-b {
+		text-align: left;
+		font-weight: bold;
+		border: none;
+	}
+
+	.items-table-total-2-b {
+		text-align : right ;
+		font-weight : bold ;
+		border : 1px solid #000000 ;
+	}
+
+	#bill-total {
+		padding: 0;
+		margin: 0 0 5mm 5mm;
+	}
+
+	#bill-total-count {
+		padding: 3px;
+		font-weight: bold;
+
+	}
+
+	#bill-total-price {
+		padding: 3px;
+		font-weight: bold;
+
+	}
+
+	#bill-end {
+		padding: 0;
+		margin: 0 0 5mm 5mm;
+		border-collapse: collapse;
+	}
+
+	#bill-end td {
+		padding: 2mm 0 2mm 0;
+	}
+
+	.bp-i {
+		background-color : #ffc000 ;
+		margin : 2px ;
+	}
+
+	@media print {
+		.bp-i {
+			display : none ;
+		}
+	}
+	
+	.bill-tgt-ex {
+		font-size : 12pt ;
+		text-align : justify ;
+		width : 100% ;
+		font-weight : bold ;
+	}
+
+	.bill-date-ex {
+		font-size : 12pt ;
+		text-align : center ;
+		width : 96px ;
+		font-weight : bold ;
+	}
+	
+	.wVAT {
+		background-color : #fc0 ;
+		display : none ;
+	}
+	
+	.it-wVAT .wVAT {
+		display : inline !important ;
+	}
+		
+
+	@media print {
+		.wVAT {
+			display : none ;
+		}
+		
+		.items-row {
+			background-color : #fff !important ;
+		}
+	}
+	
+	.linked-bill a {
+		font-size : 11pt ;
+		color : #000 ;
+		text-decoration : none ;
+	}
+	
+	.linked-bill a:hover {
+		color : #f00 ;
+	}
+	
+	.linked {
+		text-align : center ;
+	}
+	
+	.linked a {
+		color : #000 ;
+	}
+	.linked a:hover {
+		color : #f00 ;
+	}
+
+	@media print {
+		.linked {
+			display : none ;
+		}
+	}
+	
+	/* ----------------------------------------------------------- */
+	.pr-d1 {
+		width : 100% ;
+		height : 100% ;
+		/*display : none ;*/
+	}
+	
+	.it-wVAT {
+	}
+	
+	.it-wVAT .items-table-col-4 {
+		height : 100% ;
+		padding : 0px ;
+	}
+	
+	.it-wVAT .pr-d1 {
+		display : block !important ;
+		/*border : 1px solid #f00 ;*/
+		margin : 0px ;
+		position : relative ;
+	}
+	
+	.pr-d2 {
+		vertical-align : middle ;
+		display : inline ;
+	}
+	
+	.it-wVAT .bill-lnk-area {
+		display : block !important ;
+	}
+	
+	.bill-lnk-area {
+		display : none ;
+		position : absolute ;
+		width : 192px ;
+		border : 1px dotted #666 ;
+		right : -195px ;
+		top : 0px ;
+		bottom : 0px ;
+		padding : 2px ;
+		background-color : #fc0 ;
+		overflow : hidden ;
+		font-size : 10pt ;
+		text-align : center ;
+	}
+	
+	.bill-lnk-area:hover {
+		bottom : auto ;
+		z-index : 2000 ;
+		box-shadow: 4px 4px 16px #000;
+	}
+	
+	.bill-lnk-area a , .search-bill-lnk {
+		vertical-align : middle ;
+		text-decoration : none ;
+		color : #000 ;
+	}
+	
+	.bill-lnk-area a:hover , .search-bill-lnk:hover {
+		text-decoration : underline ;
+		color : #f00 ;
+	}
+	
+	.search-bill-lnk {
+		cursor : pointer ;
+	}
+	

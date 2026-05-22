@@ -1,0 +1,197 @@
+* {
+	font-family : "Times" ;
+}
+
+.page-container {
+	page-break-before: avoid ;
+	page-break-inside : avoid ;
+	page-break-after: auto ;
+}
+
+.ctrl-area {
+	background-color : #ffc000 ;
+	position : absolute ;
+	left : 2cm ;
+	top : 14cm ;
+	width : 19cm ;
+	height : 2cm ;
+	text-align : center ;
+	line-height : 2cm ;
+	vertical-align : middle ;
+	z-index : 1000 ; 
+}
+
+.multicover-lnk {
+	color : #404040 ;
+	text-decoration : underline ;
+	cursor : pointer ;
+}
+
+.multicover-lnk:hover {
+	color : #ff0000 ;
+}
+
+@media print {
+	.ctrl-area {
+		display : none ;
+	}
+}
+
+#page-area {
+	min-width : 42cm ;
+	width : 42cm ;
+	max-width : 42cm ;
+	
+	min-height : 29.7cm ;
+	height : 29.7cm ;
+	max-height : 29.7cm ;
+	
+	position : absolute ;
+	border : 1px solid #ffffff ;
+}
+
+#data-area {
+	position : absolute ;
+	left : 23cm ;
+	top : 2cm ;
+	right : 2cm ;
+	bottom : 2cm ;
+	border : 1px dashed #c0c0c0 ;
+}
+
+#page-head {
+	font-size : 14pt ;
+	text-align : center ;
+	padding-bottom : 0.5cm ;
+	border-bottom : 1px solid black ;
+}
+
+#page-title {
+	/*position : absolute ;
+	top : */
+	margin-top : 8cm ;
+	font-size : 22pt ;
+	text-align : center ;
+}
+
+#case-number {
+	margin-top : 1.5cm ;
+	font-size : 24pt ;
+	text-align : center ;
+}
+
+#case-number span {
+	text-decoration : underline ;
+}
+
+#pay-data {
+	position : absolute ;
+	top : 5cm ;
+	right : 0cm ;
+	max-width : 9cm ;
+	border : 1px solid red ;
+	color : #800000 ;
+	padding-left : 0.1cm ;
+	padding-right : 0.1cm ;
+}
+
+#case-description {
+	text-align : justify ;
+	margin-top : 1.5cm ;
+	font-size : 18pt ;
+	text-decoration : underline ;
+}
+
+#expert-data {
+	position : absolute ;
+	border-collapse : collapse ;
+	bottom : 0cm ;
+	width : 8.5cm ;
+}
+
+.expert-post , .expert-name {
+	font-size : 14pt ;
+	border-bottom : 1px solid black ;
+	height : 1cm ;
+}
+
+.expert-post {
+	text-align : left ;
+}
+.expert-name {
+	text-align : right ;
+}
+
+#case-date {
+	position : absolute ;
+	bottom : 1.5cm ;	
+	right : 0cm ;
+	width : 8cm ;
+	font-size : 14pt ;
+	border-collapse : collapse ;
+}
+
+.case-date-title {
+	text-align : left ;
+	border-bottom : 1px solid black ;
+}
+
+.case-date-date {
+	text-align : center ;
+	border-bottom : 1px solid black ;
+}
+
+#barcode {
+	position : absolute ;
+	right : 0cm ;
+	height : 0.75cm ;
+	border : none ;
+}
+
+.pos-ctrl {
+	position : fixed ;
+	left : 12px ;
+	top : 9px ;
+	z-index : 100 ;
+	width : 16px ;
+	height : 16px ;
+	padding : 0px ;
+	margin : 0px ;
+}
+
+.pos-ctrl::after {
+	content : "A4" ;
+	position : absolute ;
+	left : 20px ;
+	font-size : 24px ;
+	top : -5px ; 
+	z-index : 110 ;
+}
+
+.pos-ctrl-area {
+	position : fixed ;
+	left : 4px ;
+	top : 4px ;
+	width : 96px ;
+	height : 24px ;
+	border : 1px solid #444 ;
+	background-color : #fc0 ;
+}
+
+.pos-ctrl:checked + #page-area {
+	left : -21cm ;
+}
+
+@media print {
+	#data-area {
+		border : none ;
+	}
+	
+	.pos-ctrl {
+		display : none ;
+	}
+	
+	.pos-ctrl-area {
+		display : none ;
+	}
+}

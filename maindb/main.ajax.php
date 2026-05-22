@@ -1,0 +1,247 @@
+<?php
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+
+	include_once ( "../core.php" );
+	require_once "lconfig.php" ;
+
+	TryLoginFromCookie( $PlaceID );
+	if ( !$LoginOk ) {
+		Redirect( "../auth.php" );
+	}
+
+
+	if ( count( $UserRights ) != 1 ) {
+		MainHead_L2( "" , "" , array( "../%UT/buttons.css" , "../%UT/forms.css" ) , array() , "hlp/no_access.html" );
+		echo "<br><br><br><br><br>" ;
+		MessageForm();
+		closeHtml();
+		exit ;
+	}
+
+	$tabDepartments = $portalDB->table( "departments" , "id" );
+	$tabSpecialities = $portalDB->table( "specialities" , "id" );
+	$tabWorkers = $portalDB->table( "workers" , "id" );
+
+	$Rights= ParseRights( strtoupper( $UserRights[ 0 ] ) );
+
+	if ( array_key_exists( "LVL1CARD" , $Rights ) ) {
+		$lvl1cardADD = in_array( "ADD" , $Rights[ "LVL1CARD" ] );
+		$lvl1cardEDIT = in_array( "EDIT" , $Rights[ "LVL1CARD" ] );
+		$lvl1cardSEEALL = in_array( "SEEALL" , $Rights[ "LVL1CARD" ] );
+	} else {
+		$lvl1cardADD = $lvl1cardEDIT = $lvl1cardSEEALL = false ;
+	}
+
+	if ( array_key_exists( "LVL2CARD" , $Rights ) ) {
+		$lvl2cardADD = in_array( "ADD" , $Rights[ "LVL2CARD" ] );
+		$lvl2cardEDIT = in_array( "EDIT" , $Rights[ "LVL2CARD" ] );
+		$lvl2cardSEEALL = in_array( "SEEALL" , $Rights[ "LVL2CARD" ] );
+		$lvl2cardDELETE = in_array( "DELETE" , $Rights[ "LVL2CARD" ] );
+		$lvl2cardDELETEANY = in_array( "DELETE-ANY" , $Rights[ "LVL2CARD" ] );
+	} else {
+		$lvl2cardADD = $lvl2cardEDIT = $lvl2cardSEEALL = $lvl2cardDELETE = $lvl2cardDELETEANY = false ;
+	}
+
+	if ( array_key_exists( "EXPERTIZE" , $Rights ) ) {
+		$expertizeEDIT = in_array( "EDIT" , $Rights[ "EXPERTIZE" ] );
+		$expertizeSEEALL = in_array( "SEEALL" , $Rights[ "EXPERTIZE" ] );
+	} else {
+		$expertizeSEEALL = $expertizeEDIT = false ;
+	}
+
+	if ( array_key_exists( "EXTENTIONS" , $Rights ) ) {
+		$maySEARCH = in_array("SEARCH", $Rights["EXTENTIONS"]);
+		$maySTATISTICS = in_array("STATISTICS", $Rights["EXTENTIONS"]);
+		$mayCard_01 = in_array("CARD-01", $Rights["EXTENTIONS"]);
+		$mayMAT_CHECKER_01 = in_array( "MAT-CHECKER-01" , $Rights["EXTENTIONS"] );
+		$mayPrintAddressLabel = in_array( "PRINT-ADDRESS-LABEL" , $Rights[ "EXTENTIONS" ] );
+		$mayLetterRegistry = in_array( "LETTER-REGISTRY" , $Rights[ "EXTENTIONS" ] );
+	} else {
+		$maySEARCH = $maySTATISTICS = $mayCard_01 = $mayMAT_CHECKER_01 = $mayLetterRegistry = $mayPrintAddressLabel = false ;
+	}
+
+	if ( array_key_exists( "RECEIPTS" , $Rights ) ) {
+		$receiptsADD = in_array( "ADD" , $Rights[ "RECEIPTS" ] );
+		$receiptsEDIT = in_array( "EDIT" , $Rights[ "RECEIPTS" ] );
+		$receiptsVIEWNC = in_array( "VIEW-NC" , $Rights[ "RECEIPTS" ] );
+		$receiptsVIEWAC = in_array( "VIEW-AC" , $Rights[ "RECEIPTS" ] );
+		$receiptsVIEWCC = in_array( "VIEW-CC" , $Rights[ "RECEIPTS" ] );
+	} else {
+		$receiptsADD = $receiptsEDIT = $receiptsVIEWNC = $receiptsVIEWAC = $receiptsVIEWCC = false ;
+	}
+	$receiptsBtn = $receiptsADD || $receiptsEDIT || $receiptsVIEWNC || $receiptsVIEWAC || $receiptsVIEWCC ;
+
+	if ( array_key_exists( "PAYMENTS" , $Rights ) ) {
+		$paymentsBtn = true ;
+	} else {
+		$paymentsBtn = false ;
+	}
+
+	if ( array_key_exists( "UTILS" , $Rights ) ) {
+		$mayUtils = in_array( "LOGIC-CONTROL" , $Rights[ "UTILS" ] );
+	} else{
+		$mayUtils = false ;
+	}
+
+	header( "Content-Type: text/xml" );
+	header( "Pragma: no-cache" );
+	header( "Cache-Control: no-store, no-cache, must-revalidate" );
+	header( "Expires: ".date( "r" ) );
+	header( "Expires: -1" , false );
+
+	echo "<?xml version=\"1.0\" encoding=\"windows-1251\" ?>" ;
+
+	$DD = new DomDocument();
+	$DD->loadXML( $_REQUEST[ "data" ] );
+
+	$data = $DD->documentElement ;
+
+	$q = "select
+			`t1`.`id` ,
+			matincomingNumber( `t1`.`id` ) as `a` ,
+			`t1`.`date` as `b` ,
+			concat( `t2`.`name` , \", \" , `t3`.`name` , \", \" , `t1`.`ex_data_3` ) as `c` ,
+			`t1`.`ex_data_4` as `d` ,
+			\"13.1\" as `e` ,
+			`t1`.`ex_data_6` as `f` ,
+			`t1`.`ex_data_7` as `g` ,
+			`t1`.`ex_data_8` as `h` ,
+			`t1`.`ex_data_9` as `i`
+		from
+			`matincoming` as `t1`,
+			`agency` as `t2`,
+			`agent` as `t3`".( $lvl1cardSEEALL ? "" : ", `matincominglvl2` as `t4`,
+			`expertize` as `t5`" )."
+		where
+			(not (`t1`.`date` is null)) and
+			(`t1`.`from_agency` = `t2`.`id`) and
+			(`t1`.`from_agent` = `t3`.`id`)".( $lvl1cardSEEALL ? "" : " and ( `t1`.`id` = `t4`.`mat_id` ) and ( `t4`.`id` = `t5`.`ext_id` ) and ( `t5`.`exp_id` in ( ".implode( " , " , $UserAllWorkers )." ) ) group by `t1`.`id` " )."
+		order by `t1`.`id` desc limit 100 ;" ;
+
+
+	function cvt_f_a( $v ) {
+		return $v ;
+	}
+
+	function cvt_f_b( $v ) {
+		return date( "d-m-Y" , strtotime( $v ) );
+	}
+
+	function cvt_f_default( $v ) {
+		if ( strlen( $v ) < 1 ) {
+			return "" ;
+		} else {
+			return toCDATA( $v );
+		}
+	}
+
+	function cvt_f_e( $v ) {
+		return $v ;
+	}
+
+	function cvt_f2_a( $v ) {
+		return $v ;
+	}
+
+	function cvt_f2_b( $v ) {
+		return date( "d-m-Y" , strtotime( $v ) );
+	}
+
+	function cvt_f2_default( $v ) {
+		$v = str_replace( "&" , "&amp;" , $v );
+		$v = str_replace( "<" , "&lt;" , $v );
+		$v = str_replace( ">" , "&gt;" , $v );
+		$v = str_replace( "\"" , "&quot;" , $v );
+		$v = str_replace( "'" , "&apos;" , $v );
+		$v = str_replace( "  " , " " , $v );
+		return $v ;
+	}
+
+	function cvt_f2_e( $v ) {
+		return $v ;
+	}
+
+	switch ( $data->nodeName ) {
+
+		case "get-lvl1-full-list" :  // size = 100 % // 3 600 178
+			$pcid = Int2SQL( $data->getAttribute( "id" ) );
+			echo "<result>" ;
+
+			$res = $portalDB->query( $q );
+			foreach( $res as &$row ) {
+				echo "<row id=\"\">" ;
+				foreach( $row as $rei => $rev ) {
+					$fn = "cvt_f2_".$rei ;
+					if ( !function_exists( $fn ) ) {
+						echo "<" , $rei , ">" , cvt_f2_default( $rev ) , "</" , $rei , ">" ;
+					} else {
+						echo "<" , $rei , ">" , $fn( $rev ) , "</" , $rei , ">" ;
+					}
+				}
+				echo "</row>" ;
+			}
+			unset( $row );
+
+			echo "</result>" ;
+			break ;
+
+		case "get-lvl1-full-list-1" :  // size = + 16.25 % // 4 185 306
+			$pcid = Int2SQL( $data->getAttribute( "id" ) );
+			echo "<result>" ;
+
+			$res = $portalDB->query( $q );
+			foreach( $res as &$row ) {
+				echo "<row>" ;
+				foreach( $row as $rei => $rev ) {
+					$fn = "cvt_f_".$rei ;
+					if ( !function_exists( $fn ) ) {
+						echo "<" , $rei , ">" , cvt_f_default( $rev ) , "</" , $rei , ">" ;
+					} else {
+						echo "<" , $rei , ">" , $fn( $rev ) , "</" , $rei , ">" ;
+					}
+				}
+				echo "</row>" ;
+			}
+			unset( $row );
+
+			echo "</result>" ;
+			break ;
+
+		case "get-lvl1-full-list-2" :  // size = +30 % // 4 677 714
+			$pcid = Int2SQL( $data->getAttribute( "id" ) );
+			echo "<result>" ;
+
+			$res = $portalDB->query( $q );
+			foreach( $res as &$row ) {
+				echo "<row>" ;
+				foreach( $row as $rei => $rev ) {
+					echo "<" , $rei , ">" , toCDATA( $rev ) , "</" , $rei , ">" ;
+				}
+				echo "</row>" ;
+			}
+			unset( $row );
+
+			echo "</result>" ;
+			break ;
+
+		case "get-lvl1-full-list-3" :  // size = +226.45 % // 11 752 814
+			$pcid = Int2SQL( $data->getAttribute( "id" ) );
+
+			$res = $portalDB->query( $q );
+			foreach( $res as &$row ) {
+				foreach( $row as $rei => &$rev ) {
+					$row[ $rei ] = iconv( "cp1251" , "utf8" , $rev );
+				}
+			}
+
+			unset( $row );
+
+			echo json_encode( $res );
+
+			break ;
+	}
+?>

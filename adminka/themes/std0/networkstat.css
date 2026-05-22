@@ -1,0 +1,24 @@
+/*
+    Этот скрипт (исходный код) является интелектуальной собственностью Пекшева Петра Александровича.
+    Публикация, воспроизведение, распространение и использование без письменного разрешение автора запрещено.
+    copyright (c) Пекшев Петр Александрович, 2008
+*/
+* {
+	font-family : "verdana" , "arial" , sans-serif ;
+}
+
+.img-tab {
+	border-collapse : collapse ;
+}
+
+.gr-in-panel {
+	text-align : center ;
+}
+
+.gr-out-panel {
+	text-align : center ;
+}
+
+.ctrl-panel {
+	text-align : center ;
+}

@@ -1,0 +1,255 @@
+/*
+    ���� ������ (�������� ���) �������� ��������������� �������������� ������� ����� ��������������.
+    ����������, ���������������, ��������������� � ������������� ��� ����������� ���������� ������ ���������.
+    copyright (c) ������ ���� �������������, 2008
+*/
+
+	.tools-panel {
+	}
+
+	.rp {
+		border : 1px dashed #606060 ;
+		background-color : #ffc000 ;
+		padding : 4px 6px ;
+		font-size : 10pt ;
+	}
+
+	.hr {
+		border : none ;
+		border-top : 1px dashed #806000 ;
+		margin : 4px 0px ;
+	}
+
+	.rpaa {
+		text-align : center ;
+		cursor : pointer ;
+	}
+
+	.rpt {
+		border-collapse : collapse ;
+		width : 100% ;
+	}
+
+	.rptcl {
+		border-right : 1px dashed #806000 ;
+		padding-right : 12px ;
+	}
+
+	.rptcc {
+		border-right : 1px dashed #806000 ;
+		padding-left : 8px ;
+		padding-right : 12px ;
+	}
+
+	.rptcr {
+		padding-left : 8px ;
+	}
+
+	.rpflt-lnk-area {
+		padding : 4px 6px 4px 4px ;
+	}
+
+	.rpflt-lnk {
+		color : #0040c0 ;
+		text-decoration : underline ;
+		cursor : pointer ;
+	}
+
+	.tool-group {
+		border : 1px dashed #606060 ;
+		background-color : #ffc000 ;
+		padding : 2px 6px ;
+		font-size : 12pt ;
+	}
+
+	.search-panel {
+		position : absolute ;
+		background-color : #e0e0e0 ;
+		border : 1px solid #000000 ;
+		padding : 4px ;
+		margin : 0px ;
+		text-align : center ;
+	}
+
+	.search-input {
+		border : 1px solid #80c0ff ;
+		margin : 0px ;
+	}
+
+	.exp-list-table {
+		border-collapse : collapse ;
+		border : none ;
+	}
+
+	.elt-h , .elt-d {
+		padding : 0px 4px ;
+		font-size : 10pt ;
+		border : 1px solid #000000 ;
+	}
+
+	.elt-h {
+		text-align : center ;
+	}
+
+	.a-cb , .a-en , .a-ed , .a-ecc , .a-wd , .a-ckd , .a-woe , .a-afi , .a-sndz {
+		text-align : center ;
+	}
+
+	.a-wn , .a-fay , .a-fat , .a-fby , .a-f , .a-ed4 , .a-pd , .a-pde , .a-com {
+		text-align : left ;
+	}
+
+	.a-p {
+		text-align : right ;
+	}
+
+
+	.w-en , .w-ed , .w-efd , .w-wd , .w-p , .w-ckd , .w-pd {
+		min-width : 96px ;
+		width : 96px ;
+		max-width : 96px ;
+	}
+
+	.w-ecc {
+		min-width : 128px ;
+		width : 128px ;
+		max-width : 128px ;
+	}
+
+	.w-wn {
+		min-width : 144px ;
+		width : 144px ;
+		max-width : 144px ;
+	}
+
+	.w-fay , .w-fat , .w-fby , .w-f , .w-ed4 {
+		min-width : 256px ;
+		width : 256px ;
+		max-width : 256px ;
+	}
+
+	 .elt-h-pd , .elt-d-pd {
+		 min-width : 192px ;
+		 width : 192px ;
+		 max-width : 192px ;
+	 }
+	 .w-pde {
+		 min-width : 256px ;
+		 width : 256px ;
+		 max-width : 256px ;
+	 }
+
+	 .w-cb {
+		 min-width : 18px ;
+		 width : 18px ;
+		 max-width : 18px ;
+	 }
+
+	.w-com {
+		min-width : 320px ;
+		width : 320px ;
+		max-width : 320px ;
+	}
+	
+	.w-woe {
+		min-width : 128px ;
+		width : 128px ;
+		max-width : 128px ;
+	}
+	
+	.w-afi , .w-sndz {
+		min-width : 48px ;
+		width : 48px ;
+		max-width : 48px ;
+	}
+
+	.elt-d-total {
+		padding : 8px 0px 32px 32px ;
+		border : none ;
+		color : #000000 ;
+	}
+
+	.elt-h-period {
+		font-size : 14pt ;
+		padding : 12px 0px 8px 32px ;
+		border : none ;
+		color : #000000 ;
+	}
+
+	.elt-title {
+		font-size : 18pt ;
+		color : #000 ;
+		text-align : center ;
+		margin-top : 5em ;
+		margin-bottom : 1em ;
+	}
+
+	.flt-lnk {
+		text-decoration : none ;
+		color : #000000 ;
+		cursor : pointer ;
+	}
+	.flt-lnk-hl {
+		text-decoration : none ;
+		color : #008000 ;
+		cursor : pointer ;
+	}
+
+	.flt-lnk:hover {
+		text-decoration : underline ;
+		color : #ff8000 ;
+	}
+	.flt-lnk-hl:hover {
+		text-decoration : underline ;
+		color : #ff8000 ;
+	}
+	
+	.woe-li {
+		
+	}
+
+	.uc-area {
+		font-size : 8pt ;
+	}
+	
+	.uc-comment {
+		background-color : #e0e0e0 ;
+		border : 1px solid #606060 ;
+		margin : 2px 0px ;
+	}
+	
+	.uc-comment + .uc-comment {
+		margin-top : 0px ;
+	}
+	
+	.uc-text {
+		padding : 1px 2px ;
+	}
+	
+	.uc-author {
+		background-color : #404040 ;
+		color : #ffffff ;
+		margin-left : 4px ;
+		float : right ;
+		font-style : italic ;
+		padding : 1px 2px ;
+	}
+
+	.elt-d-com-ta {
+		vertical-align : top ;
+		font-size : 10pt ;
+		margin : 4px ;
+		width : 304px ;
+		height : 128px ;
+	}
+
+	.subpoena-mark {
+		border : 1px solid #006080 ;
+		border-radius : 3px ;
+		font-size : 8pt ;
+		background-color : #00c0ff ;
+		padding : 2px 6px ;
+		margin-right : 4px ;
+		display : inline-block ;
+	}
+	
