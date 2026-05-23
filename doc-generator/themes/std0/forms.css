@@ -174,7 +174,7 @@
 		text-decoration : underline ;
 	}
 	.dg--ev-visual--array--btn-add.disabled {
-		color : #888 ;
+		color : #8a8378 ;
 		cursor : not-allowed ;
 		pointer-events : none ;
 	}
@@ -348,7 +348,7 @@
 
 	.dg--generated-list--item span:nth-child( odd ) {
 		font-size : 9pt ;
-		color : #888 ;
+		color : #8a8378 ;
 		width : 64px ;
 	}
 	.dg--generated-list--item span:nth-child( odd ):after {
@@ -359,7 +359,7 @@
 
 	.dg--generated-list--item span:nth-child( even ) {
 		font-size : 11pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		margin-right : 2em ;
 		width : 176px ;
 	}
@@ -442,7 +442,7 @@
 	}
 
 	.dg--ev-visual--address--helper-list-item-selected {
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 	}
 
 	.buttons-area {

@@ -13,7 +13,7 @@
 		padding: 2px ;
 		
 		border : 1px solid #000 ;
-		background-color : #ddd ;
+		background-color : #f4f1ec ;
 	}
 
 	.buttons-bar {
@@ -35,7 +35,7 @@
 		display : inline-block ;
 		padding : 2px 8px 2px 2px ;
 		text-decoration : none ;
-		color : #000 ;
+		color : #1a5c33 ;
 		cursor : pointer ;
 		font-size : 10pt ;
 	}
@@ -46,7 +46,7 @@
 	}
 	
 	.disabled {
-		color : #888 ;
+		color : #8a8378 ;
 		cursor : default ;
 		text-shadow : #fff 1px 1px 0px ;
 		
@@ -73,7 +73,7 @@
 	
 	.address-bar {
 		font-size : 10pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		padding : 2px 8px ;
 		vertical-align : middle ;
 		line-height : 24px ;

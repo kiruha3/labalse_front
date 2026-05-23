@@ -57,8 +57,8 @@
 		padding : 2px 8px ;
 		border : 1px solid #777 ;
 		border-radius : 3px ;
-		background-color : #ccc ;
-		color : #000 ;
+		background-color : #e8e4de ;
+		color : #1a5c33 ;
 		margin : 2px ;
 	}
 
@@ -76,7 +76,7 @@
 	}
 
 	*:has(> * > .marks--dlg-client-area ) {
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 	}
 
 	.marks--dlg-client-area {
@@ -151,8 +151,8 @@
 		padding : 2px 8px ;
 		border : 1px solid #777 ;
 		border-radius : 3px ;
-		background-color : #ccc ;
-		color : #000 ;
+		background-color : #e8e4de ;
+		color : #1a5c33 ;
 		margin : 2px ;
 		font-size : 12pt ;
 		cursor : pointer ;

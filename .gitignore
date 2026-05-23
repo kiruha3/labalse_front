@@ -10,3 +10,4 @@ doc-generator/doc_ex_data/
 doc-generator/files/
 files/labeling/
 errors/
+*.bak

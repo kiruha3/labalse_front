@@ -46,7 +46,7 @@
 	}
 
 	.i_price_bind {
-		color : #0000ff ;
+		color : #1a5c33 ;
 	}
 
 
@@ -70,8 +70,8 @@
 	
 	.i_comment.area {
 		border : 1px dotted #606060 ;
-		background-color : #e0e0e0 ;
-		color : #606060 ;
+		background-color : #f4f1ec ;
+		color : #5a554e ;
 		width : 500px ;
 		text-align : center ;
 		font-size : 12pt ;
@@ -92,7 +92,7 @@
 	}
 	
 	.req {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 
 
@@ -178,7 +178,7 @@
 	}
 	
 	.dlg-cancel-btn {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 	
 	.dlg-add-btn , .dlg-apply-btn , .dlg-cancel-btn {

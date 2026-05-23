@@ -25,7 +25,7 @@
 	.ldt-prna-btn , .ldt-addressee , .ldt-destination {
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 		padding : 0px ;
 	}
@@ -91,6 +91,6 @@
 	}
 
 	.address-lnk:hover {
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 

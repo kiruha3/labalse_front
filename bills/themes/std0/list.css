@@ -6,7 +6,7 @@
 
 	.blt {
 		border-collapse : collapse ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 
 		min-width : 1074px ;
 		width : 1074px ;
@@ -17,10 +17,10 @@
 		font-size : 10pt ;
 		font-weight : bold ;
 		text-align : center ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		color : #ffffff ;
 		padding : 4px ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 	}
 
 	.blch-0 {
@@ -30,11 +30,11 @@
 	}
 
 	.blr-0 {
-		background-color : #f0f0f0 ;
+		background-color : #ffffff ;
 	}
 
 	.blr-1 {
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 	}
 	
 	.bill-err {
@@ -47,7 +47,7 @@
 
 	.blc-0-1 , .blc-0-1 , .blc-0-2 , .blc-0-3 , .blc-0-4 , .blc-1 , .blc-2 , .blc-3 , .blc-4 , .blc-5 {
 		font-size : 10pt ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 		padding : 2px ;
 	}
 
@@ -98,12 +98,12 @@
 	}
 
 	.blc-0-4 a {
-		color : #0080ff ;
+		color : #1a5c33 ;
 		text-decoration : none ;
 	}
 
 	.blc-0-4 a:hover {
-		color : #ff8000 ;
+		color : #b85c3e ;
 		text-decoration : underline ;
 	}
 
@@ -177,9 +177,9 @@
 		padding : 3px ;
 		border : 1px solid #000000 ;
 		text-decoration : none ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		font-size : 10pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 /*  ������ �����/���  */
@@ -187,7 +187,7 @@
 		padding : 3px ;
 		border : 1px solid #000000 ;
 		text-decoration : none ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		font-size : 8pt ;
 		color : #ffffff ;
 	}
@@ -196,7 +196,7 @@
 		padding : 3px ;
 		border : 1px solid #000000 ;
 		text-decoration : none ;
-		background-color : #606060 ;
+		background-color : #5a554e ;
 		color : #ffffff ;
 	}
 	

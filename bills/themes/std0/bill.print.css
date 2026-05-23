@@ -279,7 +279,7 @@
 	
 	.linked-bill a {
 		font-size : 11pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		text-decoration : none ;
 	}
 	
@@ -292,7 +292,7 @@
 	}
 	
 	.linked a {
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	.linked a:hover {
 		color : #f00 ;
@@ -359,7 +359,7 @@
 	.bill-lnk-area a , .search-bill-lnk {
 		vertical-align : middle ;
 		text-decoration : none ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.bill-lnk-area a:hover , .search-bill-lnk:hover {

@@ -15,7 +15,7 @@
 	.dsp-unselected {
 		display : inline-block ;
 		border : 1px solid #000000 ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		text-align : center ;
 		padding : 1px 6px ;
 		color : #e0e0e0 ;
@@ -30,7 +30,7 @@
 	.mt-c-1 , .mt-c-1-2 , .mt-c-2 , .mt-c-3 , .mt-c-4 , .mt-c-5 , .mt-c-6 {
 		font-size : 8pt ;
 		text-align : center ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		font-weight : bold ;
 		color : #ffffff ;
 		background-color: #404040 ;
@@ -40,9 +40,9 @@
 	}
 
 	.mt-d-1 , .mt-d-1-2 , .mt-d-2 , .mt-d-3 , .mt-d-4 , .mt-d-5 , .mt-d-6 {
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 		font-size : 10pt ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		color : #ffffff ;
 	}
 
@@ -104,7 +104,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow: 6px 6px 8px #000;
@@ -116,13 +116,13 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
 
 	.addresses-fill-dlg-content {
-		background-color : #fff0e0 ;
+		background-color : #f8f5f0 ;
 		border : 1px dashed #807060 ;
 		margin-top : 8px ;
 		padding : 8px ;
@@ -149,7 +149,7 @@
 	.ldt-comment , .ldt-addressee , .ldt-destination , .ldt-weight {
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 
@@ -213,7 +213,7 @@
 	}
 
 	.address-lnk:hover {
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 	
 	.comment-lnk {

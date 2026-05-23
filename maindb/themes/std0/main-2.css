@@ -40,9 +40,9 @@
 		display : none ;
 		padding : 3px 6px ;
 		border : 1px solid #000000 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		font-size : 8pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		width : 144px ;
 		z-index : 1000 ;
 	}
@@ -56,7 +56,7 @@
 	}
 	.csu_link {
 		background-color : #ff8080 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.su_link {
 		background-color : #603030 ;
@@ -68,7 +68,7 @@
 		font-size : 10pt ;
 	}
 	.csu_link A {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.su_link A {
 		color : #d0d0d0 ;
@@ -96,7 +96,7 @@
 		margin-top : 1cm ;
 		padding : 0.2cm ;
 		border : 1px solid #000000 ;
-		background-color : #c0ffc0 ;
+		background-color : #d4e8db ;
 	}
 
 	.imc01 {
@@ -337,7 +337,7 @@
 	}
 
 	.lvl3c_edit , .lvl3c_state , .lvl3c_name , .lvl3c_price , .lvl3c_finished , .lvl3c_unfinished {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.lvl3c_edit {
@@ -372,7 +372,7 @@
 	}
 	.lvl3c_sndz {
 		text-align : center ;
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 
 	.letter-dlg {
@@ -384,7 +384,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow: 6px 6px 8px #000;
@@ -412,7 +412,7 @@
 		text-align : center ;
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 
@@ -433,7 +433,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -469,7 +469,7 @@
 	.ldt-prna-btn , .ldt-addressee , .ldt-destination , .ldt2-radio-btn , .ldt2-worker {
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 
@@ -511,7 +511,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow: 6px 6px 8px #000;
@@ -523,7 +523,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -553,7 +553,7 @@
 	top: 192px ;
 	right : 0px ;
 	bottom : 0px ;
-	/*background-color : #000000 ;*/
+	/*background-color : #1a5c33 ;*/
 }
 
 
@@ -568,7 +568,7 @@
 
 
 #main-tab-fc-area {
-	background-color : #ff0000 ;
+	background-color : #8b2e2e ;
 }
 
 #main-tab-fr-area {
@@ -576,7 +576,7 @@
 }
 
 #main-tab-s-area {
-	background-color : #0000ff ;
+	background-color : #1a5c33 ;
 }
 
 #main-tab-v-scroll {
@@ -634,7 +634,7 @@
 	height : 55px ;
 	
 	font-size : 7.5pt ;
-	color : #606060 ;
+	color : #5a554e ;
 }
 
 .mtc-h2 {
@@ -674,10 +674,10 @@
 }
 
 .mtc-d {
-	background-color : #e0e0e0 ;
+	background-color : #f4f1ec ;
 	border-right : 1px solid #606060 ;
 	border-bottom : 1px solid #606060 ;
-	color : #000000 ;
+	color : #1a5c33 ;
 	font-size : 8pt ;
 	padding : 0px ;
 	margin : 0px ;

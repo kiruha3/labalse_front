@@ -64,7 +64,7 @@
 
 	.search-panel {
 		position : absolute ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		border : 1px solid #000000 ;
 		padding : 4px ;
 		margin : 0px ;
@@ -166,19 +166,19 @@
 	.elt-d-total {
 		padding : 8px 0px 32px 32px ;
 		border : none ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.elt-h-period {
 		font-size : 14pt ;
 		padding : 12px 0px 8px 32px ;
 		border : none ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.elt-title {
 		font-size : 18pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		text-align : center ;
 		margin-top : 5em ;
 		margin-bottom : 1em ;
@@ -186,7 +186,7 @@
 
 	.flt-lnk {
 		text-decoration : none ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		cursor : pointer ;
 	}
 	.flt-lnk-hl {
@@ -197,11 +197,11 @@
 
 	.flt-lnk:hover {
 		text-decoration : underline ;
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 	.flt-lnk-hl:hover {
 		text-decoration : underline ;
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 	
 	.woe-li {
@@ -213,7 +213,7 @@
 	}
 	
 	.uc-comment {
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		border : 1px solid #606060 ;
 		margin : 2px 0px ;
 	}
@@ -227,7 +227,7 @@
 	}
 	
 	.uc-author {
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		color : #ffffff ;
 		margin-left : 4px ;
 		float : right ;
@@ -247,7 +247,7 @@
 		border : 1px solid #006080 ;
 		border-radius : 3px ;
 		font-size : 8pt ;
-		background-color : #00c0ff ;
+		background-color : #1a5c33 ;
 		padding : 2px 6px ;
 		margin-right : 4px ;
 		display : inline-block ;

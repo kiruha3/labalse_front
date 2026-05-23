@@ -175,7 +175,7 @@
 	}
 
 	.spec-area:hover {
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 	}
 
 	.spec-row {
@@ -207,7 +207,7 @@
 
 	.stat-row-name {
 		text-decoration : none ;
-		color : #000 ;
+		color : #1a5c33 ;
 		display : inline-block ;
 		position : absolute ;
 		cursor : pointer ;
@@ -221,7 +221,7 @@
 	.stat-row-name.locked {
 		cursor : auto ;
 		text-decoration : none ;
-		color : #888 ;
+		color : #8a8378 ;
 	}
 
 	.stat-row-name-details {
@@ -239,7 +239,7 @@
 	}
 
 	.stat-row-name-details:before , .stat-row-name-details:after {
-		color : #000 ;
+		color : #1a5c33 ;
 		font-weight : normal ;
 	}
 	.stat-row-name-details:before {
@@ -263,7 +263,7 @@
 
 	.stat-row-data-label {
 		/*color : #369 ;*/
-		color : #000 ;
+		color : #1a5c33 ;
 		text-align : right ;
 		position : absolute ;
 		font-size : 10pt ;
@@ -281,7 +281,7 @@
 
 	.stat-row.no-stat .stat-row-data-label {
 		/*color : #844 ;*/
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 
 	.stat-row-data-bar {

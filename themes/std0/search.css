@@ -36,7 +36,7 @@
 	}
 	
 	.wer-1 {
-		border : 1px solid #ccc ;
+		border : 1px solid #c9c3bb ;
 		border-radius : 3px ;
 		height : 31px ;
 		position : relative ;
@@ -91,12 +91,12 @@
 	 	position : absolute ;
 	 	top : 3px ;
 	 	left : 4px ;
-	 	border : 1px solid #ccc ;
+	 	border : 1px solid #c9c3bb ;
 	 	border-radius : 3px ;
 	 	height : 22px ;
 	 	line-height : 18px ;
 	 	outline : none ;
-	 	background-color : #ccc ;
+	 	background-color : #e8e4de ;
 	 	z-index : 20 ;
 	 	text-align : center ;
 	 	cursor : pointer ;
@@ -163,7 +163,7 @@
 	}
 		
 	.wle-b {
-		/*color : #000 ;*/
+		/*color : #1a5c33 ;*/
 		font-weight : bold ;
 		font-family : "Arial" ;
 	}
@@ -199,7 +199,7 @@
 	}
 	
 	.wle-hl .wle-s-pay {
-		background-color : #fec ;
+		background : linear-gradient(180deg, #123d20 0%, #1a5c33 100%) ;
 	}
 	
 	.wle-s-pay .wle-cap {
@@ -229,7 +229,7 @@
 	}
 	
 	.wle-hl .wle-s-portal {
-		background-color : #ddd ;
+		background-color : #f4f1ec ;
 	}
 	
 	.wle-s-portal .wle-cap {
@@ -240,7 +240,7 @@
 
 	
 	.wle-hl .wle-s-all {
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 		color : #444 ;
 	}
 	.wle .wle-s-all {
@@ -268,7 +268,7 @@
 		content : "вх. корр" ;
 		background-color : #0d0 ;
 		border : 1px solid #060 ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.wle-hl .wle-s-cor_t2 {
@@ -288,7 +288,7 @@
 		content : "исх. корр" ;
 		background-color : #0df ;
 		border : 1px solid #068 ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.wle-hl .wle-s-cor_t3 {
@@ -308,7 +308,7 @@
 		content : "вх. корр (опл)" ;
 		background-color : #fd0 ;
 		border : 1px solid #860 ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.wle-hl .wle-s-cor_t4 {
@@ -328,7 +328,7 @@
 		content : "исх. корр (опл)" ;
 		background-color : #fcc ;
 		border : 1px solid #855 ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.wle-s-cor_t1 .wle-cap:after ,
@@ -337,7 +337,7 @@
 	.wle-s-cor_t4 .wle-cap:after {
 		position : absolute ;
 		left : 62px ;
-		color : #000 ;
+		color : #1a5c33 ;
 		
 		display : inline-block ;
 	 	border-radius : 4px ;
@@ -355,7 +355,7 @@
 		height : 9cm ;
 		top : 0px ;
 		right : 0px ;
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 		border : 1px solid #000 ;
 		overflow : scroll ;
 	}

@@ -8,13 +8,13 @@
 		margin-bottom : 24px ;
 		padding : 8px ;
 		width : 800px ;
-		background-color : #e0e0e0 ;
-		border : 1px solid #808080 ;
+		background-color : #f4f1ec ;
+		border : 1px solid #c9c3bb ;
 		text-align : center ;
 	}
 	
 	.w-fio-fill {
-		color : #0080ff ;
+		color : #1a5c33 ;
 		text-decoration : underline ;
 		cursor : pointer ;
 	}
@@ -43,7 +43,7 @@
 
 	.worker-data {
 		padding : 0px ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 	}
 
 	.worker-data-table {
@@ -70,7 +70,7 @@
 		background : #e0e0e0 /*url(cap2.gif)*/ ;
 		vertical-align : middle ;
 		font-size : 10pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.param-value {
@@ -81,7 +81,7 @@
 		background : #e0e0e0 /*url(cap2.gif)*/ ;
 		vertical-align : middle ;
 		font-size : 10pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.i_department {
@@ -97,7 +97,7 @@
 	}
 
 	.spec-num {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 
 	.i_ip {

@@ -14,14 +14,14 @@
 .rpdl {
 	cursor : pointer ;
 	text-decoration : none ;
-	color : #0080ff ;
+	color : #1a5c33 ;
 	margin-left : 4px ;
 	margin-right : 4px ;
 }
 
 .rpdl:hover {
 	text-decoration : underline ;
-	color : #ff8000 ;
+	color : #b85c3e ;
 }
 
 .IT {

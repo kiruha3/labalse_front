@@ -28,7 +28,7 @@
 }
 
 .cap {
-	background-color : #404040 ;
+	background-color : #1a5c33 ;
 	background-image : url( "cap.gif" );
 }
 .cap TD {
@@ -76,7 +76,7 @@
 
 .col-worker {
 	text-align : left ;
-	color : #000000 ;
+	color : #1a5c33 ;
 }
 
 .col-mac {
@@ -116,7 +116,7 @@
 
 .st-unknown {
 	font-size : 10pt ;
-	color : #000000 ;
+	color : #1a5c33 ;
 	text-decoration : underline ;
 	font-style : italic ;
 }
@@ -133,7 +133,7 @@
 
 .st-unknown-addr {
 	font-size : 10pt ;
-	color : #000000 ;
+	color : #1a5c33 ;
 	text-decoration : underline ;
 	font-style : italic ;
 }
@@ -148,7 +148,7 @@
 
 .head {
 	font-size : 12pt ;
-	color : #000000 ;
+	color : #1a5c33 ;
 }
 
 .head-bold {
@@ -159,7 +159,7 @@
 
 .head-2 {
 	font-size : 10pt ;
-	color : #000000 ;
+	color : #1a5c33 ;
 }
 
 .head-2-bold {
@@ -190,7 +190,7 @@
 	border-bottom : 1px dashed #ff0000 ;
 	border-top : 1px dashed #ff0000 ;
 	background-color : #ffc0c0 ;
-	color : #000000 ;
+	color : #1a5c33 ;
 }
 
 .services {

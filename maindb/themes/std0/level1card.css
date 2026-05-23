@@ -11,10 +11,10 @@
 	.unlink-lnk {
 		cursor : pointer ;
 		text-decoration : underline ;
-		color : #0080ff ;
+		color : #1a5c33 ;
 	}
 	.unlink-lnk:hover {
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 
 	.new-link-lnk {
@@ -258,18 +258,18 @@
 
 	.docs-lnk {
 		background-color : #fc0 ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #860 ;
 	}
 	
 	.docs-lnk-green {
 		background-color : #0f0 ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #060 ;
 	}
 
 	.docs-lnk-gray {
-		background-color : #666 ;
+		background-color : #5a554e ;
 		color : #eee ;
 		border : 1px solid #aaa ;
 	}
@@ -282,19 +282,19 @@
 
 	.docs-lnk-lt-blue {
 		background-color : #adf ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #578 ;
 	}
 
 	.docs-lnk-purple {
 		background-color : #fad ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #857 ;
 	}
 
 	.docs-lnk-purple-dot {
 		background-color : none ;
-		/*color : #000 ;*/
+		/*color : #1a5c33 ;*/
 		border : 1px dotted #857 ;
 	}
 

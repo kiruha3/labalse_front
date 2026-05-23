@@ -36,13 +36,13 @@
 		padding : 2px 4px ;
 		font-size : 8pt ;
 		color : #fff ;
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 	}
 
 	.dat1:hover .lnk {
 		text-decoration : none ;
 		border : 1px solid #444 ;
-		background-color : #888 ;
+		background-color : #8a8378 ;
 	}
 
 	.dat1:hover .lnk:hover {
@@ -131,7 +131,7 @@
 		height : 16px ;
 		border : 1px solid #444 ;
 		border-radius : 8px ;
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 		margin-left : 8px ;
 		position : relative ;
 	}
@@ -145,7 +145,7 @@
 		height : 12px ;
 		border : 1px solid #000 ;
 		border-radius : 6px ;
-		background-color : #888 ;
+		background-color : #8a8378 ;
 	}
 
 	#i-exp-id-list-all:checked + label.exp-name > .exp-name-all-slider {
@@ -159,12 +159,12 @@
 	}
 
 	#i-exp-id-list-all:checked ~ div.exp-name-group > div.exp-name-group-name {
-		color : #888 ;
+		color : #8a8378 ;
 		pointer-events : none ;
 	}
 
 	#i-exp-id-list-all:checked ~ div.exp-name-group > div.exp-name > label.exp-name {
-		color : #888 ;
+		color : #8a8378 ;
 		pointer-events : none ;
 	}
 

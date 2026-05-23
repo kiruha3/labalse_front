@@ -39,7 +39,7 @@
 	.preview {
 		font-family : monospace ;
 		border : 1px solid #404040 ;
-		background-color : #fff0e0 ;
+		background-color : #f8f5f0 ;
 		padding : 0px ;
 		/*position : absolute ;*/
 		overflow : auto; ;
@@ -48,7 +48,7 @@
 	}
 	
 	.preview-res {
-		background-color : #fff0e0 ;
+		background-color : #f8f5f0 ;
 		overflow : auto ;
 		max-height : 384px ;
 		text-align : center ;

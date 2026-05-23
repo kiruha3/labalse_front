@@ -16,7 +16,7 @@
 	}
 	
 	.fp-area tr:hover {
-		background-color : #fef0c0 ;
+		background-color : #e8f0ec ;
 	}
 	
 	.flt-gn , .flt-pn , .flt-d , .flt-v , .flt-s {
@@ -69,7 +69,7 @@
 	
 	.i_list {
 		text-decoration : underline ;
-		color : #0080ff ;
+		color : #1a5c33 ;
 		cursor : pointer ;
 	}
 	
@@ -110,7 +110,7 @@
 	}
 	
 	.dlg-calendar-month-area {
-		background-color : #0080ff ;
+		background-color : #1a5c33 ;
 		margin : 1px ;
 		font-weight : bold ;
 		color : #ffffff ;
@@ -187,7 +187,7 @@
 	
 	.dlg-calendar-week-day-0 {
 		background-color : #c0c0c0 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	
 	.dlg-calendar-date-0 , .dlg-calendar-date-1 {
@@ -195,24 +195,24 @@
 	}
 	
 	.dlg-calendar-date-0:hover , .dlg-calendar-date-1:hover {
-		background-color : #fef0c0 ;
+		background-color : #e8f0ec ;
 	}
 	
 	.dlg-calendar-date-0 {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	
 	.dlg-calendar-week-day-1 {
-		background-color : #ff0000 ;
+		background-color : #8b2e2e ;
 		color : #ffffff ;
 	}
 	
 	.dlg-calendar-date-1 {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 	
 	.dlg-calendar-today {
-		background-color : #c0ffc0 ;
+		background-color : #d4e8db ;
 	}
 	
 	.dlg-calendar-current-date {
@@ -223,7 +223,7 @@
 	}
 	
 	.dlg-calendar-current-date:hover {
-		background-color : #fef0c0 ;
+		background-color : #e8f0ec ;
 	}
 	
 	.dlg-calendar-current-date-marker {
@@ -294,12 +294,12 @@
 	}
 	
 	.dlg-list-clear {
-		color : #ff8000 ;
+		color : #b85c3e ;
 		margin-right : 16px ;
 	}
 	
 	.dlg-list-cancel {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 	
 	.controls-panel {

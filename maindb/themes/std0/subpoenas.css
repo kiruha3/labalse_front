@@ -7,7 +7,7 @@
 	#subpoenaTooltip {
 		position : absolute ;
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		/*padding : 4px 8px ;*/
 	}
 
@@ -119,7 +119,7 @@
 		position : absolute ;
 		width : 100% ;
 		height : 100% ;
-		/*background-color : #ff0000 ;*/
+		/*background-color : #8b2e2e ;*/
 		border-collapse : collapse ;
 	}
 	
@@ -208,7 +208,7 @@
 	
 	.nrr-from-agency-address {
 		cursor : pointer ;
-		color : #0080ff ;
+		color : #1a5c33 ;
 		text-decoration : underline ;
 	}
 	
@@ -275,7 +275,7 @@
 	}
 	
 	.lnk-cancel {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 	}
 	
 	.nrr-lnk:hover {
@@ -283,7 +283,7 @@
 	}
 	
 	.sl-a-e {
-		color : #000 ;
+		color : #1a5c33 ;
 		cursor : pointer ;
 	}
 	.sl-a-e:hover {
@@ -297,7 +297,7 @@
 		border : 1px solid #840 ;
 		border-radius : 3px ;
 		background-color : #fc0 ;
-		color : #000 ;
+		color : #1a5c33 ;
 		text-decoration : none ;
 		cursor : pointer ;
 		font-size : 9pt ;
@@ -338,7 +338,7 @@
 		top : -3px ;
 		right : -3px ;
 		bottom : -3px ;
-		background-color : #000 ;
+		background-color : #1a5c33 ;
 		opacity : 0.8 ;
 	}
 	
@@ -351,7 +351,7 @@
 		width : 100% ;
 		/*height : 384px ;*/
 
-		background-color : #ddd ;
+		background-color : #f4f1ec ;
 		/*background-image : url( 'bg_337394.png' );*/
 		
 		text-align : center ;
@@ -416,7 +416,7 @@
 		top : 0px ;
 		right : 0px ;
 		bottom : 0px ;
-		background-color : #000 ;
+		background-color : #1a5c33 ;
 		opacity : 0.7 ;
 	}
 	
@@ -502,7 +502,7 @@
 		padding : 0.125em 1em ;
 		font-size : 12pt ;
 		margin : 1px 1px -1px 1px ;
-		color : #888 ;
+		color : #8a8378 ;
 	}
 	
 	.fu-tabs :checked + * + label {
@@ -513,11 +513,11 @@
 	}
 	.fu-tabs > label:hover {
 		background-color : inherit ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	.fu-tabs :checked + * + label:hover {
-		border-color : #000 ;
-		color : #000 ;
+		border-color : #1a5c33 ;
+		color : #1a5c33 ;
 	} 
 	
 	.fu-tabs > div {
@@ -554,9 +554,9 @@
 		padding : 3px 6px ;
 		border : 1px solid #000000 ;
 		text-decoration : none ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		font-size : 10pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	/*  ������ �����/���  */
@@ -564,7 +564,7 @@
 		padding : 3px 6px ;
 		border : 1px solid #000000 ;
 		text-decoration : none ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		font-size : 9pt ;
 		color : #d0d0d0 ;
 	}
@@ -572,7 +572,7 @@
 		padding : 3px 6px ;
 		border : 1px solid #000000 ;
 		text-decoration : none ;
-		background-color : #606060 ;
+		background-color : #5a554e ;
 		color : #ffffff ;
 	}
 
@@ -591,7 +591,7 @@
 	}
 
 	.b-l-at {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 		text-decoration : none ;
 		position : relative ;
 	}
@@ -614,7 +614,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow : 6px 6px 8px #000 ;
@@ -642,7 +642,7 @@
 		text-align : center ;
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 
@@ -662,7 +662,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -694,7 +694,7 @@
 		border : 1px solid #606060 ;
 		font-weight : bold ;
 		color : #ffffff ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		background-image : url( "cap.gif" );
 		height : 19px ;
 		padding : 0px ;
@@ -703,7 +703,7 @@
 	.ldt-prna-btn , .ldt-addressee , .ldt-destination , .ldt2-radio-btn , .ldt2-worker {
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 

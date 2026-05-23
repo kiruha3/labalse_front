@@ -7,7 +7,7 @@
 	#licenseTooltip {
 		position : absolute ;
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		/*padding : 4px 8px ;*/
 	}
 
@@ -23,7 +23,7 @@
 	}*/
 
 	.llr-normal {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.llr-expired {
 		color : #c0c0c0 ;
@@ -118,14 +118,14 @@
 	}
 
 	.lic-link {
-		color : #000000 ;
+		color : #1a5c33 ;
 		text-decoration : none ;
 		cursor : pointer ;
 		margin-right : 3px ;
 	}
 
 	.lic-link:hover {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 		text-decoration : underline ;
 	}
 

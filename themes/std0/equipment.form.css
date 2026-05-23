@@ -67,7 +67,7 @@
 		padding : 4px ;
 	}
 	.ed-tab-section:hover {
-		background-color : #fec ;
+		background : linear-gradient(180deg, #123d20 0%, #1a5c33 100%) ;
 	}
 	
 	.ed-tab-section + .ed-tab-section {

@@ -91,7 +91,7 @@
 
 .nav-panel {
 	border : 1px  solid #000000 ;
-	background-color : #e0e0e0 ;
+	background-color : #f4f1ec ;
 	padding : 4px ;
 	width : 256px ;
 	position : absolute ;
@@ -102,7 +102,7 @@
 
 .next-worker {
 	text-decoration : none ;
-	color : #0080ff ;
+	color : #1a5c33 ;
 }
 
 .next-worker:hover {
@@ -112,7 +112,7 @@
 
 .next-page {
 	text-decoration : none ;
-	color : #0080ff ;
+	color : #1a5c33 ;
 }
 
 .next-page:hover {

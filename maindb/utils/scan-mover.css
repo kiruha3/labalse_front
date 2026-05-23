@@ -19,7 +19,7 @@
 		top : 0px ;
 		right : 0px ;
 		bottom : 0px ;
-		background-color : #000 ;
+		background-color : #1a5c33 ;
 		opacity : 0.7 ;
 	}
 	
@@ -60,17 +60,17 @@
 		top : 0px ;
 		bottom : 0px ;
 		width : 21px ;
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 		text-align : center ;
 		text-decoration : none ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	.tgt-lnk:hover .tgt-lnk-dnld {
 		display : inline-block ;
 	}
 
 	.target-list .tgt-lnk[data-sel="1"] {
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 	}
 
 	.pdf-pages-preview {

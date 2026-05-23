@@ -6,7 +6,7 @@
 	
 	.eq-info {
 		border : 1px solid #444 ;
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 		margin-bottom : 8px ;
 		padding : 23px 8px 8px ;
 		position : relative ;
@@ -50,7 +50,7 @@
 		
 	.eq-pv  {
 		font-size : 12pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		text-shadow : #888 -1px -1px 1px ;
 		display : inline-block ;
 		margin-left : 4px ;
@@ -73,7 +73,7 @@
 	
 	.eq-label {
 		font-size : 8pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		margin-bottom : 8px ;
 	}
 	
@@ -98,7 +98,7 @@
 	
 	.eq-doc-lnk , .eq-doc-lnk-err {
 		border-radius : 3px ;
-		color : #000 ;
+		color : #1a5c33 ;
 		font-size : 8pt ;
 		text-decoration : none ;
 		padding : 2px 8px ;
@@ -124,7 +124,7 @@
 		border : 1px solid #444 ;
 		width : 256px ;
 		right : -258px ;
-		background-color : #ccc ;
+		background-color : #e8e4de ;
 		padding : 4px ;
 		
 		
@@ -137,7 +137,7 @@
 
 	.eq-menu-item {
 		font-size : 8pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		cursor : pointer ;
 	}
 	.eq-menu-item:hover {

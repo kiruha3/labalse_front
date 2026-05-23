@@ -22,7 +22,7 @@
 	}
 	
 	.cmon_link {
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 		font-size : 10pt ;
 	}
 	.mon_link {
@@ -30,7 +30,7 @@
 		font-size : 9pt ;
 	}
 	.mon_link:hover {
-		background-color : #666 ;
+		background-color : #5a554e ;
 	}
 	
 	.mon_link + .mon_link , .mon_link + .cmon_link ,
@@ -45,9 +45,9 @@
 		display : none ;
 		padding : 3px 6px ;
 		border : 1px solid #000000 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		font-size : 8pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		width : 144px ;
 		z-index : 1000 ;
 		position : absolute ;
@@ -57,9 +57,9 @@
 		display : none ;
 		padding : 3px 6px ;
 		border : 1px solid #000000 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		font-size : 8pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		width : 144px ;
 		z-index : 1000 ;
 		right : 0px ;
@@ -82,7 +82,7 @@
 	}
 	.csu_link {
 		background-color : #ff8080 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.su_link {
 		background-color : #603030 ;
@@ -94,7 +94,7 @@
 		font-size : 10pt ;
 	}
 	.csu_link A {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.su_link A {
 		color : #d0d0d0 ;
@@ -125,7 +125,7 @@
 		margin-top : 1cm ;
 		padding : 0.2cm ;
 		border : 1px solid #000000 ;
-		background-color : #c0ffc0 ;
+		background-color : #d4e8db ;
 		position : relative ;
 	}
 	
@@ -150,7 +150,7 @@
 		border : 1px solid #000 ;
 		text-align : center ;
 		font-size : 8pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		text-decoration : none ;
 		vertical-align : middle ;
 	}
@@ -188,12 +188,12 @@
 		padding : 4px ;
 		text-align : center ;
 		font-size : 6.5pt ;
-		color : #606060 ;
+		color : #5a554e ;
 	}
 
 	/*  ������ ��������  */
 	.cap2 {
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		background-image : url( "sprites1.png" );
 		background-position : 0px -293px ;
 	}
@@ -225,7 +225,7 @@
 	
 	.mig {
 		background-color : #ffc000 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	
 	.mig TD {
@@ -237,8 +237,8 @@
 
 	/*  ����� "��������-1" ������� ������  */
 	.micw {
-		background-color : #e0e0e0 ;
-		color : #000000 ;
+		background-color : #f4f1ec ;
+		color : #1a5c33 ;
 	}
 	.micw TD {
 		border : 1px solid #606060 ;
@@ -247,7 +247,7 @@
 	/*  ������������  */
 	.micwh {
 		background-color : #80ff80 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.micwh TD {
 		border : 1px solid #606060 ;
@@ -256,7 +256,7 @@
 	/*  ����������  */
 	.micws {
 		background-color : #ff8080 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.micws TD {
 		border : 1px solid #606060 ;
@@ -265,7 +265,7 @@
 	/*  ���������� ������������  */
 	.micwhs {
 		background-color : #ffc080 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.micwhs TD {
 		border : 1px solid #606060 ;
@@ -277,7 +277,7 @@
 
 	/*  ����� "��������-1" ���������� ������  */
 	.miaw {
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		color : #ffffff ;
 	}
 	.miaw TD {
@@ -321,7 +321,7 @@
 	.f02 img { margin-left : 2px ; }
 	.f02 a { cursor : pointer ; }
 	.f030 { width : 23px ; text-align : center ; }
-	.f030 IMG { width : 13px ; height : 13px ; background-color : #ff0000 ; }
+	.f030 IMG { width : 13px ; height : 13px ; background-color : #8b2e2e ; }
 	.f031 { width : 23px ; text-align : center ;  }
 	.f031 IMG { width : 13px ; height : 13px ; background-color : #00c000 ; }
 	.f04 { width : 23px ; text-align : center ; }
@@ -347,15 +347,15 @@
 
 	.miTreeItem1 { }
 	.miTreeItem1 TD { border : 1px solid #606060 ;
-		padding : 2px ; font-size : 8pt ; color : #000000 ;
-		background-color : #e0e0ff ;}
+		padding : 2px ; font-size : 8pt ; color : #1a5c33 ;
+		background-color : #edf5f0 ;}
 
 	.mitif00 { width : 28px ; text-align : center ; }
 	.mitif01 { width : 28px ; text-align : center ; }
 	.mitif02 { width : 28px ; text-align : center ; }
 
 	.mitif1 { width : 96px ; text-align : center ;  }
-	.mitif1id { color : #0080ff ; }
+	.mitif1id { color : #1a5c33 ; }
 	.mitif2 { width : 96px ; text-align : center ; }
 	.mitif3 { width : 384px ; }
 	.mitif4 { width : 384px ; }
@@ -370,7 +370,7 @@
 
 	.miTreeItem2 { }
 	.miTreeItem2 TD { border : 1px solid #606060 ;
-		padding : 2px ; font-size : 8pt ; color : #000000 ;
+		padding : 2px ; font-size : 8pt ; color : #1a5c33 ;
 		background-color : #d0d0ff ; }
 
 	.lvl3card { }
@@ -383,7 +383,7 @@
 	}
 
 	.lvl3c_order , .lvl3c_edit , .lvl3c_state , .lvl3c_spec_detail , .lvl3c_name , .lvl3c_price , .lvl3c_finished , .lvl3c_unfinished {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.lvl3c_edit {
@@ -442,7 +442,7 @@
 		left : 50% ;
 
 		background-color : #fff ;
-		border : 1px solid #ccc ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow : 6px 6px 8px #000 ;
@@ -470,7 +470,7 @@
 		text-align : center ;
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 
@@ -490,7 +490,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -522,7 +522,7 @@
 		border : 1px solid #606060 ;
 		font-weight : bold ;
 		color : #ffffff ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		background-image : url( "cap.gif" );
 		height : 19px ;
 		padding : 0px ;
@@ -531,7 +531,7 @@
 	.ldt-prna-btn , .ldt-addressee , .ldt-destination , .ldt2-radio-btn , .ldt2-worker {
 		font-size : 8pt ;
 		border : 1px solid #606060 ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		white-space : normal ;
 	}
 
@@ -573,7 +573,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow : 6px 6px 8px #000 ;
@@ -585,13 +585,13 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
 	
 	.lnk-wsl {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 		text-decoration : none ;
 	}
 	
@@ -616,18 +616,18 @@
 
 	.docs-lnk {
 		background-color : #fc0 ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #860 ;
 	}
 	
 	.docs-lnk-green {
 		background-color : #0f0 ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #060 ;
 	}
 
 	.docs-lnk-gray {
-		background-color : #666 ;
+		background-color : #5a554e ;
 		color : #eee ;
 		border : 1px solid #aaa ;
 	}
@@ -640,19 +640,19 @@
 
 	.docs-lnk-lt-blue {
 		background-color : #adf ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #578 ;
 	}
 
 	.docs-lnk-purple {
 		background-color : #fad ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #857 ;
 	}
 	
 	.docs-lnk-white {
 		background-color : #fff ;
-		color : #000 ;
+		color : #1a5c33 ;
 		border : 1px solid #888 ;
 	}
 	
@@ -724,7 +724,7 @@
 	}
 
 	.l1-at {
-		color : #ff0000 ;
+		color : #8b2e2e ;
 		text-decoration : none ;
 		position : relative ;
 	}
@@ -875,7 +875,7 @@
 	.gpinfo-ca {
 		background-color : #fff ;
 		border : 1px solid #666 ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.gpinfo-total > .gpinfo-ca {
@@ -885,7 +885,7 @@
 	}
 	
 	.gpinfo-cd {
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 
 
@@ -949,7 +949,7 @@
 	}
 
 	.stat-panel-cap {
-		background-color : #00c0ff ;
+		background-color : #1a5c33 ;
 		height : 19px ;
 		position : absolute ;
 		left : 0px ;
@@ -964,7 +964,7 @@
 	}
 
 	.stat-panel-close-btn {
-		background-color : #00c0ff ;
+		background-color : #1a5c33 ;
 		height : 14px ;
 		width : 25px ;
 		position : absolute ;
@@ -1005,7 +1005,7 @@
 	}
 
 	.spec-area:hover {
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 	}
 
 	.spec-row {
@@ -1037,7 +1037,7 @@
 
 	.stat-row-name {
 		text-decoration : none ;
-		color : #000 ;
+		color : #1a5c33 ;
 		display : inline-block ;
 		position : absolute ;
 		cursor : pointer ;
@@ -1051,7 +1051,7 @@
 	.stat-row-name.locked {
 		cursor : auto ;
 		text-decoration : none ;
-		color : #888 ;
+		color : #8a8378 ;
 	}
 
 	.stat-row-name-details {
@@ -1069,7 +1069,7 @@
 	}
 
 	.stat-row-name-details:before , .stat-row-name-details:after {
-		color : #000 ;
+		color : #1a5c33 ;
 		font-weight : normal ;
 	}
 	.stat-row-name-details:before {
@@ -1093,7 +1093,7 @@
 
 	.stat-row-data-label {
 		/*color : #369 ;*/
-		color : #000 ;
+		color : #1a5c33 ;
 		text-align : right ;
 		position : absolute ;
 		font-size : 10pt ;
@@ -1111,7 +1111,7 @@
 
 	.stat-row.no-stat .stat-row-data-label {
 		/*color : #844 ;*/
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 
 	.stat-row-data-bar {

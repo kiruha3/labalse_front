@@ -217,18 +217,18 @@ tr.dg--e--list-item--default:last-child td.dg--e--list-item-aligned-content-defa
 .dg--e--var--default {
 	cursor : pointer ;
 	position : relative ;
-	background-color : #eee ;
+	background-color : #f4f1ec ;
 }
 
 .dg--e--var--default[data-var-name^='cfg:'] {
-	background-color : #eee ;
+	background-color : #f4f1ec ;
 }
 .dg--e--var--default[data-var-name^='user-bank:'] {
-	background-color : #fec ;
+	background : linear-gradient(180deg, #123d20 0%, #1a5c33 100%) ;
 }
 
 .dg--e--var--default:hover {
-	background-color : #ccc ;
+	background-color : #e8e4de ;
 }
 
 .dg--e--var--default[data-var-name^='cfg:']:hover {
@@ -256,7 +256,7 @@ tr.dg--e--list-item--default:last-child td.dg--e--list-item-aligned-content-defa
 	font-family : Serif ;
 	font-weight : normal ;
 	font-style : normal ;
-	color : #000 ;
+	color : #1a5c33 ;
 	text-transform : none ;
 	white-space : nowrap ;
 }
@@ -572,7 +572,7 @@ tr.dg--e--list-item--default:last-child td.dg--e--list-item-aligned-content-defa
 #title:empty:before , .title:empty:before {
 	content : "{ ��������� }" ;
 	font-style : italic ;
-	color : #888 ;
+	color : #8a8378 ;
 }
 
 #tgt-date-i {
@@ -623,7 +623,7 @@ tr.dg--e--list-item--default:last-child td.dg--e--list-item-aligned-content-defa
 
 .var-area table {
 	text-align : left ;
-	background-color : #eee ;
+	background-color : #f4f1ec ;
 	border-collapse : collapse ;
 }
 .var-area td {
@@ -641,13 +641,13 @@ tr.dg--e--list-item--default:last-child td.dg--e--list-item-aligned-content-defa
 
 .var-desc-el {
 	display : block ;
-	color : #888 ;
+	color : #8a8378 ;
 	font-size : 7pt ;
 	/*margin-left : 4px !important ;
 	padding : 0px ;*/
 }
 .var-desc-el:last-child {
-	color : #000 ;
+	color : #1a5c33 ;
 	font-size : 8pt ;	
 }
 .var-desc-el:first-letter {
@@ -657,7 +657,7 @@ tr.dg--e--list-item--default:last-child td.dg--e--list-item-aligned-content-defa
 .var-lnk {
 	text-decoration : none ;
 	cursor : pointer ;
-	color : #000 ;
+	color : #1a5c33 ;
 	font-size : 10pt ;
 }
 .var-lnk:hover {

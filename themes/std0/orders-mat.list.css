@@ -79,7 +79,7 @@
 	}
 
 	.date-new {
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.order-lnk {
@@ -148,7 +148,7 @@
 	#orderTooltip {
 		position : absolute ;
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		padding : 4px 8px ;
 	}
 
@@ -196,7 +196,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow: 6px 6px 8px #000;
@@ -225,7 +225,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -235,7 +235,7 @@
 	}
 
 	.order-ac , .order-tc , .order-dc {
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		padding-left : 6px ;
 	}
 
@@ -257,7 +257,7 @@
 		color : #ffffff ;
 		font-size : 8pt ;
 		padding : 2px 8px ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 	}
 
 	.order-ac {
@@ -304,7 +304,7 @@
 	}
 
 	.price {
-		color : #0080ff ;
+		color : #1a5c33 ;
 	}
 
 	.count-i {

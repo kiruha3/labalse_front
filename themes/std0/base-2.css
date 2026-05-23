@@ -66,24 +66,24 @@
 
 	.mhMenu { width : 100% ; border-collapse : collapse ; }
 	.mhMenu TD { font-size : 8pt ; font-weight : normal ; text-align : center ; }
-	.mhMenu a { text-decoration : none ; color : #000000 ; }
-	.mhMenu a:hover { color : #ff0000 ; }
+	.mhMenu a { text-decoration : none ; color : #1a5c33 ; }
+	.mhMenu a:hover { color : #8b2e2e ; }
 
-	.mhTable { width : 100% ; border-collapse : collapse ; border : 1px solid #c0c0c0 ; }
-	.mhtCell1 { padding : 0px ; border : 1px solid #c0c0c0 ; }
+	.mhTable { width : 100% ; border-collapse : collapse ; border : 1px solid #c9c3bb ; }
+	.mhtCell1 { padding : 0px ; border : 1px solid #c9c3bb ; }
 
-	.mhInfo { width : 100% ; background-color : #e0e0e0 ; border-collapse : collapse ; }
+	.mhInfo { width : 100% ; background-color : #f4f1ec ; border-collapse : collapse ; }
 	.mhiUserNameL  { font-size : 8pt ; }
 	.mhiUserNameV { font-size : 8pt ; font-weight : bold ; }
 	.mhiLastVisitL  { font-size : 8pt ; }
 	.mhiLastVisitV { font-size : 8pt ; font-weight : bold ; }
 	.mhiSubTable { font-size : 11pt ; font-weight : bold ; text-indent : 12px ; }
 	.mhiSubTable a { font-size : 11pt ; font-weight : bold ;
-		text-decoration : none ; color : #000000 ; }
-	.mhiSubTable a:hover { color : #ff0000 ; }
+		text-decoration : none ; color : #1a5c33 ; }
+	.mhiSubTable a:hover { color : #8b2e2e ; }
 
 	.iframe-std-1 {
-		background-color : #fff0e0 ;
+		background-color : #f8f5f0 ;
 		border : 1px dashed #807060 ;
 		margin-top : 8px ;
 	}

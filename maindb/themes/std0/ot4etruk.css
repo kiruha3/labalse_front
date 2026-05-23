@@ -87,7 +87,7 @@ td {
 	background-color : #dca ;
 }
 .mt-d-m.c-l {
-	background-color : #fec ;
+	background : linear-gradient(180deg, #123d20 0%, #1a5c33 100%) ;
 }
 
 .mt-d-n {

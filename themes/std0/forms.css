@@ -31,7 +31,7 @@
 
 	.inlineMsg {
 		width : 100% ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 		border-collapse : collapse ;
 	}
 
@@ -40,6 +40,6 @@
 		padding : 16px ;
 		font-size : 14pt ;
 		font-weight : normal ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		background-color : #ff8080 ;
 	}

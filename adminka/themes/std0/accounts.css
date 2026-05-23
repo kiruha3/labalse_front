@@ -16,7 +16,7 @@
 	}
 
 	.letter-menu-item {
-		color : #0080ff ;
+		color : #1a5c33 ;
 		text-decoration : none ;
 		cursor : pointer ;
 		padding-left : 2px ;
@@ -24,7 +24,7 @@
 	}
 	
 	.letter-menu-item:hover {
-		color : #ff8000 ;
+		color : #b85c3e ;
 		text-decoration : underline ; 
 	}
 	
@@ -34,7 +34,7 @@
 	
 	.letter-label {
 		margin-top : 16px ;
-		color : #ff0000 ;
+		color : #8b2e2e ;
 		padding : 16px 8px 2px 8px ;
 		font-size : 14pt ;
 	}
@@ -218,7 +218,7 @@
 
 	.time-data {
 		text-align : right ;
-		color : #888 ;
+		color : #8a8378 ;
 	}
 
 	.time-data:hover {

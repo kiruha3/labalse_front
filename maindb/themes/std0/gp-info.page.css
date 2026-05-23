@@ -2,7 +2,7 @@
 	.gpinfo-panel {
 		border : 1px solid #888 ;
 		padding : 0px ;
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 		margin : 2cm auto 0 ;
 		max-width : 1440px ;
 	}
@@ -50,7 +50,7 @@
 	.gpinfo-ca {
 		background-color : #fff ;
 		border : 1px solid #666 ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	
 	.gpinfo-total > .gpinfo-ca {
@@ -60,12 +60,12 @@
 	}
 	
 	.gpinfo-cd {
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 
 	.chart-area {
 		border : 1px solid #888 ;
-		background-color : #eee ;
+		background-color : #f4f1ec ;
 		margin : 0 auto 0 ;
 		max-width : 1440px ;
 	}
@@ -74,7 +74,7 @@
 	}
 
 	.chart-area::part(axis-labels) {
-		color : #000 ;
+		color : #1a5c33 ;
 		font-size : 10pt ;
 		font-family : "Calibri" ;
 	}
@@ -88,61 +88,61 @@
 	}
 
 	.chart-area::part(data-line-0) , .control-panel-line-0-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #cff ;
 		border-color : #048 ;
 	}
 
 	.chart-area::part(data-line-1) , .control-panel-line-1-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #cfc ;
 		border-color : #060 ;
 	}
 
 	.chart-area::part(data-line-2) , .control-panel-line-2-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #fcc ;
 		border-color : #600 ;
 	}
 
 	.chart-area::part(data-line-3) , .control-panel-line-3-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #ff8 ;
 		border-color : #840 ;
 	}
 
 	.chart-area::part(data-line-4) , .control-panel-line-4-mark {
-		color : #000 ;
-		background-color : #ccc ;
+		color : #1a5c33 ;
+		background-color : #e8e4de ;
 		border-color : #444 ;
 	}
 
 	.chart-area::part(data-line-5) , .control-panel-line-5-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #08f ;
 		border-color : #004 ;
 	}
 
 	.chart-area::part(data-line-6) , .control-panel-line-6-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #800 ;
 		border-color : #400 ;
 	}
 
 	.chart-area::part(data-line-7) , .control-panel-line-7-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #080 ;
 		border-color : #040 ;
 	}
 
 	.chart-area::part(data-line-8) , .control-panel-line-8-mark {
-		color : #000 ;
-		background-color : #888 ;
+		color : #1a5c33 ;
+		background-color : #8a8378 ;
 		border-color : #444 ;
 	}
 
 	.chart-area::part(data-line-9) , .control-panel-line-9-mark {
-		color : #000 ;
+		color : #1a5c33 ;
 		background-color : #c60 ;
 		border-color : #630 ;
 	}
@@ -150,7 +150,7 @@
 	.chart-area::part(data-lines-legend) {
 		font-family: "Calibri" ;
 		font-size : 12pt ;
-		color : #000 ;
+		color : #1a5c33 ;
 		--position : top ;
 		--line-to-line-space : 1cm ;
 	}

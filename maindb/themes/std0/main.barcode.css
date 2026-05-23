@@ -40,7 +40,7 @@
 	.t1-number-title , .t1-date-title ,
 	.t1-from-title , .t1-ex_data_7-title ,
 	.exp-price-title {
-		color : #606060 ;
+		color : #5a554e ;
 		margin-right : 8px ;
 		text-align : right ;
 	}
@@ -124,7 +124,7 @@
 	.expert-spec {
 		font-size : 18pt ;
 		margin-left : 16px ;
-		color : #606060 ;
+		color : #5a554e ;
 	}
 	
 	.kat_slognost {
@@ -146,7 +146,7 @@
 	.exp-conclusion-title , .exp-conclusion_1-title ,
 	.exp-conclusion_2-title , .exp-conclusion_3-title {
 		text-align : center ;
-		color : #606060 ;
+		color : #5a554e ;
 	}
 	
 	.pay-details {

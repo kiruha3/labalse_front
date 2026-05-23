@@ -19,7 +19,7 @@
 
 	.search-panel {
 		position : absolute ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		border : 1px solid #000000 ;
 		padding : 4px ;
 		margin : 0px ;
@@ -42,7 +42,7 @@
 	.elt-d-cd {
 		padding : 0px 4px ;
 		text-align : right ;
-		color : #606060 ;
+		color : #5a554e ;
 		font-size : 9pt ;
 	}
 
@@ -65,8 +65,8 @@
 	.elt-d-en , .elt-d-wn , .elt-d-d , .elt-d-p , .elt-d-f ,
 	.elt-d-pd , .elt-d-pde , .elt-d-cb , .elt-d-ckd ,
 	.elt-d-com , .elt-d-afi , .elt-d-sndz , .elt-d-mark {
-		border : 1px solid #808080 ;
-		background-color : #404040 ;
+		border : 1px solid #c9c3bb ;
+		background-color : #1a5c33 ;
 		color : #ffffff ;
 	}
 
@@ -211,7 +211,7 @@
 	.elt-d-total {
 		padding : 8px 0px 32px 12px ;
 		border : none ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 
 	.elt-d-total-h {
@@ -229,14 +229,14 @@
 	}
 
 	.elt-h-period {
-		color : #000000 ;
+		color : #1a5c33 ;
 		border : none ;
 		text-align : center ;
 	}
 
 	.elt-title {
 		font-size : 14pt ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		text-align : center ;
 	}
 
@@ -246,7 +246,7 @@
 
 	.elt-h-sm-m {
 		padding : 4px ;
-		background-color : #e0e0e0 ;
+		background-color : #f4f1ec ;
 		border : 1px solid #000000 ;
 
 		width : 192px ;
@@ -257,7 +257,7 @@
 	
 	.flt-lnk {
 		text-decoration : none ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		cursor : pointer ;
 	}
 	.flt-lnk-hl {
@@ -268,11 +268,11 @@
 
 	.flt-lnk:hover {
 		text-decoration : underline ;
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 	.flt-lnk-hl:hover {
 		text-decoration : underline ;
-		color : #ff8000 ;
+		color : #b85c3e ;
 	}
 
 	.mrl-ab {
@@ -293,7 +293,7 @@
 		position : absolute ;
 		left : 23px ;
 		top : 0px ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		min-width : 192px ;
 		width : 192px ;
 		max-width : 192px ;
@@ -310,8 +310,8 @@
 		width : 128px ;
 		max-width : 128px ;
 		
-		background-color : #404040 ;
-		border : 1px solid #808080 ;
+		background-color : #1a5c33 ;
+		border : 1px solid #c9c3bb ;
 		text-align : center ;
 	}
 	
@@ -337,7 +337,7 @@
 	#woeDataTooltip {
 		position : absolute ;
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		padding : 4px 8px ;
 	}
 	
@@ -397,7 +397,7 @@
 	
 	.uc-comment {
 		background-color : #505050 ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		margin : 2px 0px ;
 	}
 	
@@ -411,7 +411,7 @@
 	
 	.uc-author {
 		background-color : #c0c0c0 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		margin-left : 4px ;
 		float : right ;
 		font-style : italic ;

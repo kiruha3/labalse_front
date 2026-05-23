@@ -34,12 +34,12 @@
 		padding : 0.125em 1em ;
 		font-size : 12pt ;
 		margin : 1px 1px -1px 1px ;
-		color : #888 ;
+		color : #8a8378 ;
 	}
 
 	.tt-tabs > label:hover {
 		background-color : inherit ;
-		color : #000 ;
+		color : #1a5c33 ;
 	}
 	.tt-tabs > div {
 		display : none ;
@@ -130,7 +130,7 @@
 		font-size : 9pt ;
 		font-weight : normal ;
 		background-image : url( "ttlcap_bgimg.gif" );
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 
 	.ttMonth img {
@@ -140,35 +140,35 @@
 
 	.ttDoW1 {
 		background-color : #ffffff ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.ttDoW2 {
-		background-color : #f0f0f0 ;
-		color : #000000 ;
+		background-color : #ffffff ;
+		color : #1a5c33 ;
 	}
 	.ttDoW3 {
-		background-color : #e0e0e0 ;
-		color : #000000 ;
+		background-color : #f4f1ec ;
+		color : #1a5c33 ;
 	}
 	.ttDoW4 {
 		background-color : #d0d0d0 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.ttDoW5 {
 		background-color : #c0c0c0 ;
-		color : #000000 ;
+		color : #1a5c33 ;
 	}
 	.ttDoW6 {
-		background-color : #606060 ;
+		background-color : #5a554e ;
 		color : #ffffff ;
 	}
 	.ttDoW7 {
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 		color : #ffffff ;
 	}
 
 	.ttdc_1 , .ttdc_2 , .ttdc_3 , .ttdc_4 , .ttdc_5 {
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 	}
 
 	.ttdc_1 {
@@ -200,18 +200,18 @@
 
 	.c-year-link {
 		padding : 3px 6px ;
-		color : #000000 ;
-		background-color : #e0e0e0 ;
+		color : #1a5c33 ;
+		background-color : #f4f1ec ;
 	}
 
 	.year-link {
 		padding : 2px 5px ;
 		color : #ffffff ;
-		background-color : #404040 ;
+		background-color : #1a5c33 ;
 	}
 
 	.year-link:hover {
-		background-color : #606060 ;
+		background-color : #5a554e ;
 	}
 
 	.add-record-dlg {
@@ -223,7 +223,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow: 6px 6px 8px #000;
@@ -242,7 +242,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -299,7 +299,7 @@
 		left : 50% ;
 
 		background-color : #ffffff ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 
 
 		box-shadow: 6px 6px 8px #000;
@@ -325,7 +325,7 @@
 		left : 807px ;
 		width : 21px ;
 		padding-top : 3px ;
-		border : 1px solid #c0c0c0 ;
+		border : 1px solid #c9c3bb ;
 		background-color : #ffffff ;
 		text-align : center ;
 	}
@@ -351,9 +351,9 @@
 	.fdc-t-cap1 , .fdc-t-cap2 , .fdc-t-cap3 {
 		font-size : 8pt ;
 		font-weight : bold ;
-		color : #000000 ;
+		color : #1a5c33 ;
 		height : 19px ;
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 		border-collapse : collapse ;
 		text-align : center ;
 	}
@@ -376,7 +376,7 @@
 	}
 
 	.fdc-t-d1 , .fdc-t-d2 , .fdc-t-d3 {
-		border : 1px solid #808080 ;
+		border : 1px solid #c9c3bb ;
 		padding : 1px ;
 	}
 
