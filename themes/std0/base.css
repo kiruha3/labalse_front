@@ -5,6 +5,7 @@
 */
 	* {
 		font-family : "Segoe UI", "Helvetica Neue", Arial, sans-serif ;
+		font-size : 14px ;
 	}
 
 	a {
@@ -30,8 +31,8 @@
 
 	#page-head {
 		position : relative ;
-		padding : 4px ;
-		background : linear-gradient(180deg, #123d20 0%, #1a5c33 100%) ;
+		padding : 16px 4px 12px 4px ;
+		background : linear-gradient(180deg, #0f2e1a 0%, #1a5c33 100%) ;
 	}
 
 	#page-content {
@@ -59,18 +60,21 @@
 		
 	}
 	.mhTitle1 {
-		font-size : 16pt ;
+		font-size : 20pt ;
+		font-weight : 600 ;
 		color : #ffffff ;
+		letter-spacing : 1px ;
 	}
 	.mhTitle2 {
-		font-size : 13pt ;
-		color : #e8e4de ;
+		font-size : 14pt ;
+		color : #a8c4b0 ;
+		font-weight : 300 ;
 	}
 
 	.mhMenu { width : 100% ; border-collapse : collapse ; }
-	.mhMenu TD { font-size : 9pt ; font-weight : 500 ; text-align : center ; }
-	.mhMenu a { text-decoration : none ; color : #ffffff ; }
-	.mhMenu a:hover { color : #8b2e2e ; }
+	.mhMenu TD { font-size : 11pt ; font-weight : 500 ; text-align : center ; padding : 10px 8px ; }
+	.mhMenu a { text-decoration : none ; color : #d4e8db ; padding : 6px 12px ; display : inline-block ; border-bottom : 2px solid transparent ; transition : all 0.2s ; }
+	.mhMenu a:hover { color : #ffffff ; border-bottom : 2px solid #49a67b ; }
 
 	.mhTable { width : 100% ; border-collapse : collapse ; border : 1px solid #c9c3bb ; }
 	.mhtCell1 { padding : 0px ; border : 1px solid #c9c3bb ; }
