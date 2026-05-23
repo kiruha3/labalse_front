@@ -39,9 +39,22 @@
 
 	#left-column {
 		width: 280px;
-		padding: 16px;
+		padding: 20px 16px;
 		vertical-align: top;
 		background: #123d20;
+	}
+	#left-column .panel-header {
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid #1a5c33;
+		padding: 12px 0 8px 0;
+		font-size: 11px;
+		color: #a8c4b0;
+		letter-spacing: 1px;
+	}
+	#left-column .panel-content {
+		background: transparent;
+		padding: 12px 0;
 	}
 
 	#sections {
